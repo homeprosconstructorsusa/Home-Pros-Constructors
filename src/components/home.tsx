@@ -1,10 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
+import { PageBackdrop } from "./page-backdrop";
 import { StateSelector } from "./state-selector";
 export function HomeContent() {
   return (
     <>
-      <section className="home-hero">
+      <section className="home-hero page-scene">
+        <PageBackdrop scene="home" />
         <div className="shell home-hero-grid">
           <div>
             <p className="home-kicker">Licenças exclusivas de cidades americanas</p>
@@ -18,10 +19,12 @@ export function HomeContent() {
             </div>
             <p className="home-footnote">Uma licença por cidade · Treinamento progressivo · Produção pela Home Pros</p>
           </div>
-          <figure className="home-visual">
-            <Image src="/photos/home/hero.png" alt="Cena ilustrativa de uma profissional trabalhando com laptop em casa, com a paisagem de Boston ao fundo." width={1536} height={1024} sizes="(min-width: 900px) 560px, 100vw" loading="eager" className="home-hero-image" />
-            <figcaption className="home-visual-caption"><span>PRIMEIRO MERCADO</span><strong>Massachusetts</strong><p>351 cidades. Uma nova possibilidade para você.</p><small>Imagem ilustrativa</small></figcaption>
-          </figure>
+          <div className="home-market-preview">
+            <span className="market-pill">Seu primeiro mercado</span>
+            <h3>Massachusetts</h3>
+            <p>Escolha sua cidade.<br />Construa sua próxima oportunidade.</p>
+            <Link href="/states/massachusetts" className="market-link"><strong>351</strong><span>cidades para explorar</span><span aria-hidden="true">↗</span></Link>
+          </div>
         </div>
       </section>
       <section className="shell home-benefits" aria-label="O que acompanha sua atuação">

@@ -18,7 +18,7 @@ Existiam arquivos Next.js/Tailwind, páginas inicial, catálogo vazio, detalhe e
 - API de cotação por identificadores e valores calculados no servidor.
 - PostgreSQL e Prisma 7 com migrations e seed de 351 rascunhos, sem sobrescrever dados existentes.
 - Comando local para gerenciar situações, preços e parcelamento; sem painel web administrativo.
-- Página inicial refinada em verde-escuro, branco e dourado, com chamada para trabalho remoto, imagem ilustrativa e percurso de escolha da cidade.
+- Design mais claro e minimalista, com tipografia do sistema, verde e detalhes dourados, cartões translúcidos e fundos fotográficos com opacidade e degradê: profissional na página inicial, dólar em Boston e Estátua da Liberdade no carrinho. Os fundos foram preparados a partir das referências enviadas, sem textos publicitários nem barras do celular.
 - Design responsivo, navegação acessível, metadados, tratamento de falhas e páginas inexistentes.
 - Links oficiais do YouTube, Instagram e Facebook no rodapé de todas as páginas, incluindo a prévia portátil.
 - HTML interativo autocontido para revisão sem hospedagem, usando os mesmos componentes React.

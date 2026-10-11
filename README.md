@@ -85,6 +85,6 @@ A aplicação está preparada para Node.js/PostgreSQL e saída Next.js standalon
 
 O build standalone inclui `server.js`, `.next/static` e `public`. Depois de copiar a pasta `.next/standalone` para a VPS, execute seu `server.js` com `HOSTNAME=127.0.0.1`, `PORT` e `DATABASE_URL` configurados de forma segura atrás de um proxy HTTPS. Não copie a `.env` de desenvolvimento para produção.
 
-### Imagem da página inicial
+### Fundos fotográficos
 
-`public/photos/home/hero.png` é uma imagem ilustrativa gerada para este projeto: trabalho remoto com paisagem inspirada em Boston. Não retrata uma equipe ou sede real da empresa. É servida localmente e incorporada à prévia, sem dependência de bancos de imagens externos. A identidade original permanece nos componentes de marca.
+`public/photos/backgrounds` contém três fundos preparados com edição generativa das capturas enviadas pelo responsável, removendo textos publicitários, marcas de terceiros e barras de interface: `home.png` (IMG_2563.PNG, profissional trabalhando), `boston.png` (IMG_2567.PNG, dólar) e `cart.png` (IMG_2553.PNG, Estátua da Liberdade e bandeira). São imagens ilustrativas, sem atribuição de equipe ou sede real. A quarta referência, IMG_2555.PNG, não foi necessária nestes três fundos. O componente compartilhado `PageBackdrop` funciona no website e na prévia portátil, que incorpora os arquivos. As camadas de opacidade e degradê são CSS; os textos e controles ficam acima e as imagens decorativas não interferem na navegação. A imagem anterior da página inicial permanece arquivada em `public/photos/home/hero.png`.

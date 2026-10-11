@@ -154,15 +154,21 @@ test("desktop design screenshots", async ({ page }) => {
   await page.goto("/");
   await expect(page.locator("main section").first()).toHaveCSS(
     "background-color",
-    "rgb(16, 44, 40)",
+    "rgb(248, 250, 248)",
   );
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("HOME PROS CONSTRUCTORS");
   await expect(page.locator(".home-headline")).toContainText("Trabalhe de Qualquer Lugar do Mundo");
-  await expect.poll(() => page.locator(".home-hero-image").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+  await expect.poll(() => page.locator(".page-backdrop-home .scene-image").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
   await expect(
     page.locator("main section").first().locator(".shell"),
   ).toHaveCSS("display", "grid");
   await page.screenshot({ path: "/tmp/homepros-home.png", fullPage: true });
+  await page.goto("/cities/boston");
+  await expect.poll(() => page.locator(".page-backdrop-boston img").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+  await page.screenshot({ path: "/tmp/homepros-boston-background.png" });
+  await page.goto("/cart");
+  await expect.poll(() => page.locator(".page-backdrop-cart img").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+  await page.screenshot({ path: "/tmp/homepros-cart-background.png", fullPage: true });
   await page.goto("/states/massachusetts");
   await page.getByLabel("Buscar cidades").fill("Cambridge");
   await page.screenshot({ path: "/tmp/homepros-catalog.png", fullPage: true });

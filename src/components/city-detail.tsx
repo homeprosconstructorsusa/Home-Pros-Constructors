@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PageBackdrop } from "./page-backdrop";
 import { CityAlbum } from "./city-album";
 import type { CityLicense } from "@/lib/license";
 import {
@@ -19,6 +20,8 @@ export function CityDetail({
 }) {
   const plan = installments(license);
   return (
+    <div className={`page-scene ${license.slug === "boston" ? "boston-scene" : ""}`}>
+      {license.slug === "boston" && <PageBackdrop scene="boston" />}
     <section className="shell page-space">
       <Link href="/states/massachusetts" className="back-link">
         ← Cidades de Massachusetts
@@ -201,5 +204,6 @@ export function CityDetail({
         </aside>
       </div>
     </section>
+    </div>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 import { useState, useSyncExternalStore } from "react";
 import Link from "next/link";
+import { PageBackdrop } from "./page-backdrop";
 import { CART_KEY, parseCart } from "@/lib/cart-storage";
 import type { CityLicense } from "@/lib/license";
 import { money, statusLabels, installments } from "@/lib/license";
@@ -93,6 +94,8 @@ export function Cart({
     }
   }
   return (
+    <div className="page-scene cart-scene">
+      <PageBackdrop scene="cart" />
     <section className="shell page-space">
       <div className="eyebrow">Seu próximo passo</div>
       <h1 className="page-title">
@@ -261,5 +264,6 @@ export function Cart({
         </aside>
       </div>
     </section>
+    </div>
   );
 }
