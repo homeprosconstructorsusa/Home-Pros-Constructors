@@ -51,6 +51,11 @@ export function SiteShell({
             <Link href="/states/massachusetts">Massachusetts</Link>
             <span className="mx-4">·</span>
             <Link href="/cart">Seu carrinho</Link>
+            <nav className="social-links" aria-label="Redes sociais da Home Pros Constructors">
+              <a href="https://www.youtube.com/@HomeProsConstructorsUsa" target="_blank" rel="noopener noreferrer">YouTube <span aria-hidden="true">↗</span></a>
+              <a href="https://www.instagram.com/homeprosconstructors/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+              <a href="https://www.facebook.com/profile.php?id=61582340693737" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">↗</span></a>
+            </nav>
             <p className="mt-3 text-xs text-white/50">
               © {new Date().getFullYear()} Home Pros Constructors · Projeto em
               desenvolvimento

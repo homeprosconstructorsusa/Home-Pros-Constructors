@@ -64,6 +64,9 @@ input, select, button { font: inherit; }
 .detail-facts strong { font-size: 14px; font-weight: 600; }
 .site-footer { background: #102c28; color: white; margin-top: 40px; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding-block: 42px; }
+.social-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.social-links a { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #ffffff30; border-radius: 6px; padding: 10px 12px; font-size: 12px; }
+.social-links a:hover { border-color: #d5c29b; color: #d5c29b; }
 .skip-link { position: fixed; top: -60px; left: 10px; z-index: 100; background: #fff; color: #17352e; padding: 12px; }
 .skip-link:focus { top: 10px; }
 @media (max-width: 900px) {
