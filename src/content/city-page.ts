@@ -7,7 +7,7 @@ export const cityPageContent: {
   sections: { title: string; body: string }[];
 } = {
   introduction:
-    "Trabalhe de casa representando a Home Pros Constructors em {city}, com treinamento, materiais personalizados e suporte para atender clientes e comercializar serviços de marketing digital.\n\nAtendemos companhias de brasileiros e americanos nos Estados Unidos e no Canadá, ajudando profissionais da construção e de serviços residenciais a fortalecer sua presença na internet, divulgar seus trabalhos e alcançar mais clientes.\n\nVocê pode atuar de qualquer lugar do mundo, mesmo começando sem conhecimento de inglês. A capacitação começa pelo atendimento a brasileiros. A Home Pros School, nossa escola de inglês, terá início das aulas no 1º trimestre de 2027, para apoiar o aprendizado progressivo do idioma e ampliar sua atuação.",
+    "Trabalhe de casa atendendo a cidade de {city}. A Home Pros Constructors oferece treinamento, materiais personalizados e suporte para você atender clientes e comercializar serviços de marketing digital.\n\nAtendemos companhias de brasileiros e americanos nos Estados Unidos e no Canadá, ajudando profissionais da construção e de serviços residenciais a fortalecer sua presença na internet, divulgar seus trabalhos e alcançar mais clientes.\n\nVocê pode atuar de qualquer lugar do mundo. O público que você atende e os canais de comunicação podem acompanhar seu nível de inglês, do zero ao avançado.",
   photosByCity: {},
   generalPhotos: [
     { src: "/photos/general/card-01.png", alt: "Ganhe em dólares, mesmo sem inglês. Comece atendendo brasileiros, com treinamento e suporte. Resultados dependem das vendas." },
@@ -18,6 +18,10 @@ export const cityPageContent: {
     { src: "/photos/general/card-06.png", alt: "Conheça nossa escola de inglês: Home Pros School. Início das aulas: 1º trimestre de 2027." },
   ],
   sections: [
+    {
+      title: "Inglês: do zero ao avançado",
+      body: "Dependendo do seu nível de inglês, você pode atender diferentes públicos e usar diferentes formas de comunicação:\n\n• Sem inglês: comece atendendo brasileiros em português.\n\n• Inglês intermediário: atenda brasileiros e americanos por mensagens de texto e e-mail.\n\n• Inglês avançado: atenda brasileiros e americanos por mensagens, e-mails e ligações, com apoio em traduções na comunicação com clientes.\n\nPara desenvolver seu inglês, conheça a Home Pros School. Início das aulas: 1º trimestre de 2027.",
+    },
     {
       title: "Serviços que comercializamos",
       body: "• Criação de websites.\n• Filmagens em campo e com drone.\n• Produção de vídeos publicitários.\n• Criação de logomarcas.\n• Administração de redes sociais.\n• Criação e otimização do Google Business Profile — Google Meu Negócio.\n• Gestão de anúncios no Google e no Facebook.\n• Criação de cartões digitais.\n• Divulgação em guia de serviços locais.\n• Apoio na apresentação de serviços e elaboração de orçamentos.\n\nNosso foco abrange 100 categorias de serviços da construção e de manutenção residencial, incluindo pintura, limpeza, reformas e outras especialidades. Ajudamos essas companhias a ampliar sua presença digital e a serem encontradas por clientes da região.",

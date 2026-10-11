@@ -54,7 +54,7 @@ export function CityDetail({
           )}
           <div className="mt-10">
             <h2 className="text-2xl font-semibold">
-              Representar a Home Pros em {license.city}
+              {license.city} — Home Pros em {license.city}
             </h2>
             <p className="mt-4 whitespace-pre-line leading-8 text-stone-600">
               {license.description ??

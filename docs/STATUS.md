@@ -8,7 +8,7 @@ Existiam arquivos Next.js/Tailwind, páginas inicial, catálogo vazio, detalhe e
 
 - Catálogo dos 351 municípios reais de Massachusetts, com 14 condados e fonte US Census Bureau.
 - Busca por nome, filtros de condado/disponibilidade e estados de busca vazia.
-- Rota individual para cada cidade; modelo compartilhado com o texto enviado.
+- Rota individual para cada cidade; modelo compartilhado com o texto enviado. Abertura personalizada com o nome da cidade e atendimento de casa, seguida de orientação para níveis de inglês: sem inglês, intermediário e avançado.
 - Comissões e estimativas conforme esclarecimento do responsável; projeções sem garantia.
 - Álbum de cards no catálogo e no topo da página, com navegação e ampliação acessível para leitura. Imagens dos álbuns e da página inicial reduzidas em 10% e depois em mais 15% sobre o tamanho ajustado (23,5% de redução acumulada), incluindo a prévia portátil.
 - Seis artes gerais aprovadas nas 351 cidades; Home Pros School por último, com início das aulas no 1º trimestre de 2027.
