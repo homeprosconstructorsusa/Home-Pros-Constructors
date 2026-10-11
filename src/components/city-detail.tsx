@@ -76,7 +76,11 @@ export function CityDetail({
               </div>
             </div>
           </div>
-          <CityContent city={license.city} county={license.county} />
+          <CityContent
+            slug={license.slug}
+            city={license.city}
+            county={license.county}
+          />
           <section className="mt-10">
             <h2 className="text-2xl font-semibold">Perfil de {license.city}</h2>
             {license.slug === "boston" ? (

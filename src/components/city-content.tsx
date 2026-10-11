@@ -3,23 +3,27 @@ import { cityPageContent, cityCopy } from "@/content/city-page";
 export function CityContent({
   city,
   county,
+  slug,
 }: {
   city: string;
   county: string;
+  slug: string;
 }) {
+  const photos = cityPageContent.photosByCity[slug] ?? [];
   return (
     <>
-      {cityPageContent.photos.length > 0 && (
-        <section className="mt-10" aria-label={`${city} photo gallery`}>
+      {photos.length > 0 && (
+        <section className="mt-10" aria-label={`Imagens de ${city}`}>
           <div className="grid gap-4 sm:grid-cols-2">
-            {cityPageContent.photos.map((photo) => (
+            {photos.map((photo) => (
               <figure key={photo.src}>
                 <Image
                   src={photo.src}
                   alt={cityCopy(photo.alt, city, county)}
-                  width={1200}
-                  height={800}
-                  className="aspect-[3/2] w-full rounded-xl object-cover"
+                  width={1122}
+                  height={1402}
+                  sizes="(min-width: 900px) 320px, (min-width: 640px) 45vw, 100vw"
+                  className="h-auto w-full rounded-xl"
                 />
                 {photo.caption && (
                   <figcaption className="mt-2 text-sm text-stone-500">

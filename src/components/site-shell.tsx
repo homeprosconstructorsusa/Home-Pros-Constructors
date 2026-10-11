@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CartCount } from "./cart";
+import { BrandLogo } from "./brand-logo";
 export function SiteShell({
   children,
   demo,
@@ -23,12 +24,7 @@ export function SiteShell({
       <header className="site-header">
         <nav className="shell header-inner" aria-label="Navegação principal">
           <Link href="/" className="brand">
-            <span className="brand-symbol" aria-hidden="true">
-              ⌂
-            </span>
-            <span>
-              HOME PROS<span className="brand-subtitle">CONSTRUCTORS</span>
-            </span>
+            <BrandLogo />
           </Link>
           <div className="header-links">
             <Link href="/states/massachusetts">Explorar cidades</Link>
@@ -42,7 +38,13 @@ export function SiteShell({
       <footer className="site-footer">
         <div className="shell footer-inner">
           <div>
-            <p className="font-bold">HOME PROS CONSTRUCTORS</p>
+            <Link
+              href="/"
+              className="brand"
+              aria-label="Home Pros Constructors — página inicial"
+            >
+              <BrandLogo />
+            </Link>
             <p className="mt-2 text-sm">Sua cidade. Seu próximo negócio.</p>
           </div>
           <div className="text-sm">

@@ -1,16 +1,17 @@
 /* eslint-disable @next/next/no-img-element -- Offline review has no Next image server. */
-/* Static review uses the same local assets without the Next.js image server. */
 import type { ImgHTMLAttributes } from "react";
-export default function Image(props: ImgHTMLAttributes<HTMLImageElement>) {
-  return (
-    <img
-      {...props}
-      src={
-        typeof props.src === "string" && props.src.startsWith("/")
-          ? `./public${props.src}`
-          : props.src
-      }
-      alt={props.alt ?? ""}
-    />
-  );
+declare global {
+  interface Window {
+    __HOME_PROS_ASSETS?: Record<string, string>;
+  }
+}
+export default function Image({
+  unoptimized,
+  ...props
+}: ImgHTMLAttributes<HTMLImageElement> & { unoptimized?: boolean }) {
+  const src =
+    typeof props.src === "string" && props.src.startsWith("/")
+      ? (window.__HOME_PROS_ASSETS?.[props.src] ?? `./public${props.src}`)
+      : props.src;
+  return <img {...props} loading={props.loading ?? (unoptimized ? "eager" : "lazy")} src={src} alt={props.alt ?? ""} />;
 }

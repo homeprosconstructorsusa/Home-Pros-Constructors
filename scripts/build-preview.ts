@@ -1,5 +1,5 @@
 import { build } from "esbuild";
-import { mkdir, readFile, writeFile, rm, cp } from "node:fs/promises";
+import { mkdir, readFile, writeFile, rm, cp, readdir } from "node:fs/promises";
 import { resolve } from "node:path";
 import { spawnSync } from "node:child_process";
 import { tmpdir } from "node:os";
@@ -33,7 +33,20 @@ async function main() {
     },
     define: { "process.env.NODE_ENV": '"production"' },
   });
-  const html = `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Home Pros Constructors · Prévia para aprovação</title><style>${await readFile(cssPath, "utf8")}</style></head><body><div id="root"></div><noscript>Ative o JavaScript para usar a prévia interativa.</noscript><script>${result.outputFiles[0].text.replaceAll("</script", "<\\/script")}</script></body></html>`;
+  const assets: Record<string, string> = {};
+  async function collectImages(directory: string) {
+    for (const entry of await readdir(directory, { withFileTypes: true })) {
+      const path = `${directory}/${entry.name}`;
+      if (entry.isDirectory()) await collectImages(path);
+      else if (entry.isFile() && /\.(png|jpe?g|webp|svg)$/i.test(entry.name)) {
+        const extension = entry.name.split(".").pop()!.toLowerCase();
+        const mime = extension === "svg" ? "image/svg+xml" : extension === "jpg" ? "image/jpeg" : `image/${extension}`;
+        assets[path.replace(/^public/, "")] = `data:${mime};base64,${(await readFile(path)).toString("base64")}`;
+      }
+    }
+  }
+  await collectImages("public/photos");
+  const html = `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Home Pros Constructors · Prévia para aprovação</title><style>${await readFile(cssPath, "utf8")}</style></head><body><div id="root"></div><noscript>Ative o JavaScript para usar a prévia interativa.</noscript><script>window.__HOME_PROS_ASSETS=${JSON.stringify(assets)};${result.outputFiles[0].text.replaceAll("</script", "<\\/script")}</script></body></html>`;
   await writeFile("preview/homepros-preview.html", html);
   await rm("preview/public", { recursive: true, force: true });
   await cp("public", "preview/public", { recursive: true });

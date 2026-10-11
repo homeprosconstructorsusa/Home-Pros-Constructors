@@ -249,3 +249,27 @@ test("live PostgreSQL publishes a license and preserves changes on reseed", asyn
     await pool.end();
   }
 });
+
+test("Boston shows six original portrait cards; other cities do not reuse them", async ({ page }) => {
+  await page.goto("/cities/boston");
+  const gallery = page.getByRole("region", { name: "Imagens de Boston" });
+  await expect(gallery.locator("img")).toHaveCount(6);
+  for (const image of await gallery.locator("img").all()) {
+    await image.scrollIntoViewIfNeeded();
+    await expect(image).toBeVisible();
+    await expect.poll(() => image.evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+  }
+  await page.locator(".brand-logo").first().scrollIntoViewIfNeeded();
+  await expect(page.locator(".brand-logo-source").first()).toBeVisible();
+  await page.screenshot({ path: "/tmp/homepros-boston-cards.png", fullPage: true });
+  await page.goto("/cities/cambridge");
+  await expect(page.getByRole("region", { name: "Imagens de Cambridge" })).toHaveCount(0);
+  await page.goto("http://127.0.0.1:3102/homepros-preview.html#/cities/boston");
+  const offlineGallery = page.getByRole("region", { name: "Imagens de Boston" });
+  await expect(offlineGallery.locator("img")).toHaveCount(6);
+  for (const image of await offlineGallery.locator("img").all()) {
+    await image.scrollIntoViewIfNeeded();
+    await expect(image).toHaveAttribute("src", /^data:image\/png;base64,/);
+    await expect.poll(() => image.evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBe(1122);
+  }
+});

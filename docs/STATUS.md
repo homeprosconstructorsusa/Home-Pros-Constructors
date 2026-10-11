@@ -22,7 +22,7 @@ Existiam arquivos Next.js/Tailwind, páginas inicial, catálogo vazio, detalhe e
 
 ## Pendente
 
-- Receber e inserir as seis fotografias do proprietário, com sua ordem e descrições.
+- Receber as imagens específicas das outras 350 cidades. As seis artes de Boston já estão inseridas somente em Boston; a logo do último card está no cabeçalho, rodapé e ícone. Um arquivo separado da logo poderá substituir o enquadramento atual.
 - Aprovação visual, final do texto/contrato e ofertas de cada cidade.
 - Indicadores populacionais/econômicos específicos das outras 350 cidades.
 - Painel administrativo web com autenticação, caso seja solicitado; hoje o gerenciamento é local.
@@ -34,6 +34,6 @@ A prévia não efetua vendas. Valores do modelo de Boston são aplicados às cid
 
 ## Validação nesta máquina
 
-Instalação com lockfile, lint, TypeScript e build de produção passaram. Seis testes de dados/cálculo e oito testes de navegador passaram, incluindo os modos demonstrativo e PostgreSQL real, preservação de ofertas ao reexecutar o seed, filtros, páginas, carrinho, HTML autocontido e layout de desktop/celular. O teste do banco restaurou os dados temporários; os 351 registros reais continuam em rascunho.
+Instalação com lockfile, lint, TypeScript e build de produção passaram. Seis testes de dados/cálculo e nove testes de navegador passaram, incluindo os modos demonstrativo e PostgreSQL real, preservação de ofertas ao reexecutar o seed, filtros, páginas, carrinho, HTML autocontido e layout de desktop/celular. O teste do banco restaurou os dados temporários; os 351 registros reais continuam em rascunho.
 
 A prévia HTML foi testada por um servidor local, bloqueando todas as outras requisições de rede. A abertura direta por file:// não pôde ser testada no Chromium gerenciado por restrição administrativa; o arquivo não depende de servidor para renderização.

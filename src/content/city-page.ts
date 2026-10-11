@@ -2,12 +2,39 @@
 export type CityPagePhoto = { src: string; alt: string; caption?: string };
 export const cityPageContent: {
   introduction: string | null;
-  photos: CityPagePhoto[];
+  photosByCity: Record<string, CityPagePhoto[]>;
   sections: { title: string; body: string }[];
 } = {
   introduction:
     "Trabalhe de casa representando a Home Pros Constructors em {city}, com treinamento, materiais personalizados e suporte para atender clientes e comercializar serviços de marketing digital.\n\nAtendemos companhias de brasileiros e americanos nos Estados Unidos e no Canadá, ajudando profissionais da construção e de serviços residenciais a fortalecer sua presença na internet, divulgar seus trabalhos e alcançar mais clientes.\n\nVocê pode atuar de qualquer lugar do mundo, mesmo começando sem conhecimento de inglês. A capacitação começa pelo atendimento a brasileiros e inclui o aprendizado progressivo do idioma, preparando o licenciado para atender clientes americanos com maior autonomia.",
-  photos: [], // Waiting for the owner's six photographs, order and alt descriptions.
+  photosByCity: {
+    boston: [
+      {
+        src: "/photos/boston/card-01.png",
+        alt: "Boston: atendimento a brasileiros com treinamento e suporte; resultados dependem das vendas.",
+      },
+      {
+        src: "/photos/boston/card-02.png",
+        alt: "Trabalhe do Brasil e atenda Boston, de casa ou de qualquer lugar do mundo.",
+      },
+      {
+        src: "/photos/boston/card-03.png",
+        alt: "Comece atendendo brasileiros nos Estados Unidos e no Canadá, mesmo sem inglês.",
+      },
+      {
+        src: "/photos/boston/card-04.png",
+        alt: "Aprenda inglês com capacitação progressiva para ampliar sua atuação em Boston.",
+      },
+      {
+        src: "/photos/boston/card-05.png",
+        alt: "Você atende; a Home Pros produz websites, vídeos, logomarcas e gestão de redes sociais.",
+      },
+      {
+        src: "/photos/boston/card-06.png",
+        alt: "Parceiros para assessoria de vistos e imigração; comissões de 54% para marketing e 3% para residência permanente, conforme contrato.",
+      },
+    ],
+  },
   sections: [
     {
       title: "Serviços que comercializamos",
