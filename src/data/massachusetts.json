@@ -1,0 +1,2459 @@
+[
+  {
+    "name": "Abington",
+    "slug": "abington",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502300170"
+  },
+  {
+    "name": "Acton",
+    "slug": "acton",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501700380"
+  },
+  {
+    "name": "Acushnet",
+    "slug": "acushnet",
+    "county": "Bristol",
+    "kind": "town",
+    "geoid": "2500500520"
+  },
+  {
+    "name": "Adams",
+    "slug": "adams",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500300555"
+  },
+  {
+    "name": "Agawam Town",
+    "slug": "agawam-town",
+    "county": "Hampden",
+    "kind": "city",
+    "geoid": "2501300840"
+  },
+  {
+    "name": "Alford",
+    "slug": "alford",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500300975"
+  },
+  {
+    "name": "Amesbury Town",
+    "slug": "amesbury-town",
+    "county": "Essex",
+    "kind": "city",
+    "geoid": "2500901260"
+  },
+  {
+    "name": "Amherst Town",
+    "slug": "amherst-town",
+    "county": "Hampshire",
+    "kind": "city",
+    "geoid": "2501501370"
+  },
+  {
+    "name": "Andover",
+    "slug": "andover",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500901465"
+  },
+  {
+    "name": "Aquinnah",
+    "slug": "aquinnah",
+    "county": "Dukes",
+    "kind": "town",
+    "geoid": "2500701585"
+  },
+  {
+    "name": "Arlington",
+    "slug": "arlington",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501701605"
+  },
+  {
+    "name": "Ashburnham",
+    "slug": "ashburnham",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502701885"
+  },
+  {
+    "name": "Ashby",
+    "slug": "ashby",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501701955"
+  },
+  {
+    "name": "Ashfield",
+    "slug": "ashfield",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501102095"
+  },
+  {
+    "name": "Ashland",
+    "slug": "ashland",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501702130"
+  },
+  {
+    "name": "Athol",
+    "slug": "athol",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502702480"
+  },
+  {
+    "name": "Attleboro",
+    "slug": "attleboro",
+    "county": "Bristol",
+    "kind": "city",
+    "geoid": "2500502690"
+  },
+  {
+    "name": "Auburn",
+    "slug": "auburn",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502702760"
+  },
+  {
+    "name": "Avon",
+    "slug": "avon",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502102935"
+  },
+  {
+    "name": "Ayer",
+    "slug": "ayer",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501703005"
+  },
+  {
+    "name": "Barnstable Town",
+    "slug": "barnstable-town",
+    "county": "Barnstable",
+    "kind": "city",
+    "geoid": "2500103690"
+  },
+  {
+    "name": "Barre",
+    "slug": "barre",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502703740"
+  },
+  {
+    "name": "Becket",
+    "slug": "becket",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500304545"
+  },
+  {
+    "name": "Bedford",
+    "slug": "bedford",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501704615"
+  },
+  {
+    "name": "Belchertown",
+    "slug": "belchertown",
+    "county": "Hampshire",
+    "kind": "town",
+    "geoid": "2501504825"
+  },
+  {
+    "name": "Bellingham",
+    "slug": "bellingham",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502104930"
+  },
+  {
+    "name": "Belmont",
+    "slug": "belmont",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501705070"
+  },
+  {
+    "name": "Berkley",
+    "slug": "berkley",
+    "county": "Bristol",
+    "kind": "town",
+    "geoid": "2500505280"
+  },
+  {
+    "name": "Berlin",
+    "slug": "berlin",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502705490"
+  },
+  {
+    "name": "Bernardston",
+    "slug": "bernardston",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501105560"
+  },
+  {
+    "name": "Beverly",
+    "slug": "beverly",
+    "county": "Essex",
+    "kind": "city",
+    "geoid": "2500905595"
+  },
+  {
+    "name": "Billerica",
+    "slug": "billerica",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501705805"
+  },
+  {
+    "name": "Blackstone",
+    "slug": "blackstone",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502706015"
+  },
+  {
+    "name": "Blandford",
+    "slug": "blandford",
+    "county": "Hampden",
+    "kind": "town",
+    "geoid": "2501306085"
+  },
+  {
+    "name": "Bolton",
+    "slug": "bolton",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502706365"
+  },
+  {
+    "name": "Boston",
+    "slug": "boston",
+    "county": "Suffolk",
+    "kind": "city",
+    "geoid": "2502507000"
+  },
+  {
+    "name": "Bourne",
+    "slug": "bourne",
+    "county": "Barnstable",
+    "kind": "town",
+    "geoid": "2500107175"
+  },
+  {
+    "name": "Boxborough",
+    "slug": "boxborough",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501707350"
+  },
+  {
+    "name": "Boxford",
+    "slug": "boxford",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500907420"
+  },
+  {
+    "name": "Boylston",
+    "slug": "boylston",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502707525"
+  },
+  {
+    "name": "Braintree Town",
+    "slug": "braintree-town",
+    "county": "Norfolk",
+    "kind": "city",
+    "geoid": "2502107740"
+  },
+  {
+    "name": "Brewster",
+    "slug": "brewster",
+    "county": "Barnstable",
+    "kind": "town",
+    "geoid": "2500107980"
+  },
+  {
+    "name": "Bridgewater Town",
+    "slug": "bridgewater-town",
+    "county": "Plymouth",
+    "kind": "city",
+    "geoid": "2502308130"
+  },
+  {
+    "name": "Brimfield",
+    "slug": "brimfield",
+    "county": "Hampden",
+    "kind": "town",
+    "geoid": "2501308470"
+  },
+  {
+    "name": "Brockton",
+    "slug": "brockton",
+    "county": "Plymouth",
+    "kind": "city",
+    "geoid": "2502309000"
+  },
+  {
+    "name": "Brookfield",
+    "slug": "brookfield",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502709105"
+  },
+  {
+    "name": "Brookline",
+    "slug": "brookline",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502109175"
+  },
+  {
+    "name": "Buckland",
+    "slug": "buckland",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501109595"
+  },
+  {
+    "name": "Burlington",
+    "slug": "burlington",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501709840"
+  },
+  {
+    "name": "Cambridge",
+    "slug": "cambridge",
+    "county": "Middlesex",
+    "kind": "city",
+    "geoid": "2501711000"
+  },
+  {
+    "name": "Canton",
+    "slug": "canton",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502111315"
+  },
+  {
+    "name": "Carlisle",
+    "slug": "carlisle",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501711525"
+  },
+  {
+    "name": "Carver",
+    "slug": "carver",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502311665"
+  },
+  {
+    "name": "Charlemont",
+    "slug": "charlemont",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501112505"
+  },
+  {
+    "name": "Charlton",
+    "slug": "charlton",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502712715"
+  },
+  {
+    "name": "Chatham",
+    "slug": "chatham",
+    "county": "Barnstable",
+    "kind": "town",
+    "geoid": "2500112995"
+  },
+  {
+    "name": "Chelmsford",
+    "slug": "chelmsford",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501713135"
+  },
+  {
+    "name": "Chelsea",
+    "slug": "chelsea",
+    "county": "Suffolk",
+    "kind": "city",
+    "geoid": "2502513205"
+  },
+  {
+    "name": "Cheshire",
+    "slug": "cheshire",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500313345"
+  },
+  {
+    "name": "Chester",
+    "slug": "chester",
+    "county": "Hampden",
+    "kind": "town",
+    "geoid": "2501313485"
+  },
+  {
+    "name": "Chesterfield",
+    "slug": "chesterfield",
+    "county": "Hampshire",
+    "kind": "town",
+    "geoid": "2501513590"
+  },
+  {
+    "name": "Chicopee",
+    "slug": "chicopee",
+    "county": "Hampden",
+    "kind": "city",
+    "geoid": "2501313660"
+  },
+  {
+    "name": "Chilmark",
+    "slug": "chilmark",
+    "county": "Dukes",
+    "kind": "town",
+    "geoid": "2500713800"
+  },
+  {
+    "name": "Clarksburg",
+    "slug": "clarksburg",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500314010"
+  },
+  {
+    "name": "Clinton",
+    "slug": "clinton",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502714395"
+  },
+  {
+    "name": "Cohasset",
+    "slug": "cohasset",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502114640"
+  },
+  {
+    "name": "Colrain",
+    "slug": "colrain",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501114885"
+  },
+  {
+    "name": "Concord",
+    "slug": "concord",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501715060"
+  },
+  {
+    "name": "Conway",
+    "slug": "conway",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501115200"
+  },
+  {
+    "name": "Cummington",
+    "slug": "cummington",
+    "county": "Hampshire",
+    "kind": "town",
+    "geoid": "2501516040"
+  },
+  {
+    "name": "Dalton",
+    "slug": "dalton",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500316180"
+  },
+  {
+    "name": "Danvers",
+    "slug": "danvers",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500916250"
+  },
+  {
+    "name": "Dartmouth",
+    "slug": "dartmouth",
+    "county": "Bristol",
+    "kind": "town",
+    "geoid": "2500516425"
+  },
+  {
+    "name": "Dedham",
+    "slug": "dedham",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502116495"
+  },
+  {
+    "name": "Deerfield",
+    "slug": "deerfield",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501116670"
+  },
+  {
+    "name": "Dennis",
+    "slug": "dennis",
+    "county": "Barnstable",
+    "kind": "town",
+    "geoid": "2500116775"
+  },
+  {
+    "name": "Dighton",
+    "slug": "dighton",
+    "county": "Bristol",
+    "kind": "town",
+    "geoid": "2500516950"
+  },
+  {
+    "name": "Douglas",
+    "slug": "douglas",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502717300"
+  },
+  {
+    "name": "Dover",
+    "slug": "dover",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502117405"
+  },
+  {
+    "name": "Dracut",
+    "slug": "dracut",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501717475"
+  },
+  {
+    "name": "Dudley",
+    "slug": "dudley",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502717685"
+  },
+  {
+    "name": "Dunstable",
+    "slug": "dunstable",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501717825"
+  },
+  {
+    "name": "Duxbury",
+    "slug": "duxbury",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502317895"
+  },
+  {
+    "name": "East Bridgewater",
+    "slug": "east-bridgewater",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502318455"
+  },
+  {
+    "name": "East Brookfield",
+    "slug": "east-brookfield",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502718560"
+  },
+  {
+    "name": "East Longmeadow",
+    "slug": "east-longmeadow",
+    "county": "Hampden",
+    "kind": "town",
+    "geoid": "2501319645"
+  },
+  {
+    "name": "Eastham",
+    "slug": "eastham",
+    "county": "Barnstable",
+    "kind": "town",
+    "geoid": "2500119295"
+  },
+  {
+    "name": "Easthampton Town",
+    "slug": "easthampton-town",
+    "county": "Hampshire",
+    "kind": "city",
+    "geoid": "2501519370"
+  },
+  {
+    "name": "Easton",
+    "slug": "easton",
+    "county": "Bristol",
+    "kind": "town",
+    "geoid": "2500520100"
+  },
+  {
+    "name": "Edgartown",
+    "slug": "edgartown",
+    "county": "Dukes",
+    "kind": "town",
+    "geoid": "2500721150"
+  },
+  {
+    "name": "Egremont",
+    "slug": "egremont",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500321360"
+  },
+  {
+    "name": "Erving",
+    "slug": "erving",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501121780"
+  },
+  {
+    "name": "Essex",
+    "slug": "essex",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500921850"
+  },
+  {
+    "name": "Everett",
+    "slug": "everett",
+    "county": "Middlesex",
+    "kind": "city",
+    "geoid": "2501721990"
+  },
+  {
+    "name": "Fairhaven",
+    "slug": "fairhaven",
+    "county": "Bristol",
+    "kind": "town",
+    "geoid": "2500522130"
+  },
+  {
+    "name": "Fall River",
+    "slug": "fall-river",
+    "county": "Bristol",
+    "kind": "city",
+    "geoid": "2500523000"
+  },
+  {
+    "name": "Falmouth",
+    "slug": "falmouth",
+    "county": "Barnstable",
+    "kind": "town",
+    "geoid": "2500123105"
+  },
+  {
+    "name": "Fitchburg",
+    "slug": "fitchburg",
+    "county": "Worcester",
+    "kind": "city",
+    "geoid": "2502723875"
+  },
+  {
+    "name": "Florida",
+    "slug": "florida",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500324120"
+  },
+  {
+    "name": "Foxborough",
+    "slug": "foxborough",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502124820"
+  },
+  {
+    "name": "Framingham",
+    "slug": "framingham",
+    "county": "Middlesex",
+    "kind": "city",
+    "geoid": "2501724960"
+  },
+  {
+    "name": "Franklin Town",
+    "slug": "franklin-town",
+    "county": "Norfolk",
+    "kind": "city",
+    "geoid": "2502125172"
+  },
+  {
+    "name": "Freetown",
+    "slug": "freetown",
+    "county": "Bristol",
+    "kind": "town",
+    "geoid": "2500525240"
+  },
+  {
+    "name": "Gardner",
+    "slug": "gardner",
+    "county": "Worcester",
+    "kind": "city",
+    "geoid": "2502725485"
+  },
+  {
+    "name": "Georgetown",
+    "slug": "georgetown",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500925625"
+  },
+  {
+    "name": "Gill",
+    "slug": "gill",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501125730"
+  },
+  {
+    "name": "Gloucester",
+    "slug": "gloucester",
+    "county": "Essex",
+    "kind": "city",
+    "geoid": "2500926150"
+  },
+  {
+    "name": "Goshen",
+    "slug": "goshen",
+    "county": "Hampshire",
+    "kind": "town",
+    "geoid": "2501526290"
+  },
+  {
+    "name": "Gosnold",
+    "slug": "gosnold",
+    "county": "Dukes",
+    "kind": "town",
+    "geoid": "2500726325"
+  },
+  {
+    "name": "Grafton",
+    "slug": "grafton",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502726430"
+  },
+  {
+    "name": "Granby",
+    "slug": "granby",
+    "county": "Hampshire",
+    "kind": "town",
+    "geoid": "2501526535"
+  },
+  {
+    "name": "Granville",
+    "slug": "granville",
+    "county": "Hampden",
+    "kind": "town",
+    "geoid": "2501326675"
+  },
+  {
+    "name": "Great Barrington",
+    "slug": "great-barrington",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500326815"
+  },
+  {
+    "name": "Greenfield",
+    "slug": "greenfield",
+    "county": "Franklin",
+    "kind": "city",
+    "geoid": "2501127060"
+  },
+  {
+    "name": "Groton",
+    "slug": "groton",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501727480"
+  },
+  {
+    "name": "Groveland",
+    "slug": "groveland",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500927620"
+  },
+  {
+    "name": "Hadley",
+    "slug": "hadley",
+    "county": "Hampshire",
+    "kind": "town",
+    "geoid": "2501527690"
+  },
+  {
+    "name": "Halifax",
+    "slug": "halifax",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502327795"
+  },
+  {
+    "name": "Hamilton",
+    "slug": "hamilton",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500927900"
+  },
+  {
+    "name": "Hampden",
+    "slug": "hampden",
+    "county": "Hampden",
+    "kind": "town",
+    "geoid": "2501328075"
+  },
+  {
+    "name": "Hancock",
+    "slug": "hancock",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500328180"
+  },
+  {
+    "name": "Hanover",
+    "slug": "hanover",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502328285"
+  },
+  {
+    "name": "Hanson",
+    "slug": "hanson",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502328495"
+  },
+  {
+    "name": "Hardwick",
+    "slug": "hardwick",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502728740"
+  },
+  {
+    "name": "Harvard",
+    "slug": "harvard",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502728950"
+  },
+  {
+    "name": "Harwich",
+    "slug": "harwich",
+    "county": "Barnstable",
+    "kind": "town",
+    "geoid": "2500129020"
+  },
+  {
+    "name": "Hatfield",
+    "slug": "hatfield",
+    "county": "Hampshire",
+    "kind": "town",
+    "geoid": "2501529265"
+  },
+  {
+    "name": "Haverhill",
+    "slug": "haverhill",
+    "county": "Essex",
+    "kind": "city",
+    "geoid": "2500929405"
+  },
+  {
+    "name": "Hawley",
+    "slug": "hawley",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501129475"
+  },
+  {
+    "name": "Heath",
+    "slug": "heath",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501129650"
+  },
+  {
+    "name": "Hingham",
+    "slug": "hingham",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502330210"
+  },
+  {
+    "name": "Hinsdale",
+    "slug": "hinsdale",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500330315"
+  },
+  {
+    "name": "Holbrook",
+    "slug": "holbrook",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502130455"
+  },
+  {
+    "name": "Holden",
+    "slug": "holden",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502730560"
+  },
+  {
+    "name": "Holland",
+    "slug": "holland",
+    "county": "Hampden",
+    "kind": "town",
+    "geoid": "2501330665"
+  },
+  {
+    "name": "Holliston",
+    "slug": "holliston",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501730700"
+  },
+  {
+    "name": "Holyoke",
+    "slug": "holyoke",
+    "county": "Hampden",
+    "kind": "city",
+    "geoid": "2501330840"
+  },
+  {
+    "name": "Hopedale",
+    "slug": "hopedale",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502730945"
+  },
+  {
+    "name": "Hopkinton",
+    "slug": "hopkinton",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501731085"
+  },
+  {
+    "name": "Hubbardston",
+    "slug": "hubbardston",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502731435"
+  },
+  {
+    "name": "Hudson",
+    "slug": "hudson",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501731540"
+  },
+  {
+    "name": "Hull",
+    "slug": "hull",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502331645"
+  },
+  {
+    "name": "Huntington",
+    "slug": "huntington",
+    "county": "Hampshire",
+    "kind": "town",
+    "geoid": "2501531785"
+  },
+  {
+    "name": "Ipswich",
+    "slug": "ipswich",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500932310"
+  },
+  {
+    "name": "Kingston",
+    "slug": "kingston",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502333220"
+  },
+  {
+    "name": "Lakeville",
+    "slug": "lakeville",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502333920"
+  },
+  {
+    "name": "Lancaster",
+    "slug": "lancaster",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502734165"
+  },
+  {
+    "name": "Lanesborough",
+    "slug": "lanesborough",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500334340"
+  },
+  {
+    "name": "Lawrence",
+    "slug": "lawrence",
+    "county": "Essex",
+    "kind": "city",
+    "geoid": "2500934550"
+  },
+  {
+    "name": "Lee",
+    "slug": "lee",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500334655"
+  },
+  {
+    "name": "Leicester",
+    "slug": "leicester",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502734795"
+  },
+  {
+    "name": "Lenox",
+    "slug": "lenox",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500334970"
+  },
+  {
+    "name": "Leominster",
+    "slug": "leominster",
+    "county": "Worcester",
+    "kind": "city",
+    "geoid": "2502735075"
+  },
+  {
+    "name": "Leverett",
+    "slug": "leverett",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501135180"
+  },
+  {
+    "name": "Lexington",
+    "slug": "lexington",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501735215"
+  },
+  {
+    "name": "Leyden",
+    "slug": "leyden",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501135285"
+  },
+  {
+    "name": "Lincoln",
+    "slug": "lincoln",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501735425"
+  },
+  {
+    "name": "Littleton",
+    "slug": "littleton",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501735950"
+  },
+  {
+    "name": "Longmeadow",
+    "slug": "longmeadow",
+    "county": "Hampden",
+    "kind": "town",
+    "geoid": "2501336300"
+  },
+  {
+    "name": "Lowell",
+    "slug": "lowell",
+    "county": "Middlesex",
+    "kind": "city",
+    "geoid": "2501737000"
+  },
+  {
+    "name": "Ludlow",
+    "slug": "ludlow",
+    "county": "Hampden",
+    "kind": "town",
+    "geoid": "2501337175"
+  },
+  {
+    "name": "Lunenburg",
+    "slug": "lunenburg",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502737420"
+  },
+  {
+    "name": "Lynn",
+    "slug": "lynn",
+    "county": "Essex",
+    "kind": "city",
+    "geoid": "2500937490"
+  },
+  {
+    "name": "Lynnfield",
+    "slug": "lynnfield",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500937560"
+  },
+  {
+    "name": "Malden",
+    "slug": "malden",
+    "county": "Middlesex",
+    "kind": "city",
+    "geoid": "2501737875"
+  },
+  {
+    "name": "Manchester-by-the-Sea",
+    "slug": "manchester-by-the-sea",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500937995"
+  },
+  {
+    "name": "Mansfield",
+    "slug": "mansfield",
+    "county": "Bristol",
+    "kind": "town",
+    "geoid": "2500538225"
+  },
+  {
+    "name": "Marblehead",
+    "slug": "marblehead",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500938400"
+  },
+  {
+    "name": "Marion",
+    "slug": "marion",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502338540"
+  },
+  {
+    "name": "Marlborough",
+    "slug": "marlborough",
+    "county": "Middlesex",
+    "kind": "city",
+    "geoid": "2501738715"
+  },
+  {
+    "name": "Marshfield",
+    "slug": "marshfield",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502338855"
+  },
+  {
+    "name": "Mashpee",
+    "slug": "mashpee",
+    "county": "Barnstable",
+    "kind": "town",
+    "geoid": "2500139100"
+  },
+  {
+    "name": "Mattapoisett",
+    "slug": "mattapoisett",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502339450"
+  },
+  {
+    "name": "Maynard",
+    "slug": "maynard",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501739625"
+  },
+  {
+    "name": "Medfield",
+    "slug": "medfield",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502139765"
+  },
+  {
+    "name": "Medford",
+    "slug": "medford",
+    "county": "Middlesex",
+    "kind": "city",
+    "geoid": "2501739835"
+  },
+  {
+    "name": "Medway",
+    "slug": "medway",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502139975"
+  },
+  {
+    "name": "Melrose",
+    "slug": "melrose",
+    "county": "Middlesex",
+    "kind": "city",
+    "geoid": "2501740115"
+  },
+  {
+    "name": "Mendon",
+    "slug": "mendon",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502740255"
+  },
+  {
+    "name": "Merrimac",
+    "slug": "merrimac",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500940430"
+  },
+  {
+    "name": "Methuen Town",
+    "slug": "methuen-town",
+    "county": "Essex",
+    "kind": "city",
+    "geoid": "2500940710"
+  },
+  {
+    "name": "Middleborough",
+    "slug": "middleborough",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502340850"
+  },
+  {
+    "name": "Middlefield",
+    "slug": "middlefield",
+    "county": "Hampshire",
+    "kind": "town",
+    "geoid": "2501540990"
+  },
+  {
+    "name": "Middleton",
+    "slug": "middleton",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500941095"
+  },
+  {
+    "name": "Milford",
+    "slug": "milford",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502741165"
+  },
+  {
+    "name": "Millbury",
+    "slug": "millbury",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502741340"
+  },
+  {
+    "name": "Millis",
+    "slug": "millis",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502141515"
+  },
+  {
+    "name": "Millville",
+    "slug": "millville",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502741585"
+  },
+  {
+    "name": "Milton",
+    "slug": "milton",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502141690"
+  },
+  {
+    "name": "Monroe",
+    "slug": "monroe",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501142040"
+  },
+  {
+    "name": "Monson",
+    "slug": "monson",
+    "county": "Hampden",
+    "kind": "town",
+    "geoid": "2501342145"
+  },
+  {
+    "name": "Montague",
+    "slug": "montague",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501142285"
+  },
+  {
+    "name": "Monterey",
+    "slug": "monterey",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500342460"
+  },
+  {
+    "name": "Montgomery",
+    "slug": "montgomery",
+    "county": "Hampden",
+    "kind": "town",
+    "geoid": "2501342530"
+  },
+  {
+    "name": "Mount Washington",
+    "slug": "mount-washington",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500343300"
+  },
+  {
+    "name": "Nahant",
+    "slug": "nahant",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500943580"
+  },
+  {
+    "name": "Nantucket",
+    "slug": "nantucket",
+    "county": "Nantucket",
+    "kind": "town",
+    "geoid": "2501943790"
+  },
+  {
+    "name": "Natick",
+    "slug": "natick",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501743895"
+  },
+  {
+    "name": "Needham",
+    "slug": "needham",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502144105"
+  },
+  {
+    "name": "New Ashford",
+    "slug": "new-ashford",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500344385"
+  },
+  {
+    "name": "New Bedford",
+    "slug": "new-bedford",
+    "county": "Bristol",
+    "kind": "city",
+    "geoid": "2500545000"
+  },
+  {
+    "name": "New Braintree",
+    "slug": "new-braintree",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502745105"
+  },
+  {
+    "name": "New Marlborough",
+    "slug": "new-marlborough",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500345420"
+  },
+  {
+    "name": "New Salem",
+    "slug": "new-salem",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501145490"
+  },
+  {
+    "name": "Newbury",
+    "slug": "newbury",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500945175"
+  },
+  {
+    "name": "Newburyport",
+    "slug": "newburyport",
+    "county": "Essex",
+    "kind": "city",
+    "geoid": "2500945245"
+  },
+  {
+    "name": "Newton",
+    "slug": "newton",
+    "county": "Middlesex",
+    "kind": "city",
+    "geoid": "2501745560"
+  },
+  {
+    "name": "Norfolk",
+    "slug": "norfolk",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502146050"
+  },
+  {
+    "name": "North Adams",
+    "slug": "north-adams",
+    "county": "Berkshire",
+    "kind": "city",
+    "geoid": "2500346225"
+  },
+  {
+    "name": "North Andover",
+    "slug": "north-andover",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500946365"
+  },
+  {
+    "name": "North Attleborough Town",
+    "slug": "north-attleborough-town",
+    "county": "Bristol",
+    "kind": "city",
+    "geoid": "2500546598"
+  },
+  {
+    "name": "North Brookfield",
+    "slug": "north-brookfield",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502747135"
+  },
+  {
+    "name": "North Reading",
+    "slug": "north-reading",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501748955"
+  },
+  {
+    "name": "Northampton",
+    "slug": "northampton",
+    "county": "Hampshire",
+    "kind": "city",
+    "geoid": "2501546330"
+  },
+  {
+    "name": "Northborough",
+    "slug": "northborough",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502746820"
+  },
+  {
+    "name": "Northbridge",
+    "slug": "northbridge",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502746925"
+  },
+  {
+    "name": "Northfield",
+    "slug": "northfield",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501147835"
+  },
+  {
+    "name": "Norton",
+    "slug": "norton",
+    "county": "Bristol",
+    "kind": "town",
+    "geoid": "2500549970"
+  },
+  {
+    "name": "Norwell",
+    "slug": "norwell",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502350145"
+  },
+  {
+    "name": "Norwood",
+    "slug": "norwood",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502150250"
+  },
+  {
+    "name": "Oak Bluffs",
+    "slug": "oak-bluffs",
+    "county": "Dukes",
+    "kind": "town",
+    "geoid": "2500750390"
+  },
+  {
+    "name": "Oakham",
+    "slug": "oakham",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502750670"
+  },
+  {
+    "name": "Orange",
+    "slug": "orange",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501151265"
+  },
+  {
+    "name": "Orleans",
+    "slug": "orleans",
+    "county": "Barnstable",
+    "kind": "town",
+    "geoid": "2500151440"
+  },
+  {
+    "name": "Otis",
+    "slug": "otis",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500351580"
+  },
+  {
+    "name": "Oxford",
+    "slug": "oxford",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502751825"
+  },
+  {
+    "name": "Palmer Town",
+    "slug": "palmer-town",
+    "county": "Hampden",
+    "kind": "city",
+    "geoid": "2501352144"
+  },
+  {
+    "name": "Paxton",
+    "slug": "paxton",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502752420"
+  },
+  {
+    "name": "Peabody",
+    "slug": "peabody",
+    "county": "Essex",
+    "kind": "city",
+    "geoid": "2500952490"
+  },
+  {
+    "name": "Pelham",
+    "slug": "pelham",
+    "county": "Hampshire",
+    "kind": "town",
+    "geoid": "2501552560"
+  },
+  {
+    "name": "Pembroke",
+    "slug": "pembroke",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502352630"
+  },
+  {
+    "name": "Pepperell",
+    "slug": "pepperell",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501752805"
+  },
+  {
+    "name": "Peru",
+    "slug": "peru",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500353050"
+  },
+  {
+    "name": "Petersham",
+    "slug": "petersham",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502753120"
+  },
+  {
+    "name": "Phillipston",
+    "slug": "phillipston",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502753225"
+  },
+  {
+    "name": "Pittsfield",
+    "slug": "pittsfield",
+    "county": "Berkshire",
+    "kind": "city",
+    "geoid": "2500353960"
+  },
+  {
+    "name": "Plainfield",
+    "slug": "plainfield",
+    "county": "Hampshire",
+    "kind": "town",
+    "geoid": "2501554030"
+  },
+  {
+    "name": "Plainville",
+    "slug": "plainville",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502154100"
+  },
+  {
+    "name": "Plymouth",
+    "slug": "plymouth",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502354310"
+  },
+  {
+    "name": "Plympton",
+    "slug": "plympton",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502354415"
+  },
+  {
+    "name": "Princeton",
+    "slug": "princeton",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502755395"
+  },
+  {
+    "name": "Provincetown",
+    "slug": "provincetown",
+    "county": "Barnstable",
+    "kind": "town",
+    "geoid": "2500155500"
+  },
+  {
+    "name": "Quincy",
+    "slug": "quincy",
+    "county": "Norfolk",
+    "kind": "city",
+    "geoid": "2502155745"
+  },
+  {
+    "name": "Randolph Town",
+    "slug": "randolph-town",
+    "county": "Norfolk",
+    "kind": "city",
+    "geoid": "2502156000"
+  },
+  {
+    "name": "Raynham",
+    "slug": "raynham",
+    "county": "Bristol",
+    "kind": "town",
+    "geoid": "2500556060"
+  },
+  {
+    "name": "Reading",
+    "slug": "reading",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501756130"
+  },
+  {
+    "name": "Rehoboth",
+    "slug": "rehoboth",
+    "county": "Bristol",
+    "kind": "town",
+    "geoid": "2500556375"
+  },
+  {
+    "name": "Revere",
+    "slug": "revere",
+    "county": "Suffolk",
+    "kind": "city",
+    "geoid": "2502556585"
+  },
+  {
+    "name": "Richmond",
+    "slug": "richmond",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500356795"
+  },
+  {
+    "name": "Rochester",
+    "slug": "rochester",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502357600"
+  },
+  {
+    "name": "Rockland",
+    "slug": "rockland",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502357775"
+  },
+  {
+    "name": "Rockport",
+    "slug": "rockport",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500957880"
+  },
+  {
+    "name": "Rowe",
+    "slug": "rowe",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501158335"
+  },
+  {
+    "name": "Rowley",
+    "slug": "rowley",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500958405"
+  },
+  {
+    "name": "Royalston",
+    "slug": "royalston",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502758580"
+  },
+  {
+    "name": "Russell",
+    "slug": "russell",
+    "county": "Hampden",
+    "kind": "town",
+    "geoid": "2501358650"
+  },
+  {
+    "name": "Rutland",
+    "slug": "rutland",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502758825"
+  },
+  {
+    "name": "Salem",
+    "slug": "salem",
+    "county": "Essex",
+    "kind": "city",
+    "geoid": "2500959105"
+  },
+  {
+    "name": "Salisbury",
+    "slug": "salisbury",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500959245"
+  },
+  {
+    "name": "Sandisfield",
+    "slug": "sandisfield",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500359665"
+  },
+  {
+    "name": "Sandwich",
+    "slug": "sandwich",
+    "county": "Barnstable",
+    "kind": "town",
+    "geoid": "2500159735"
+  },
+  {
+    "name": "Saugus",
+    "slug": "saugus",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500960015"
+  },
+  {
+    "name": "Savoy",
+    "slug": "savoy",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500360225"
+  },
+  {
+    "name": "Scituate",
+    "slug": "scituate",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502360330"
+  },
+  {
+    "name": "Seekonk",
+    "slug": "seekonk",
+    "county": "Bristol",
+    "kind": "town",
+    "geoid": "2500560645"
+  },
+  {
+    "name": "Sharon",
+    "slug": "sharon",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502160785"
+  },
+  {
+    "name": "Sheffield",
+    "slug": "sheffield",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500361065"
+  },
+  {
+    "name": "Shelburne",
+    "slug": "shelburne",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501161135"
+  },
+  {
+    "name": "Sherborn",
+    "slug": "sherborn",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501761380"
+  },
+  {
+    "name": "Shirley",
+    "slug": "shirley",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501761590"
+  },
+  {
+    "name": "Shrewsbury",
+    "slug": "shrewsbury",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502761800"
+  },
+  {
+    "name": "Shutesbury",
+    "slug": "shutesbury",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501161905"
+  },
+  {
+    "name": "Somerset",
+    "slug": "somerset",
+    "county": "Bristol",
+    "kind": "town",
+    "geoid": "2500562430"
+  },
+  {
+    "name": "Somerville",
+    "slug": "somerville",
+    "county": "Middlesex",
+    "kind": "city",
+    "geoid": "2501762535"
+  },
+  {
+    "name": "South Hadley",
+    "slug": "south-hadley",
+    "county": "Hampshire",
+    "kind": "town",
+    "geoid": "2501564145"
+  },
+  {
+    "name": "Southampton",
+    "slug": "southampton",
+    "county": "Hampshire",
+    "kind": "town",
+    "geoid": "2501562745"
+  },
+  {
+    "name": "Southborough",
+    "slug": "southborough",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502763165"
+  },
+  {
+    "name": "Southbridge Town",
+    "slug": "southbridge-town",
+    "county": "Worcester",
+    "kind": "city",
+    "geoid": "2502763345"
+  },
+  {
+    "name": "Southwick",
+    "slug": "southwick",
+    "county": "Hampden",
+    "kind": "town",
+    "geoid": "2501365825"
+  },
+  {
+    "name": "Spencer",
+    "slug": "spencer",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502766105"
+  },
+  {
+    "name": "Springfield",
+    "slug": "springfield",
+    "county": "Hampden",
+    "kind": "city",
+    "geoid": "2501367000"
+  },
+  {
+    "name": "Sterling",
+    "slug": "sterling",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502767385"
+  },
+  {
+    "name": "Stockbridge",
+    "slug": "stockbridge",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500367595"
+  },
+  {
+    "name": "Stoneham",
+    "slug": "stoneham",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501767665"
+  },
+  {
+    "name": "Stoughton",
+    "slug": "stoughton",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502167945"
+  },
+  {
+    "name": "Stow",
+    "slug": "stow",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501768050"
+  },
+  {
+    "name": "Sturbridge",
+    "slug": "sturbridge",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502768155"
+  },
+  {
+    "name": "Sudbury",
+    "slug": "sudbury",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501768260"
+  },
+  {
+    "name": "Sunderland",
+    "slug": "sunderland",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501168400"
+  },
+  {
+    "name": "Sutton",
+    "slug": "sutton",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502768610"
+  },
+  {
+    "name": "Swampscott",
+    "slug": "swampscott",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500968645"
+  },
+  {
+    "name": "Swansea",
+    "slug": "swansea",
+    "county": "Bristol",
+    "kind": "town",
+    "geoid": "2500568750"
+  },
+  {
+    "name": "Taunton",
+    "slug": "taunton",
+    "county": "Bristol",
+    "kind": "city",
+    "geoid": "2500569170"
+  },
+  {
+    "name": "Templeton",
+    "slug": "templeton",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502769275"
+  },
+  {
+    "name": "Tewksbury",
+    "slug": "tewksbury",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501769415"
+  },
+  {
+    "name": "Tisbury",
+    "slug": "tisbury",
+    "county": "Dukes",
+    "kind": "town",
+    "geoid": "2500769940"
+  },
+  {
+    "name": "Tolland",
+    "slug": "tolland",
+    "county": "Hampden",
+    "kind": "town",
+    "geoid": "2501370045"
+  },
+  {
+    "name": "Topsfield",
+    "slug": "topsfield",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500970150"
+  },
+  {
+    "name": "Townsend",
+    "slug": "townsend",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501770360"
+  },
+  {
+    "name": "Truro",
+    "slug": "truro",
+    "county": "Barnstable",
+    "kind": "town",
+    "geoid": "2500170605"
+  },
+  {
+    "name": "Tyngsborough",
+    "slug": "tyngsborough",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501771025"
+  },
+  {
+    "name": "Tyringham",
+    "slug": "tyringham",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500371095"
+  },
+  {
+    "name": "Upton",
+    "slug": "upton",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502771480"
+  },
+  {
+    "name": "Uxbridge",
+    "slug": "uxbridge",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502771620"
+  },
+  {
+    "name": "Wakefield",
+    "slug": "wakefield",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501772215"
+  },
+  {
+    "name": "Wales",
+    "slug": "wales",
+    "county": "Hampden",
+    "kind": "town",
+    "geoid": "2501372390"
+  },
+  {
+    "name": "Walpole",
+    "slug": "walpole",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502172495"
+  },
+  {
+    "name": "Waltham",
+    "slug": "waltham",
+    "county": "Middlesex",
+    "kind": "city",
+    "geoid": "2501772600"
+  },
+  {
+    "name": "Ware",
+    "slug": "ware",
+    "county": "Hampshire",
+    "kind": "town",
+    "geoid": "2501572880"
+  },
+  {
+    "name": "Wareham",
+    "slug": "wareham",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502372985"
+  },
+  {
+    "name": "Warren",
+    "slug": "warren",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502773090"
+  },
+  {
+    "name": "Warwick",
+    "slug": "warwick",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501173265"
+  },
+  {
+    "name": "Washington",
+    "slug": "washington",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500373335"
+  },
+  {
+    "name": "Watertown Town",
+    "slug": "watertown-town",
+    "county": "Middlesex",
+    "kind": "city",
+    "geoid": "2501773440"
+  },
+  {
+    "name": "Wayland",
+    "slug": "wayland",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501773790"
+  },
+  {
+    "name": "Webster",
+    "slug": "webster",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502773895"
+  },
+  {
+    "name": "Wellesley",
+    "slug": "wellesley",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502174175"
+  },
+  {
+    "name": "Wellfleet",
+    "slug": "wellfleet",
+    "county": "Barnstable",
+    "kind": "town",
+    "geoid": "2500174385"
+  },
+  {
+    "name": "Wendell",
+    "slug": "wendell",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501174525"
+  },
+  {
+    "name": "Wenham",
+    "slug": "wenham",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500974595"
+  },
+  {
+    "name": "West Boylston",
+    "slug": "west-boylston",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502775155"
+  },
+  {
+    "name": "West Bridgewater",
+    "slug": "west-bridgewater",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502375260"
+  },
+  {
+    "name": "West Brookfield",
+    "slug": "west-brookfield",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502775400"
+  },
+  {
+    "name": "West Newbury",
+    "slug": "west-newbury",
+    "county": "Essex",
+    "kind": "town",
+    "geoid": "2500977150"
+  },
+  {
+    "name": "West Springfield Town",
+    "slug": "west-springfield-town",
+    "county": "Hampden",
+    "kind": "city",
+    "geoid": "2501377890"
+  },
+  {
+    "name": "West Stockbridge",
+    "slug": "west-stockbridge",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500377990"
+  },
+  {
+    "name": "West Tisbury",
+    "slug": "west-tisbury",
+    "county": "Dukes",
+    "kind": "town",
+    "geoid": "2500778235"
+  },
+  {
+    "name": "Westborough",
+    "slug": "westborough",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502775015"
+  },
+  {
+    "name": "Westfield",
+    "slug": "westfield",
+    "county": "Hampden",
+    "kind": "city",
+    "geoid": "2501376030"
+  },
+  {
+    "name": "Westford",
+    "slug": "westford",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501776135"
+  },
+  {
+    "name": "Westhampton",
+    "slug": "westhampton",
+    "county": "Hampshire",
+    "kind": "town",
+    "geoid": "2501576380"
+  },
+  {
+    "name": "Westminster",
+    "slug": "westminster",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502777010"
+  },
+  {
+    "name": "Weston",
+    "slug": "weston",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501777255"
+  },
+  {
+    "name": "Westport",
+    "slug": "westport",
+    "county": "Bristol",
+    "kind": "town",
+    "geoid": "2500577570"
+  },
+  {
+    "name": "Westwood",
+    "slug": "westwood",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502178690"
+  },
+  {
+    "name": "Weymouth Town",
+    "slug": "weymouth-town",
+    "county": "Norfolk",
+    "kind": "city",
+    "geoid": "2502178972"
+  },
+  {
+    "name": "Whately",
+    "slug": "whately",
+    "county": "Franklin",
+    "kind": "town",
+    "geoid": "2501179110"
+  },
+  {
+    "name": "Whitman",
+    "slug": "whitman",
+    "county": "Plymouth",
+    "kind": "town",
+    "geoid": "2502379530"
+  },
+  {
+    "name": "Wilbraham",
+    "slug": "wilbraham",
+    "county": "Hampden",
+    "kind": "town",
+    "geoid": "2501379740"
+  },
+  {
+    "name": "Williamsburg",
+    "slug": "williamsburg",
+    "county": "Hampshire",
+    "kind": "town",
+    "geoid": "2501579915"
+  },
+  {
+    "name": "Williamstown",
+    "slug": "williamstown",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500379985"
+  },
+  {
+    "name": "Wilmington",
+    "slug": "wilmington",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501780230"
+  },
+  {
+    "name": "Winchendon",
+    "slug": "winchendon",
+    "county": "Worcester",
+    "kind": "town",
+    "geoid": "2502780405"
+  },
+  {
+    "name": "Winchester",
+    "slug": "winchester",
+    "county": "Middlesex",
+    "kind": "town",
+    "geoid": "2501780510"
+  },
+  {
+    "name": "Windsor",
+    "slug": "windsor",
+    "county": "Berkshire",
+    "kind": "town",
+    "geoid": "2500380685"
+  },
+  {
+    "name": "Winthrop Town",
+    "slug": "winthrop-town",
+    "county": "Suffolk",
+    "kind": "city",
+    "geoid": "2502581005"
+  },
+  {
+    "name": "Woburn",
+    "slug": "woburn",
+    "county": "Middlesex",
+    "kind": "city",
+    "geoid": "2501781035"
+  },
+  {
+    "name": "Worcester",
+    "slug": "worcester",
+    "county": "Worcester",
+    "kind": "city",
+    "geoid": "2502782000"
+  },
+  {
+    "name": "Worthington",
+    "slug": "worthington",
+    "county": "Hampshire",
+    "kind": "town",
+    "geoid": "2501582175"
+  },
+  {
+    "name": "Wrentham",
+    "slug": "wrentham",
+    "county": "Norfolk",
+    "kind": "town",
+    "geoid": "2502182315"
+  },
+  {
+    "name": "Yarmouth",
+    "slug": "yarmouth",
+    "county": "Barnstable",
+    "kind": "town",
+    "geoid": "2500182525"
+  }
+]

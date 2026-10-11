@@ -1,0 +1,32 @@
+generator client {
+ provider = "prisma-client"
+ output = "../src/generated/prisma"
+}
+datasource db {
+ provider = "postgresql"
+}
+enum LicenseStatus {
+ DRAFT
+ AVAILABLE
+ RESERVED
+ SOLD
+}
+model CityLicense {
+ id String @id @default(cuid())
+ slug String @unique
+ city String
+ county String
+ kind String
+ geoid String @unique
+ state String @default("MA")
+ description String?
+ depositCents Int?
+ totalPriceCents Int?
+ installmentCount Int?
+ currency String @default("BRL")
+ status LicenseStatus @default(DRAFT)
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@unique([state, city])
+ @@index([state, status])
+}
