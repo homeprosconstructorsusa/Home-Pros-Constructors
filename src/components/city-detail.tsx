@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CityAlbum } from "./city-album";
 import type { CityLicense } from "@/lib/license";
 import {
   isPurchasable,
@@ -32,6 +33,9 @@ export function CityDetail({
           <p className="intro">
             Home Pros Constructors — Licença de Uso da Cidade
           </p>
+          {cityPageContent.photosByCity[license.slug]?.length ? (
+            <CityAlbum slug={license.slug} city={license.city} county={license.county} />
+          ) : (
           <div className="territory-panel">
             <div className="territory-lines" aria-hidden="true" />
             <div className="relative">
@@ -47,6 +51,7 @@ export function CityDetail({
               </p>
             </div>
           </div>
+          )}
           <div className="mt-10">
             <h2 className="text-2xl font-semibold">
               Representar a Home Pros em {license.city}
@@ -77,7 +82,6 @@ export function CityDetail({
             </div>
           </div>
           <CityContent
-            slug={license.slug}
             city={license.city}
             county={license.county}
           />

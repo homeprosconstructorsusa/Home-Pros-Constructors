@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { CityAlbum } from "./city-album";
 import type { CityLicense } from "@/lib/license";
 import { money, statusLabels } from "@/lib/license";
 export function CatalogBrowser({
@@ -129,11 +130,12 @@ export function CatalogBrowser({
       ) : (
         <div className="city-grid">
           {filtered.map((city) => (
-            <Link
-              href={`/cities/${city.slug}`}
+            <article
               className="city-card"
               key={city.slug}
             >
+              <CityAlbum slug={city.slug} city={city.city} county={city.county} compact />
+              <Link href={`/cities/${city.slug}`} className="block" aria-label={`Ver detalhes de ${city.city}`}>
               <div className="flex justify-between items-center gap-3">
                 <span className={`badge status-${city.status.toLowerCase()}`}>
                   {statusLabels[city.status]}
@@ -159,7 +161,8 @@ export function CatalogBrowser({
                 </div>
                 <span className="text-xs text-stone-500">Ver detalhes →</span>
               </div>
-            </Link>
+              </Link>
+            </article>
           ))}
         </div>
       )}

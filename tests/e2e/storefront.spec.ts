@@ -250,26 +250,38 @@ test("live PostgreSQL publishes a license and preserves changes on reseed", asyn
   }
 });
 
-test("Boston shows six original portrait cards; other cities do not reuse them", async ({ page }) => {
-  await page.goto("/cities/boston");
-  const gallery = page.getByRole("region", { name: "Imagens de Boston" });
-  await expect(gallery.locator("img")).toHaveCount(6);
-  for (const image of await gallery.locator("img").all()) {
-    await image.scrollIntoViewIfNeeded();
-    await expect(image).toBeVisible();
-    await expect.poll(() => image.evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+test("City albums can be read before entering details and enlarged offline", async ({ page }) => {
+  await page.goto("/states/massachusetts");
+  await page.getByLabel("Buscar cidades").fill("Boston");
+  const album = page.getByRole("region", { name: "Álbum de Boston", exact: true });
+  await album.getByRole("button", { name: "Ampliar cards de Boston" }).click();
+  const dialog = page.getByRole("dialog", { name: "Cards de Boston ampliados" });
+  await expect(dialog).toBeVisible();
+  await dialog.getByRole("button", { name: "Próximo card" }).click();
+  await expect(dialog).toContainText("Card 2 de 6");
+  await page.keyboard.press("ArrowLeft");
+  await expect(dialog).toContainText("Card 1 de 6");
+  await page.keyboard.press("Escape");
+  await expect(dialog).not.toBeVisible();
+  await expect(album.getByRole("button", { name: "Ampliar cards de Boston" })).toBeFocused();
+  await page.getByRole("link", { name: "Ver detalhes de Boston" }).click();
+  const detailAlbum = page.getByRole("region", { name: "Álbum de Boston", exact: true });
+  for (let index = 1; index <= 6; index++) {
+    await detailAlbum.getByRole("button", { name: `Ver card ${index}`, exact: true }).click();
+    await expect(detailAlbum.getByRole("button", { name: "Ampliar cards de Boston" }).locator("img")).toBeVisible();
+    await expect.poll(() => detailAlbum.locator(".album-cover img").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
   }
-  await page.locator(".brand-logo").first().scrollIntoViewIfNeeded();
-  await expect(page.locator(".brand-logo-source").first()).toBeVisible();
-  await page.screenshot({ path: "/tmp/homepros-boston-cards.png", fullPage: true });
+  await page.screenshot({ path: "/tmp/homepros-boston-album.png", fullPage: true });
   await page.goto("/cities/cambridge");
-  await expect(page.getByRole("region", { name: "Imagens de Cambridge" })).toHaveCount(0);
+  await expect(page.getByRole("region", { name: "Álbum de Cambridge" })).toHaveCount(0);
   await page.goto("http://127.0.0.1:3102/homepros-preview.html#/cities/boston");
-  const offlineGallery = page.getByRole("region", { name: "Imagens de Boston" });
-  await expect(offlineGallery.locator("img")).toHaveCount(6);
-  for (const image of await offlineGallery.locator("img").all()) {
-    await image.scrollIntoViewIfNeeded();
-    await expect(image).toHaveAttribute("src", /^data:image\/png;base64,/);
-    await expect.poll(() => image.evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBe(1122);
-  }
+  await page.getByRole("button", { name: "Ver card 3", exact: true }).click();
+  await page.getByRole("button", { name: "Ampliar cards de Boston" }).click();
+  const offlineDialog = page.getByRole("dialog");
+  await expect(offlineDialog).toContainText("Card 3 de 6");
+  await expect(offlineDialog.locator("img")).toHaveAttribute("src", /^data:image\/png;base64,/);
+  await expect.poll(() => offlineDialog.locator("img").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBe(1122);
+  await offlineDialog.getByRole("button", { name: "Fechar" }).click();
+  await page.setViewportSize({ width: 390, height: 844 });
+  await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 });
