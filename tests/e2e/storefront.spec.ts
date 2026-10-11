@@ -175,6 +175,7 @@ test("desktop design screenshots", async ({ page }) => {
   await page.screenshot({ path: "/tmp/homepros-cart-background.png", fullPage: true });
   await page.goto("/states/massachusetts");
   await page.getByLabel("Buscar cidades").fill("Cambridge");
+  await expect.poll(() => page.locator(".page-backdrop-catalog img").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
   await page.screenshot({ path: "/tmp/homepros-catalog.png", fullPage: true });
 });
 test("live PostgreSQL publishes a license and preserves changes on reseed", async ({

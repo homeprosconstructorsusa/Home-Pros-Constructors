@@ -195,3 +195,9 @@ input, select, button { font: inherit; }
 .page-backdrop-abington .scene-image { opacity: .34; object-position: 70% top; }
 .abington-scene .summary-card { background: #ffffffde; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
 @media (max-width: 640px) { .page-backdrop-market .scene-image { opacity: .18; } .page-backdrop-abington .scene-image { opacity: .25; } }
+
+.page-backdrop-catalog .scene-image { opacity: .38; object-position: 75% top; }
+.catalog-scene .scene-gradient { background: linear-gradient(90deg, #f8faf8e8, #f8faf84d), linear-gradient(0deg, #f8faf8 0%, #f8faf800 75%); }
+.catalog-scene .filter-bar { background: #edf2ede8; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.catalog-scene .city-card { background: #fffffff0; }
+@media (max-width: 640px) { .page-backdrop-catalog .scene-image { opacity: .3; object-position: 68% top; } .catalog-scene .scene-gradient { background: linear-gradient(90deg, #f8faf8d9, #f8faf88c), linear-gradient(0deg, #f8faf8, #f8faf800 75%); } }

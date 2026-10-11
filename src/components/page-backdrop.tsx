@@ -6,6 +6,7 @@ const scenes = {
   abington: "/photos/backgrounds/home.png",
   boston: "/photos/backgrounds/boston.png",
   cart: "/photos/backgrounds/cart.png",
+  catalog: "/photos/backgrounds/cart.png",
 };
 
 export function PageBackdrop({ scene }: { scene: keyof typeof scenes }) {

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { CityAlbum } from "./city-album";
+import { PageBackdrop } from "./page-backdrop";
 import type { CityLicense } from "@/lib/license";
 import { money, statusLabels } from "@/lib/license";
 export function CatalogBrowser({
@@ -22,6 +23,8 @@ export function CatalogBrowser({
       (!status || city.status === status),
   );
   return (
+    <div className="page-scene catalog-scene">
+      <PageBackdrop scene="catalog" />
     <section className="shell page-space">
       <Link href="/" className="back-link">
         ← Todos os estados
@@ -172,5 +175,6 @@ export function CatalogBrowser({
         comercial.
       </p>
     </section>
+    </div>
   );
 }
