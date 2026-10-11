@@ -3,38 +3,20 @@ export type CityPagePhoto = { src: string; alt: string; caption?: string };
 export const cityPageContent: {
   introduction: string | null;
   photosByCity: Record<string, CityPagePhoto[]>;
+  generalPhotos: CityPagePhoto[];
   sections: { title: string; body: string }[];
 } = {
   introduction:
-    "Trabalhe de casa representando a Home Pros Constructors em {city}, com treinamento, materiais personalizados e suporte para atender clientes e comercializar serviços de marketing digital.\n\nAtendemos companhias de brasileiros e americanos nos Estados Unidos e no Canadá, ajudando profissionais da construção e de serviços residenciais a fortalecer sua presença na internet, divulgar seus trabalhos e alcançar mais clientes.\n\nVocê pode atuar de qualquer lugar do mundo, mesmo começando sem conhecimento de inglês. A capacitação começa pelo atendimento a brasileiros e inclui o aprendizado progressivo do idioma, preparando o licenciado para atender clientes americanos com maior autonomia.",
-  photosByCity: {
-    boston: [
-      {
-        src: "/photos/boston/card-01.png",
-        alt: "Boston: atendimento a brasileiros com treinamento e suporte; resultados dependem das vendas.",
-      },
-      {
-        src: "/photos/boston/card-02.png",
-        alt: "Trabalhe do Brasil e atenda Boston, de casa ou de qualquer lugar do mundo.",
-      },
-      {
-        src: "/photos/boston/card-03.png",
-        alt: "Comece atendendo brasileiros nos Estados Unidos e no Canadá, mesmo sem inglês.",
-      },
-      {
-        src: "/photos/boston/card-04.png",
-        alt: "Aprenda inglês com capacitação progressiva para ampliar sua atuação em Boston.",
-      },
-      {
-        src: "/photos/boston/card-05.png",
-        alt: "Você atende; a Home Pros produz websites, vídeos, logomarcas e gestão de redes sociais.",
-      },
-      {
-        src: "/photos/boston/card-06.png",
-        alt: "Parceiros para assessoria de vistos e imigração; comissões de 54% para marketing e 3% para residência permanente, conforme contrato.",
-      },
-    ],
-  },
+    "Trabalhe de casa representando a Home Pros Constructors em {city}, com treinamento, materiais personalizados e suporte para atender clientes e comercializar serviços de marketing digital.\n\nAtendemos companhias de brasileiros e americanos nos Estados Unidos e no Canadá, ajudando profissionais da construção e de serviços residenciais a fortalecer sua presença na internet, divulgar seus trabalhos e alcançar mais clientes.\n\nVocê pode atuar de qualquer lugar do mundo, mesmo começando sem conhecimento de inglês. A capacitação começa pelo atendimento a brasileiros. A Home Pros School, nossa escola de inglês, terá início das aulas no 1º trimestre de 2027, para apoiar o aprendizado progressivo do idioma e ampliar sua atuação.",
+  photosByCity: {},
+  generalPhotos: [
+    { src: "/photos/general/card-01.png", alt: "Ganhe em dólares, mesmo sem inglês. Comece atendendo brasileiros, com treinamento e suporte. Resultados dependem das vendas." },
+    { src: "/photos/general/card-02.png", alt: "Trabalhe de qualquer lugar do mundo. Atenda o mercado americano sem sair de casa." },
+    { src: "/photos/general/card-03.png", alt: "Comece com o que você já sabe. Use seu português para atender brasileiros nos Estados Unidos e no Canadá." },
+    { src: "/photos/general/card-04.png", alt: "Você atende. A Home Pros produz websites, vídeos, logomarcas e soluções de marketing digital." },
+    { src: "/photos/general/card-05.png", alt: "Conecte clientes a parceiros especializados em vistos e imigração. Comissões de 54% em marketing digital e 3% em serviços indicados ao advogado parceiro, conforme contrato." },
+    { src: "/photos/general/card-06.png", alt: "Conheça nossa escola de inglês: Home Pros School. Início das aulas: 1º trimestre de 2027." },
+  ],
   sections: [
     {
       title: "Serviços que comercializamos",
@@ -54,7 +36,7 @@ export const cityPageContent: {
     },
     {
       title: "Materiais e treinamento",
-      body: "O licenciado receberá:\n\n• Website direcionado à cidade de {city}.\n• Videoaulas e orientações para organizar a presença digital do projeto.\n• Treinamento para atendimento ao cliente e apresentação dos serviços.\n• Capacitação progressiva em inglês, do nível inicial ao atendimento com maior autonomia.\n• Arquivos personalizados para {city}, incluindo identidade visual, banners, descrições das redes sociais e textos para conteúdos.\n• Materiais para estruturar a presença do projeto no YouTube, Facebook, Instagram e X.\n• Suporte para desenvolver sua atuação na cidade de representação.",
+      body: "O licenciado receberá:\n\n• Website direcionado à cidade de {city}.\n• Videoaulas e orientações para organizar a presença digital do projeto.\n• Treinamento para atendimento ao cliente e apresentação dos serviços.\n• Home Pros School: escola de inglês com início das aulas no 1º trimestre de 2027.\n• Arquivos personalizados para {city}, incluindo identidade visual, banners, descrições das redes sociais e textos para conteúdos.\n• Materiais para estruturar a presença do projeto no YouTube, Facebook, Instagram e X.\n• Suporte para desenvolver sua atuação na cidade de representação.",
     },
     {
       title: "Projeção comercial — sem garantia de resultado",

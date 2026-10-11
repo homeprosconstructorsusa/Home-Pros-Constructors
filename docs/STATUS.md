@@ -11,6 +11,7 @@ Existiam arquivos Next.js/Tailwind, páginas inicial, catálogo vazio, detalhe e
 - Rota individual para cada cidade; modelo compartilhado com o texto enviado.
 - Comissões e estimativas conforme esclarecimento do responsável; projeções sem garantia.
 - Álbum de cards no catálogo e no topo da página, com navegação e ampliação acessível para leitura. Imagens dos álbuns e da página inicial reduzidas em 10% e depois em mais 15% sobre o tamanho ajustado (23,5% de redução acumulada), incluindo a prévia portátil.
+- Seis artes gerais aprovadas nas 351 cidades; Home Pros School por último, com início das aulas no 1º trimestre de 2027.
 - Perfil demográfico apenas em Boston, sem propagação de números para outras cidades.
 - Condições de pagamento do modelo em reais e separação de entrada, total e saldo.
 - Carrinho persistente, sem duplicidades, com remoção e limpeza.
@@ -24,7 +25,7 @@ Existiam arquivos Next.js/Tailwind, páginas inicial, catálogo vazio, detalhe e
 
 ## Pendente
 
-- Receber as imagens específicas das outras 350 cidades. As seis artes de Boston já estão inseridas somente em Boston; a logo do último card está no cabeçalho, rodapé e ícone. Um arquivo separado da logo poderá substituir o enquadramento atual.
+- Um arquivo separado da logo poderá substituir o enquadramento atual; a marca original já aparece no cabeçalho, rodapé e ícone.
 - Aprovação visual, final do texto/contrato e ofertas de cada cidade.
 - Indicadores populacionais/econômicos específicos das outras 350 cidades.
 - Painel administrativo web com autenticação, caso seja solicitado; hoje o gerenciamento é local.

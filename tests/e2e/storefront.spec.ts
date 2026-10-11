@@ -137,7 +137,7 @@ test("downloadable preview runs offline with catalog, pages and cart", async ({
     .click();
   await expect(page.locator(".city-card")).toHaveCount(351);
   await page.getByLabel("Buscar cidades").fill("Cambridge");
-  await page.locator(".city-card").click();
+  await page.getByRole("link", { name: "Ver detalhes de Cambridge" }).click();
   await page
     .getByRole("button", { name: "Adicionar licença ao carrinho" })
     .click();
@@ -254,6 +254,8 @@ test("live PostgreSQL publishes a license and preserves changes on reseed", asyn
 
 test("City albums can be read before entering details and enlarged offline", async ({ page }) => {
   await page.goto("/states/massachusetts");
+  await expect(page.locator(".city-card .city-album")).toHaveCount(351);
+  await expect(page.locator("dialog img")).toHaveCount(0);
   await page.getByLabel("Buscar cidades").fill("Boston");
   const album = page.getByRole("region", { name: "Álbum de Boston", exact: true });
   await album.getByRole("button", { name: "Ampliar cards de Boston" }).click();
@@ -275,15 +277,33 @@ test("City albums can be read before entering details and enlarged offline", asy
   }
   await page.screenshot({ path: "/tmp/homepros-boston-album.png", fullPage: true });
   await page.goto("/cities/cambridge");
-  await expect(page.getByRole("region", { name: "Álbum de Cambridge" })).toHaveCount(0);
+  const cambridgeAlbum = page.getByRole("region", { name: "Álbum de Cambridge", exact: true });
+  await expect(cambridgeAlbum).toBeVisible();
+  await cambridgeAlbum.getByRole("button", { name: "Ver card 6", exact: true }).click();
+  await expect(cambridgeAlbum.locator(".album-cover img")).toHaveAttribute("alt", /Home Pros School.*1º trimestre de 2027/);
+  await expect(cambridgeAlbum.locator(".album-cover img")).toHaveAttribute("src", /general/);
+  await page.goto("/cities/abington");
+  await expect(page.getByRole("region", { name: "Álbum de Abington", exact: true })).toBeVisible();
   await page.goto("http://127.0.0.1:3102/homepros-preview.html#/cities/boston");
   await page.getByRole("button", { name: "Ver card 3", exact: true }).click();
   await page.getByRole("button", { name: "Ampliar cards de Boston" }).click();
   const offlineDialog = page.getByRole("dialog");
   await expect(offlineDialog).toContainText("Card 3 de 6");
-  await expect(offlineDialog.locator("img")).toHaveAttribute("src", /^data:image\/png;base64,/);
+  await expect(offlineDialog.locator("img")).toHaveAttribute("src", /^blob:/);
   await expect.poll(() => offlineDialog.locator("img").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBe(1122);
   await offlineDialog.getByRole("button", { name: "Fechar" }).click();
+  await page.goto("http://127.0.0.1:3102/homepros-preview.html#/states/massachusetts");
+  await expect(page.locator(".city-card .city-album")).toHaveCount(351);
+  const covers = page.locator(".album-cover img");
+  const sources = await covers.evaluateAll((images) => images.map((img) => img.getAttribute("src")));
+  expect(new Set(sources).size).toBe(1);
+  await page.getByLabel("Buscar cidades").fill("Abington");
+  await page.getByRole("button", { name: "Ampliar cards de Abington" }).click();
+  const abingtonDialog = page.getByRole("dialog");
+  await abingtonDialog.getByRole("button", { name: "Card anterior" }).click();
+  await expect(abingtonDialog).toContainText("Card 6 de 6");
+  await expect(abingtonDialog.locator("img")).toHaveAttribute("alt", /Home Pros School.*2027/);
+  await abingtonDialog.getByRole("button", { name: "Fechar" }).click();
   await page.setViewportSize({ width: 390, height: 844 });
   await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 });

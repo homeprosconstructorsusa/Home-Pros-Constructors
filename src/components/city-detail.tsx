@@ -33,7 +33,7 @@ export function CityDetail({
           <p className="intro">
             Home Pros Constructors — Licença de Uso da Cidade
           </p>
-          {cityPageContent.photosByCity[license.slug]?.length ? (
+          {(cityPageContent.photosByCity[license.slug] ?? cityPageContent.generalPhotos).length ? (
             <CityAlbum slug={license.slug} city={license.city} county={license.county} />
           ) : (
           <div className="territory-panel">
