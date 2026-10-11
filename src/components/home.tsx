@@ -32,6 +32,8 @@ export function HomeContent() {
         <div><span>02 / ESTRUTURA</span><h2>Você atende. Nós produzimos.</h2><p>A Home Pros executa os serviços de marketing vendidos. Você desenvolve o relacionamento com os clientes.</p></div>
         <div><span>03 / APRENDIZADO</span><h2>Comece com apoio.</h2><p>Treinamento para atendimento e materiais personalizados. Home Pros School: aulas de inglês a partir do 1º trimestre de 2027.</p></div>
       </section>
+      <div className="page-scene home-states-scene">
+        <PageBackdrop scene="market" />
       <section id="states" className="shell py-16">
         <p className="text-xs font-bold uppercase tracking-[.2em] text-stone-500">
           Escolha seu mercado
@@ -64,6 +66,7 @@ export function HomeContent() {
           </div>
         </div>
       </section>
+      </div>
       <section id="how-it-works" className="shell home-process">
         <div className="home-process-heading"><p className="eyebrow">Um caminho claro para começar</p><h2>Da escolha da cidade ao seu próximo passo.</h2></div>
         <div className="grid gap-8 md:grid-cols-3">

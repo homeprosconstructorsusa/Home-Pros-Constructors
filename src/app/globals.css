@@ -186,3 +186,12 @@ input, select, button { font: inherit; }
 .site-footer { margin-top: 0; }
 @media (max-width: 900px) { .home-hero-grid { min-height: auto; padding-block: 54px 64px; gap: 50px; } .home-market-preview { width: min(380px, 100%); } .page-backdrop-home .scene-image { object-position: 70% center; } .page-backdrop-home .scene-gradient { background: linear-gradient(180deg, #f8faf8f2 0%, #f8faf8c4 45%, #f8faf81a 75%, #f8faf8 100%); } }
 @media (max-width: 640px) { .home-headline { font-size: 43px; } .home-market-preview { padding: 24px; margin-bottom: 0; } .home-hero-grid { gap: 140px; } .home-hero .page-backdrop { height: 100%; } .page-backdrop-home .scene-image { object-position: 68% center; } .page-backdrop-boston .scene-image { opacity: .18; } .page-backdrop-cart .scene-image { opacity: .3; object-position: 68% top; } .boston-scene .scene-gradient, .cart-scene .scene-gradient { background: linear-gradient(90deg, #f8faf8d9, #f8faf88c), linear-gradient(0deg, #f8faf8, #f8faf800 75%); } }
+
+/* Updated placements requested by the owner: Liberty at home, Franklin in
+   state selection, and the construction professional behind Abington. */
+.page-backdrop-market .scene-image { opacity: .25; object-position: center; }
+.home-states-scene .scene-gradient { background: linear-gradient(90deg, #f8faf8e8 0%, #f8faf866 100%), linear-gradient(0deg, #f8faf8 0%, #f8faf800 50%, #f8faf8 100%); }
+.home-states-scene #states > .grid > * { background: #ffffffd9; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.page-backdrop-abington .scene-image { opacity: .34; object-position: 70% top; }
+.abington-scene .summary-card { background: #ffffffde; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+@media (max-width: 640px) { .page-backdrop-market .scene-image { opacity: .18; } .page-backdrop-abington .scene-image { opacity: .25; } }

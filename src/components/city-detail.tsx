@@ -19,9 +19,10 @@ export function CityDetail({
   demo: boolean;
 }) {
   const plan = installments(license);
+  const scene = license.slug === "boston" ? "boston" : license.slug === "abington" ? "abington" : null;
   return (
-    <div className={`page-scene ${license.slug === "boston" ? "boston-scene" : ""}`}>
-      {license.slug === "boston" && <PageBackdrop scene="boston" />}
+    <div className={`page-scene ${scene ? `${scene}-scene` : ""}`}>
+      {scene && <PageBackdrop scene={scene} />}
     <section className="shell page-space">
       <Link href="/states/massachusetts" className="back-link">
         ← Cidades de Massachusetts

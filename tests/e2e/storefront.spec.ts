@@ -162,10 +162,14 @@ test("desktop design screenshots", async ({ page }) => {
   await expect(
     page.locator("main section").first().locator(".shell"),
   ).toHaveCSS("display", "grid");
+  await expect.poll(() => page.locator(".page-backdrop-market img").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
   await page.screenshot({ path: "/tmp/homepros-home.png", fullPage: true });
   await page.goto("/cities/boston");
   await expect.poll(() => page.locator(".page-backdrop-boston img").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
   await page.screenshot({ path: "/tmp/homepros-boston-background.png" });
+  await page.goto("/cities/abington");
+  await expect.poll(() => page.locator(".page-backdrop-abington img").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+  await page.screenshot({ path: "/tmp/homepros-abington-background.png" });
   await page.goto("/cart");
   await expect.poll(() => page.locator(".page-backdrop-cart img").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
   await page.screenshot({ path: "/tmp/homepros-cart-background.png", fullPage: true });
