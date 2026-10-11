@@ -129,7 +129,7 @@ test("downloadable preview runs offline with catalog, pages and cart", async ({
   );
   await page.goto("http://127.0.0.1:3102/homepros-preview.html");
   await expect(
-    page.getByRole("heading", { name: "Sua cidade." }),
+    page.getByRole("heading", { name: "HOME PROS CONSTRUCTORS", exact: true }),
   ).toBeVisible();
   await page
     .getByRole("link", { name: "Explorar cidades", exact: true })
@@ -156,7 +156,9 @@ test("desktop design screenshots", async ({ page }) => {
     "background-color",
     "rgb(16, 44, 40)",
   );
-  await expect(page.locator("h1")).toHaveCSS("font-size", "72px");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("HOME PROS CONSTRUCTORS");
+  await expect(page.locator(".home-headline")).toContainText("Trabalhe de Qualquer Lugar do Mundo");
+  await expect.poll(() => page.locator(".home-hero-image").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
   await expect(
     page.locator("main section").first().locator(".shell"),
   ).toHaveCSS("display", "grid");

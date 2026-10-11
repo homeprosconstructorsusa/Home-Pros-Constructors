@@ -17,6 +17,7 @@ Existiam arquivos Next.js/Tailwind, páginas inicial, catálogo vazio, detalhe e
 - API de cotação por identificadores e valores calculados no servidor.
 - PostgreSQL e Prisma 7 com migrations e seed de 351 rascunhos, sem sobrescrever dados existentes.
 - Comando local para gerenciar situações, preços e parcelamento; sem painel web administrativo.
+- Página inicial refinada em verde-escuro, branco e dourado, com chamada para trabalho remoto, imagem ilustrativa e percurso de escolha da cidade.
 - Design responsivo, navegação acessível, metadados, tratamento de falhas e páginas inexistentes.
 - HTML interativo autocontido para revisão sem hospedagem, usando os mesmos componentes React.
 - Saída standalone e scripts para início em VPS no futuro.

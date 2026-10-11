@@ -1,49 +1,33 @@
 import Link from "next/link";
+import Image from "next/image";
 import { StateSelector } from "./state-selector";
 export function HomeContent() {
   return (
     <>
-      <section className="bg-[#102c28] text-white">
-        <div className="shell grid gap-12 py-20 md:grid-cols-[1.3fr_1fr] md:py-28">
+      <section className="home-hero">
+        <div className="shell home-hero-grid">
           <div>
-            <p className="mb-6 text-xs uppercase tracking-[.25em] text-[#d5c29b]">
-              Home Pros Constructors · Licenças de cidades
-            </p>
-            <h1 className="max-w-2xl text-5xl font-semibold leading-[1.08] tracking-tight md:text-7xl">
-              Sua cidade.
-              <br />
-              <span className="text-[#d5c29b]">Seu próximo negócio.</span>
-            </h1>
-            <p className="my-8 max-w-lg text-lg leading-8 text-stone-300">
-              Trabalhe de casa representando a Home Pros Constructors. Conecte
-              companhias da construção e de serviços residenciais a soluções de
-              marketing digital, com treinamento e suporte.
-            </p>
-            <Link className="btn !bg-[#d5c29b] !text-[#102c28]" href="#states">
-              Escolher minha cidade →
-            </Link>
-            <p className="mt-5 text-xs text-white/50">
-              Um comprador por cidade · Condições conforme contrato
-            </p>
-          </div>
-          <div className="relative flex min-h-72 items-end overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-[#396354] to-[#152f2a] p-8">
-            <div
-              className="absolute right-8 top-10 text-8xl font-black text-white/10"
-              aria-hidden="true"
-            >
-              MA
+            <p className="home-kicker">Licenças exclusivas de cidades americanas</p>
+            <h1 className="home-brand-title">HOME PROS CONSTRUCTORS</h1>
+            <h2 className="home-headline">Trabalhe de Qualquer Lugar do Mundo<span>Seu próximo mercado está nos Estados Unidos.</span></h2>
+            <p className="home-description">Trabalhe de casa e construa sua atuação no mercado americano. Represente uma cidade, conecte profissionais a soluções de marketing digital e conte com treinamento e suporte.</p>
+            <p className="home-dollar">Oportunidade de ganhar em dólares com vendas ao mercado americano. Comissões e moeda de recebimento conforme contrato; resultados dependem das vendas.</p>
+            <div className="home-actions">
+              <Link className="btn home-primary" href="#states">Encontrar minha cidade →</Link>
+              <Link className="home-secondary" href="#how-it-works">Como funciona ↗</Link>
             </div>
-            <div>
-              <p className="text-sm text-[#d5c29b]">NOSSO PRIMEIRO ESTADO</p>
-              <h2 className="mt-3 text-4xl font-semibold">Massachusetts</h2>
-              <p className="mt-4 text-stone-300">
-                351 cidades e municípios.
-                <br />
-                Encontre sua oportunidade de representação.
-              </p>
-            </div>
+            <p className="home-footnote">Uma licença por cidade · Treinamento progressivo · Produção pela Home Pros</p>
           </div>
+          <figure className="home-visual">
+            <Image src="/photos/home/hero.png" alt="Cena ilustrativa de uma profissional trabalhando com laptop em casa, com a paisagem de Boston ao fundo." width={1536} height={1024} sizes="(min-width: 900px) 560px, 100vw" loading="eager" className="home-hero-image" />
+            <figcaption className="home-visual-caption"><span>PRIMEIRO MERCADO</span><strong>Massachusetts</strong><p>351 cidades. Uma nova possibilidade para você.</p><small>Imagem ilustrativa</small></figcaption>
+          </figure>
         </div>
+      </section>
+      <section className="shell home-benefits" aria-label="O que acompanha sua atuação">
+        <div><span>01 / FLEXIBILIDADE</span><h2>Seu trabalho, de onde estiver.</h2><p>Atenda clientes à distância e organize sua rotina com orientação da Home Pros.</p></div>
+        <div><span>02 / ESTRUTURA</span><h2>Você atende. Nós produzimos.</h2><p>A Home Pros executa os serviços de marketing vendidos. Você desenvolve o relacionamento com os clientes.</p></div>
+        <div><span>03 / APRENDIZADO</span><h2>Comece com apoio.</h2><p>Treinamento para atendimento, materiais personalizados e aprendizado progressivo de inglês.</p></div>
       </section>
       <section id="states" className="shell py-16">
         <p className="text-xs font-bold uppercase tracking-[.2em] text-stone-500">
@@ -77,7 +61,9 @@ export function HomeContent() {
           </div>
         </div>
       </section>
-      <section className="shell grid gap-8 rounded-xl bg-[#eae8df] p-8 md:grid-cols-3">
+      <section id="how-it-works" className="shell home-process">
+        <div className="home-process-heading"><p className="eyebrow">Um caminho claro para começar</p><h2>Da escolha da cidade ao seu próximo passo.</h2></div>
+        <div className="grid gap-8 md:grid-cols-3">
         {[
           [
             "01",
@@ -101,7 +87,9 @@ export function HomeContent() {
             <p className="mt-3 text-stone-600">{d}</p>
           </div>
         ))}
+        </div>
       </section>
+      <section className="shell home-closing"><div><p className="eyebrow">Conheça sua cidade de representação</p><h2>Explore o mercado. Escolha com clareza.</h2><p>Veja os cards, os serviços e as condições antes de adicionar uma licença ao carrinho.</p></div><Link href="/states/massachusetts" className="btn">Explorar Massachusetts →</Link></section>
     </>
   );
 }

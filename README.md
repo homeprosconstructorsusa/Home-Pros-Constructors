@@ -84,3 +84,7 @@ Antes de vender: configurar provedor de pagamento, pedidos, cobrança das parcel
 A aplicação está preparada para Node.js/PostgreSQL e saída Next.js standalone. Nada foi contratado ou implantado. Uma implantação futura precisará de credenciais de produção, HTTPS, domínio, supervisão do processo, banco privado e backups. A aplicação está marcada `noindex` enquanto é uma prévia.
 
 O build standalone inclui `server.js`, `.next/static` e `public`. Depois de copiar a pasta `.next/standalone` para a VPS, execute seu `server.js` com `HOSTNAME=127.0.0.1`, `PORT` e `DATABASE_URL` configurados de forma segura atrás de um proxy HTTPS. Não copie a `.env` de desenvolvimento para produção.
+
+### Imagem da página inicial
+
+`public/photos/home/hero.png` é uma imagem ilustrativa gerada para este projeto: trabalho remoto com paisagem inspirada em Boston. Não retrata uma equipe ou sede real da empresa. É servida localmente e incorporada à prévia, sem dependência de bancos de imagens externos. A identidade original permanece nos componentes de marca.
