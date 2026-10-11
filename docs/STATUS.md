@@ -10,7 +10,7 @@ Existiam arquivos Next.js/Tailwind, páginas inicial, catálogo vazio, detalhe e
 - Busca por nome, filtros de condado/disponibilidade e estados de busca vazia.
 - Rota individual para cada cidade; modelo compartilhado com o texto enviado.
 - Comissões e estimativas conforme esclarecimento do responsável; projeções sem garantia.
-- Álbum de cards no catálogo e no topo da página, com navegação e ampliação acessível para leitura.
+- Álbum de cards no catálogo e no topo da página, com navegação e ampliação acessível para leitura. Imagens dos álbuns e da página inicial reduzidas em 10%, incluindo a prévia portátil.
 - Perfil demográfico apenas em Boston, sem propagação de números para outras cidades.
 - Condições de pagamento do modelo em reais e separação de entrada, total e saldo.
 - Carrinho persistente, sem duplicidades, com remoção e limpeza.
