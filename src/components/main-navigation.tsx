@@ -14,7 +14,7 @@ const sections = {
   courses: {
     label: "Cursos", heading: "Explore os cursos",
     primary: [{ label: "Curso de edição de vídeos", href: "/courses/video-editing" }, { label: "Curso completo independente", href: "/courses/video-editing/complete" }],
-    secondary: [{ label: "Curso + direito de edição da cidade", href: "/courses/video-editing#editor-cities" }, { label: "Home Pros School", href: "/#school" }],
+    secondary: [{ label: "Curso + direito de edição da cidade", href: "/courses/video-editing#editor-cities" }, { label: "Home Pros School", href: "/courses/english" }],
     note: "Conheça as propostas de formação e suas condições. As inscrições ainda estão em preparação.",
   },
 };

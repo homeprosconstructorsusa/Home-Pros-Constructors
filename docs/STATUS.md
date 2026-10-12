@@ -95,3 +95,15 @@ A abertura da Home foi encurtada no computador e no celular, reduzindo a altura 
 A tipografia foi reforçada somente na página inicial: títulos com peso 700, tamanhos responsivos maiores, descrições com peso 500 e contraste mais forte, categorias e links com peso 600 e textos auxiliares legíveis. A família continua nativa do sistema (`-apple-system`/`BlinkMacSystemFont` em dispositivos Apple), sem baixar ou redistribuir fontes proprietárias. Fotos, cores da marca, conteúdo, preços e demais páginas não foram alterados. O site Apple não pôde ser consultado ao vivo pela restrição de rede do ambiente; o ajuste segue a referência visual anteriormente fornecida. Validação: lint, TypeScript, build de produção e três verificações existentes de navegador para desktop, páginas no celular e prévia offline com toque.
 
 A prévia autocontida também foi conferida manualmente em 320, 768 e 1440 pixels, sem rolagem horizontal.
+
+
+## Proposta da Home Pros School
+
+- Página de inglês online, acessível pelo menu Cursos, pela Home e pela Loja; preço proposto de R$ 99, com periodicidade e condições de acesso em definição.
+- Apresentação de prática de escrita, conversação planejada de cinco minutos e futura área individual do aluno. Recursos claramente indicados como indisponíveis nesta prévia; inscrições continuam desabilitadas.
+- Previsão do curso avançado mantida no 1º trimestre de 2027. Valores e condições das duas modalidades de edição preservados. Nenhum curso de gerente foi adicionado e nenhuma licença de cidade foi alterada.
+- Loja inclui a proposta de inglês junto às ofertas existentes. A classificação final das quatro transações mencionadas pelo responsável ainda precisa de esclarecimento.
+
+Faltam a periodicidade dos R$ 99, a frequência das sessões de cinco minutos, o programa final, regras de acesso e execução da plataforma do aluno. A finalidade das bandeiras Brasil/Estados Unidos/Canadá (país ou idioma) também continua pendente de esclarecimento.
+
+Validação desta alteração: lint, TypeScript, build e quatro verificações de navegador para escola de inglês, preservação das ofertas de edição, navegação e prévia móvel offline.

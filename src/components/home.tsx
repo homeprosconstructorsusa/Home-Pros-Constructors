@@ -2,12 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { PageBackdrop } from "./page-backdrop";
 import { StateSelector } from "./state-selector";
+import { englishCourseOffer } from "@/content/english-course";
+import { money } from "@/lib/license";
 
 const categories = [
   { name: "Agência Americana de Marketing", href: "/licenses", image: "/photos/real/office.webp" },
   { name: "Edição de vídeos", href: "/courses/video-editing", image: "/photos/real/editing.webp" },
   { name: "Marketing digital", href: "#services", image: "/photos/real/professional.webp" },
-  { name: "Home Pros School", href: "#school", image: "/photos/real/team.webp" },
+  { name: "Home Pros School", href: "/courses/english", image: "/photos/real/team.webp" },
 ];
 
 export function HomeContent() {
@@ -60,7 +62,7 @@ export function HomeContent() {
           <Image src="/photos/real/workspace.webp" alt="Estação de trabalho com computador, mesa e iluminação natural." width={1920} height={2560} sizes="(min-width: 760px) 50vw, 100vw" className="showcase-photo" />
         </section>
         <section id="school" className="showcase-card showcase-school">
-          <div className="showcase-copy"><p className="eyebrow">Home Pros School · Em breve</p><h2>Mais inglês.<br />Novas possibilidades.</h2><p>Conheça nossa escola de inglês. Início das aulas do curso avançado: 1º trimestre de 2027.</p><span className="showcase-small-note">Informações sobre matrículas serão apresentadas nesta área.</span></div>
+          <div className="showcase-copy"><p className="eyebrow">Home Pros School · Em breve</p><h2>Mais inglês.<br />Novas possibilidades.</h2><p>Conheça nossa escola de inglês online. Preço proposto: {money(englishCourseOffer.priceCents, englishCourseOffer.currency)}. Início das aulas do curso avançado: {englishCourseOffer.advancedCourseStart}.</p><Link href="/courses/english" className="apple-text-link">Conhecer a Home Pros School →</Link><span className="showcase-small-note">Periodicidade, acesso e condições de matrícula em definição.</span></div>
           <Image src="/photos/real/team.webp" alt="Pessoas reunidas à mesa com um laptop e materiais de trabalho." width={1920} height={2880} sizes="(min-width: 760px) 50vw, 100vw" className="showcase-photo" />
         </section>
       </div>

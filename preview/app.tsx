@@ -4,6 +4,7 @@ import { LicensesPage, ShopPage, ContactPage } from "@/components/information-pa
 import { SiteShell } from "@/components/site-shell";
 import { VideoCourse } from "@/components/video-course";
 import { CompleteVideoCourse } from "@/components/complete-video-course";
+import { EnglishCourse } from "@/components/english-course";
 import { EditorCityOfferPage } from "@/components/editor-city-offer";
 import { editorDraft } from "@/lib/editor-drafts";
 import { HomeContent } from "@/components/home";
@@ -28,7 +29,7 @@ function Preview() {
     : undefined;
   const editorOffer = route.startsWith("/courses/video-editing/") ? editorDraft(route.slice("/courses/video-editing/".length)) : undefined;
   useEffect(() => {
-    document.title = `${license?.city ?? editorOffer?.city ?? (route === "/licenses" ? "Licenças" : route === "/shop" ? "Loja" : route === "/contact" ? "Contato" : route === "/cart" ? "Seu carrinho" : route.startsWith("/courses/video-editing") ? "Curso de edição de vídeos" : "Home Pros Constructors")} | Prévia para aprovação`;
+    document.title = `${license?.city ?? editorOffer?.city ?? (route === "/courses/english" ? "Home Pros School" : route === "/licenses" ? "Licenças" : route === "/shop" ? "Loja" : route === "/contact" ? "Contato" : route === "/cart" ? "Seu carrinho" : route.startsWith("/courses/video-editing") ? "Curso de edição de vídeos" : "Home Pros Constructors")} | Prévia para aprovação`;
     const anchor = fullRoute.split("#")[1];
     if (anchor) document.getElementById(anchor)?.scrollIntoView();
     else window.scrollTo(0, 0);
@@ -52,6 +53,8 @@ function Preview() {
           <VideoCourse />
         ) : route === "/courses/video-editing/complete" ? (
           <CompleteVideoCourse />
+        ) : route === "/courses/english" ? (
+          <EnglishCourse />
         ) : editorOffer ? (
           <EditorCityOfferPage offer={editorOffer} />
         ) : license ? (

@@ -438,3 +438,14 @@ input, select, button { font: inherit; }
   .apple-home .home-category-nav a { font-size: 16px; max-width: none; }
   .apple-home .showcase-heading > p:last-child, .apple-home .apple-states > p:not(.eyebrow) { font-size: 18px; }
 }
+
+.english-school-layout { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 40px; margin-top: 36px; }
+.english-school-photo { width: 100%; height: 360px; object-fit: cover; object-position: center 54%; border-radius: 20px; }
+.english-school-details article { padding-block: 26px; border-bottom: 1px solid #dde5d8; }
+.english-school-details h2, .english-school-summary h2 { font-size: 25px; font-weight: 700; letter-spacing: -.025em; line-height: 1.3; }
+.english-school-details p, .english-school-summary p { font-size: 16px; line-height: 1.75; color: #526456; margin-top: 14px; }
+.english-school-summary h2 { margin-top: 18px; }
+.english-school-summary .btn { margin-top: 22px; }
+.shop-offer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 760px) { .english-school-layout { grid-template-columns: 1fr; gap: 28px; } .english-school-photo { height: 280px; } .english-school-summary { grid-row: 1; } }
+@media (max-width: 760px) { .shop-offer-grid { grid-template-columns: 1fr; } }

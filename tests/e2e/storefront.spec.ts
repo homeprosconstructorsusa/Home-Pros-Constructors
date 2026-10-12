@@ -550,3 +550,33 @@ test("Homepage uses supplied photographs and offline mobile navigation reaches e
   await expect(page.locator(".license-overview-grid")).toContainText("351 cidades");
   await context.close();
 });
+
+test("English school presents the proposed price without inventing billing or enabling registration", async ({ page }) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: /^Cursos/ }).click();
+  await page.locator(".mega-panel").getByRole("link", { name: "Home Pros School", exact: true }).click();
+  await expect(page).toHaveURL(/\/courses\/english$/);
+  const summary = page.getByRole("complementary", { name: "Proposta da Home Pros School" });
+  await expect(summary).toContainText("99,00");
+  await expect(summary).toContainText("Periodicidade e condições de acesso em definição");
+  await expect(page.getByRole("button", { name: "Inscrição ainda não habilitada" })).toBeDisabled();
+  await expect(page.locator(".english-school-details")).toContainText("5 minutos");
+  await expect(page.locator(".english-school-details")).toContainText("Este recurso ainda não está disponível");
+  await expect(page.locator(".english-school-details")).toContainText("1º trimestre de 2027");
+  await expect(page.locator(".cart-count")).toHaveText("0");
+  await page.goto("/shop");
+  await expect(page.locator(".shop-offer-grid article")).toHaveCount(4);
+  await page.getByRole("link", { name: /^Conhecer a escola/ }).click();
+  await expect(page.getByRole("heading", { name: "Home Pros School.", exact: true })).toBeVisible();
+  await page.route("**/*", (route) => route.request().url() === "http://127.0.0.1:3102/homepros-preview.html" ? route.continue() : route.abort());
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("http://127.0.0.1:3102/homepros-preview.html#/courses/english");
+  await expect(page.locator(".english-school-summary")).toContainText("99,00");
+  await expect(page.getByRole("button", { name: "Inscrição ainda não habilitada" })).toBeDisabled();
+  const picture = page.locator(".english-school-photo");
+  await picture.scrollIntoViewIfNeeded();
+  await expect.poll(() => picture.evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+  await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.screenshot({ path: "/tmp/homepros-school-mobile.png", fullPage: true });
+});

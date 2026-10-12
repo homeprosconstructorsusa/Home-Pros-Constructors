@@ -108,3 +108,8 @@ O cabeçalho apresenta Home, Licenças, Loja, Cursos e Contato, além do carrinh
 ### Ajuste exclusivo da página inicial
 
 O primeiro destaque da Agência Americana de Marketing apresenta “Trabalhe de casa ou de qualquer lugar. Ganhe em dólares.”, com a foto de dólar enviada em `Nova Pasta Com Itens 3.zip` como fundo decorativo suave (`public/photos/real/dollars.webp`, arquivo de origem `pexels-douglas-miller-3607411-5653247.jpg`). A profissional ao computador e o escritório das fotos já fornecidas aparecem lado a lado no computador e em sequência no celular, com a legenda “Em casa ou em um coworking.”. A foto menor da profissional é exibida com `object-fit: contain`, respeitando sua proporção. As fotos adicionais de Estátua/coworking do novo ZIP não substituem o fundo original e o escritório anteriormente aprovados. Nenhuma imagem foi gerada com IA neste ajuste. Páginas de cidades, menu, preços, condições comerciais, cursos e carrinho não foram alterados.
+
+
+### Home Pros School: proposta de inglês online
+
+`/courses/english` apresenta a escola, com preço proposto de R$ 99 em `src/content/english-course.ts`. A periodicidade da cobrança e as condições de acesso ainda não foram definidas. O menu Cursos, a categoria da Home e a Loja levam a essa apresentação. Inscrições e pagamentos ficam desabilitados. A proposta de conversação de cinco minutos e a área individual do aluno são identificadas como recursos planejados; não há login, aulas, chat ou integração de voz funcionais. O início previsto do curso avançado permanece no 1º trimestre de 2027. Nenhum curso de gerente foi criado.
