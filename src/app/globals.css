@@ -65,8 +65,13 @@ input, select, button { font: inherit; }
 .site-footer { background: #102c28; color: white; margin-top: 40px; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding-block: 42px; }
 .social-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-.social-links a { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #ffffff30; border-radius: 6px; padding: 10px 12px; font-size: 12px; }
-.social-links a:hover { border-color: #d5c29b; color: #d5c29b; }
+.social-links a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; color: white; flex-shrink: 0; }
+.social-links svg { width: 21px; height: 21px; }
+.social-links .social-facebook { background: #3d5999; }
+.social-links .social-instagram { background: radial-gradient(circle at 30% 110%, #ffd76a 0%, #f77737 25%, #e1306c 50%, #833ab4 75%, #405de6 100%); }
+.social-links .social-youtube { background: #c92b2b; }
+.social-links a:hover { filter: brightness(1.15); }
+.social-links a:focus-visible { outline: 3px solid #d5c29b; outline-offset: 4px; }
 .skip-link { position: fixed; top: -60px; left: 10px; z-index: 100; background: #fff; color: #17352e; padding: 12px; }
 .skip-link:focus { top: 10px; }
 @media (max-width: 900px) {
