@@ -30,7 +30,7 @@ export function HomeContent() {
       <section className="shell home-benefits" aria-label="O que acompanha sua atuação">
         <div><span>01 / FLEXIBILIDADE</span><h2>Seu trabalho, de onde estiver.</h2><p>Atenda clientes à distância e organize sua rotina com orientação da Home Pros.</p></div>
         <div><span>02 / ESTRUTURA</span><h2>Você atende. Nós produzimos.</h2><p>A Home Pros executa os serviços de marketing vendidos. Você desenvolve o relacionamento com os clientes.</p></div>
-        <div><span>03 / APRENDIZADO</span><h2>Comece com apoio.</h2><p>Treinamento para atendimento e materiais personalizados. Home Pros School: aulas de inglês a partir do 1º trimestre de 2027.</p></div>
+        <div><span>03 / APRENDIZADO</span><h2>Comece com apoio.</h2><p>Treinamento para atendimento e materiais personalizados. Home Pros School: aulas do curso avançado de inglês a partir do 1º trimestre de 2027.</p></div>
       </section>
       <div className="page-scene home-states-scene">
         <PageBackdrop scene="market" />
