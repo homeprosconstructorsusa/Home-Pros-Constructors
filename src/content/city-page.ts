@@ -51,3 +51,27 @@ export const cityPageContent: {
 export function cityCopy(text: string, city: string, county: string) {
   return text.replaceAll("{city}", city).replaceAll("{county}", county);
 }
+
+// Abington is the owner's review model. Keep other cities on the approved
+// shared copy until the owner explicitly asks to replicate these revisions.
+export const cityPageOverrides: Record<string, {
+  overviewParagraphs: string[];
+  sectionBodies: Record<string, string>;
+  finalSection: { title: string; body: string };
+}> = {
+  abington: {
+    overviewParagraphs: [
+      "Trabalhe da sua casa no Brasil ou de qualquer lugar do mundo atendendo brasileiros na cidade de Abington, em Massachusetts, e ganhe em dólares.",
+      "A Home Pros Constructors oferece treinamento, materiais personalizados durante todo o ano e suporte para você se conectar, atender clientes e comercializar serviços de marketing digital nos Estados Unidos 🇺🇸.",
+    ],
+    sectionBodies: {
+      "O que fazemos?": "Vendemos diversos serviços online, como:\n\n" + cityPageContent.sections.find((section) => section.title === "O que fazemos?")!.body,
+      "Materiais e treinamento": "O licenciado receberá:\n\n• Website direcionado à cidade de Abington.\n• Videoaulas e orientações para organizar a presença digital do projeto.\n• Treinamento para atendimento ao cliente e apresentação dos serviços.\n• Arquivos personalizados para Abington, incluindo identidade visual, 100 vídeos, banners, descrições das redes sociais e textos para conteúdos durante todo o ano.\n• Materiais para estruturar a presença do projeto no YouTube, Facebook, Instagram e X.\n• Suporte para desenvolver sua atuação na cidade de representação.",
+      "Inglês: do zero ao avançado": cityPageContent.sections.find((section) => section.title === "Inglês: do zero ao avançado")!.body.split("\n\n").slice(0, -1).join("\n\n"),
+    },
+    finalSection: {
+      title: "Escola de inglês Home Pros School",
+      body: "Para desenvolver seu inglês, conheça a Home Pros School, nossa escola de inglês.\n\nInício das aulas do curso avançado: 1º trimestre de 2027.",
+    },
+  },
+};

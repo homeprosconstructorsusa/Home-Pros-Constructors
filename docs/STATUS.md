@@ -42,3 +42,7 @@ A prévia não efetua vendas. Valores do modelo de Boston são aplicados às cid
 Instalação com lockfile, lint, TypeScript e build de produção passaram. Seis testes de dados/cálculo e dez testes de navegador passaram, incluindo os modos demonstrativo e PostgreSQL real, preservação de ofertas ao reexecutar o seed, filtros, páginas, carrinho, HTML autocontido e layout de desktop/celular. O teste do banco restaurou os dados temporários; os 351 registros reais continuam em rascunho.
 
 A prévia HTML foi testada por um servidor local, bloqueando todas as outras requisições de rede. A abertura direta por file:// não pôde ser testada no Chromium gerenciado por restrição administrativa; o arquivo não depende de servidor para renderização.
+
+## Modelo em revisão: somente Abington
+
+As últimas alterações de texto estão isoladas em `cityPageOverrides.abington`: trabalho de casa no Brasil ou de qualquer lugar do mundo, materiais personalizados ao longo do ano, 100 vídeos e uma seção final “Escola de inglês Home Pros School”. As outras 350 páginas permanecem com os textos anteriormente aprovados. Replicar este modelo somente após autorização explícita do responsável.

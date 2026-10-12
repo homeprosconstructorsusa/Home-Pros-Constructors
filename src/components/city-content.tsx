@@ -1,4 +1,4 @@
-import { cityPageContent, cityCopy } from "@/content/city-page";
+import { cityPageContent, cityPageOverrides, cityCopy } from "@/content/city-page";
 
 export function CityText({ text }: { text: string }) {
   return <>{text.split("\n\n").map((block, index) => {
@@ -11,7 +11,7 @@ export function CityText({ text }: { text: string }) {
 
 const sectionOrder = ["O que fazemos?", "Sua atuação como licenciado", "Materiais e treinamento", "Inglês: do zero ao avançado", "Remuneração do licenciado", "Assessorias e serviços de parceiros", "Projeção comercial — sem garantia de resultado"];
 
-export function CityContent({ city, county }: { city: string; county: string }) {
+export function CityContent({ slug, city, county }: { slug: string; city: string; county: string }) {
   const sections = [...cityPageContent.sections].sort((a, b) => {
     const rank = (title: string) => {
       const position = sectionOrder.indexOf(title);
@@ -21,6 +21,6 @@ export function CityContent({ city, county }: { city: string; county: string }) 
   });
   return <>{sections.map((section) => <details className="city-info-section" key={section.title} open={section.title === "O que fazemos?"}>
     <summary><h3>{cityCopy(section.title, city, county)}</h3><span aria-hidden="true">+</span></summary>
-    <div className="city-info-body"><CityText text={cityCopy(section.body, city, county)} /></div>
+    <div className="city-info-body"><CityText text={cityCopy(cityPageOverrides[slug]?.sectionBodies[section.title] ?? section.body, city, county)} /></div>
   </details>)}</>;
 }

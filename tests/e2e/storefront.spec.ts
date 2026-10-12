@@ -345,7 +345,17 @@ test("City pages explain the license before the album and separate payment amoun
   await english.focus();
   await page.keyboard.press("Enter");
   await expect(details.getByText(/Sem inglês: comece atendendo brasileiros/)).toBeVisible();
-  await expect(details.getByText(/Início das aulas do curso avançado: 1º trimestre de 2027/)).toBeVisible();
+  await expect(overview).toContainText("Trabalhe da sua casa no Brasil ou de qualquer lugar do mundo");
+  await expect(overview).toContainText("materiais personalizados durante todo o ano");
+  await expect(details).toContainText("Vendemos diversos serviços online");
+  const materials = details.locator("details").filter({ has: page.getByRole("heading", { name: "Materiais e treinamento", exact: true }) });
+  await materials.locator("summary").click();
+  await expect(materials).toContainText("100 vídeos");
+  await expect(materials).not.toContainText("Home Pros School");
+  const school = details.locator("details").last();
+  await expect(school.locator("summary")).toHaveText("Escola de inglês Home Pros School+");
+  await school.locator("summary").click();
+  await expect(school.getByText(/Início das aulas do curso avançado: 1º trimestre de 2027/)).toBeVisible();
   await details.locator("summary").filter({ hasText: "Remuneração do licenciado" }).click();
   await expect(details.getByText(/comissão de 54%/)).toBeVisible();
   await expect(details.getByText(/comissão prevista é de 3%/)).toBeVisible();
@@ -362,4 +372,9 @@ test("City pages explain the license before the album and separate payment amoun
   expect(second!.y + second!.height).toBeLessThan(third!.y);
   await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   await page.screenshot({ path: "/tmp/homepros-city-mobile.png", fullPage: true });
+  await page.goto("/cities/boston");
+  await expect(page.locator(".city-overview")).not.toContainText("Trabalhe da sua casa no Brasil");
+  await expect(page.locator(".city-overview")).not.toContainText("materiais personalizados durante todo o ano");
+  await expect(page.getByRole("heading", { name: "Escola de inglês Home Pros School", exact: true })).toHaveCount(0);
+  await expect(page.locator(".city-license-details")).not.toContainText("100 vídeos");
 });

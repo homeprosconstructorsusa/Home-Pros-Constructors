@@ -10,9 +10,10 @@ import {
 } from "@/lib/license";
 import { AddToCart } from "./cart";
 import { CityContent, CityText } from "./city-content";
-import { cityPageContent, cityCopy } from "@/content/city-page";
+import { cityPageContent, cityPageOverrides, cityCopy } from "@/content/city-page";
 export function CityDetail({ license, demo }: { license: CityLicense; demo: boolean }) {
   const plan = installments(license);
+  const pageOverride = cityPageOverrides[license.slug];
   const scene = license.slug === "boston" ? "boston" : license.slug === "abington" ? "abington" : null;
   const sharedIntro = cityCopy(cityPageContent.introduction ?? "", license.city, license.county);
   const [workIntro, ...introDetails] = sharedIntro.split("\n\n");
@@ -29,7 +30,7 @@ export function CityDetail({ license, demo }: { license: CityLicense; demo: bool
             <h1 className="page-title">{license.city}<span className="text-stone-400">.</span></h1>
             <p className="city-license-label">Licença de uso da cidade · Home Pros Constructors</p>
             <p className="city-license-intro">Adquira uma licença de uso da cidade de {license.city}, em Massachusetts, para atuar comercialmente com a Home Pros Constructors, conforme contrato.</p>
-            <p className="city-work-intro">{workIntro}</p>
+            {(pageOverride?.overviewParagraphs ?? [workIntro]).map((paragraph, index) => <p className={`city-work-intro ${pageOverride && index === 0 ? "font-semibold text-[#17352e]" : ""}`} key={index}>{paragraph}</p>)}
             <ul className="city-support-tags" aria-label="Estrutura para sua atuação">
               <li>Trabalho de casa</li><li>Materiais personalizados</li><li>Treinamento e suporte</li>
             </ul>
@@ -55,7 +56,7 @@ export function CityDetail({ license, demo }: { license: CityLicense; demo: bool
             {photos.length > 0 ? <div className="city-gallery-area"><p className="eyebrow">Conheça a Home Pros</p><h2>Uma visão da sua atuação.</h2><CityAlbum slug={license.slug} city={license.city} county={license.county} /></div> : <div className="territory-panel"><h2 className="text-3xl font-semibold">{license.city}, MA</h2><p className="mt-4">{license.county} County · Massachusetts</p></div>}
             <section className="city-license-details" aria-label={`Detalhes da licença de ${license.city}`}>
               <div className="city-details-heading"><p className="eyebrow">Explore os detalhes</p><h2>Como funciona sua atuação.</h2><p>Serviços, suporte e condições para atender {license.city}.</p></div>
-              <CityContent city={license.city} county={license.county} />
+              <CityContent slug={license.slug} city={license.city} county={license.county} />
               {fullDescription && <details className="city-info-section"><summary><h3>Sobre a Home Pros em {license.city}</h3><span aria-hidden="true">+</span></summary><div className="city-info-body"><CityText text={fullDescription} /></div></details>}
               <details className="city-info-section"><summary><h3>Condições de uso da licença</h3><span aria-hidden="true">+</span></summary><div className="city-info-body"><div className="detail-facts"><div><span>Estado</span><strong>Massachusetts</strong></div><div><span>Condado</span><strong>{license.county}</strong></div><div><span>Representação</span><strong>Um comprador por cidade</strong></div></div><p>Os direitos de uso e as condições finais da licença devem constar no contrato. Adicionar ao carrinho não reserva a cidade. O carrinho inclui somente a entrada, não o valor total da licença. Nenhum pagamento é cobrado nesta prévia.</p></div></details>
           <details className="city-info-section">
@@ -107,6 +108,7 @@ export function CityDetail({ license, demo }: { license: CityLicense; demo: bool
             </a>
             </div>
           </details>
+              {pageOverride && <details className="city-info-section"><summary><h3>{pageOverride.finalSection.title}</h3><span aria-hidden="true">+</span></summary><div className="city-info-body"><CityText text={pageOverride.finalSection.body} /></div></details>}
             </section>
           </div>
         </div>
