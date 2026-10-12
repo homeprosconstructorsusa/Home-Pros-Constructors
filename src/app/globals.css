@@ -249,7 +249,7 @@ input, select, button { font: inherit; }
 @media (max-width: 760px) { .city-product-layout { grid-template-columns: 1fr; row-gap: 32px; } .city-overview, .city-purchase-summary, .city-detail-body { grid-column: auto; grid-row: auto; } .city-purchase-summary { position: static; } .city-license-intro { font-size: 19px; } .city-gallery-area > h2, .city-details-heading h2 { font-size: 25px; } }
 
 /* Image-led home presentation and the separate course offering. */
-.apple-hero .home-hero-grid { grid-template-columns: 1fr; min-height: 790px; align-items: start; text-align: center; padding-block: 70px 270px; }
+.apple-hero .home-hero-grid { grid-template-columns: 1fr; min-height: 650px; align-items: start; text-align: center; padding-block: 56px 140px; }
 .apple-hero-copy { max-width: 960px; margin-inline: auto; }
 .apple-hero .home-headline { font-size: clamp(44px, 5.4vw, 80px); line-height: 1.05; }
 .apple-hero .home-headline span { font-size: .38em; margin-top: 22px; }
@@ -331,7 +331,7 @@ input, select, button { font: inherit; }
 .editor-offer-summary .complete-course-price { margin-block: 25px; }
 .editor-offer-summary .btn { margin-top: 16px; }
 @media (max-width: 900px) { .home-category-nav { gap: 30px; } .course-module-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .editor-offer-layout { gap: 26px; } }
-@media (max-width: 760px) { .home-showcase-grid, .state-feature-grid, .course-options, .course-rights, .editor-offer-layout { grid-template-columns: 1fr; } .showcase-photo { height: 280px; } .course-rights { gap: 32px; } .editor-city-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .apple-hero .home-hero-grid { min-height: 800px; padding-block: 46px 260px; } }
+@media (max-width: 760px) { .home-showcase-grid, .state-feature-grid, .course-options, .course-rights, .editor-offer-layout { grid-template-columns: 1fr; } .showcase-photo { height: 280px; } .course-rights { gap: 32px; } .editor-city-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .apple-hero .home-hero-grid { min-height: 660px; padding-block: 36px 144px; } }
 @media (max-width: 640px) { .header-inner { flex-wrap: wrap; row-gap: 8px; padding-block: 14px; } .header-inner > .brand { margin-inline: auto; } .header-links { width: 100%; justify-content: space-between; gap: 12px; } .apple-hero .home-headline { font-size: 44px; } .apple-hero .home-description { font-size: 17px; } .home-category-nav { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px 18px; } .home-showcase-grid { width: calc(100% - 24px); gap: 16px; } .showcase-copy { padding: 32px 22px 20px; } .showcase-copy h2 { font-size: 36px; } .showcase-photo { height: 250px; } .course-options article { padding: 24px; } .course-module-grid, .editor-city-grid { grid-template-columns: 1fr; } .course-outline, .course-rights, .editor-city-picker { padding-block: 40px; } .apple-states { padding-block: 44px; } }
 
 .editor-offer-summary dl > div:first-child dd { font-size: 36px; line-height: 1.2; font-weight: 600; letter-spacing: -.04em; }

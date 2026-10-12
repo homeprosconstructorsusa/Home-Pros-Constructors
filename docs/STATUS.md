@@ -83,3 +83,8 @@ A configuração reutilizável de rede do ambiente recebeu os domínios `images.
 - Nenhuma alteração nas páginas de cidades, nos textos exclusivos de Abington, no menu, nos cursos, nos preços ou no carrinho. Nenhuma geração de imagens com IA.
 
 Validação deste ajuste: lint, TypeScript, build de produção e quatro verificações de navegador direcionadas à Home no computador/celular, navegação da prévia offline, carrinho e preservação da licença de Abington.
+
+
+## Ajuste de espaço da abertura
+
+A abertura da Home foi encurtada no computador e no celular, reduzindo a altura mínima e o espaço inferior para aproximar as categorias do primeiro conteúdo. A fotografia da profissional continua preservada: o arquivo original disponível tem apenas 368 × 401 pixels. A substituição por uma fotografia de trabalho em casa em maior resolução depende do envio desse arquivo pelo responsável; não houve ampliação artificial nem uso de imagens de coworking como se fossem de casa. Lint, TypeScript, build de produção e duas verificações existentes de navegador (computador e celular/offline) foram executados para este ajuste.
