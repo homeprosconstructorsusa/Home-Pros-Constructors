@@ -113,3 +113,10 @@ O primeiro destaque da Agência Americana de Marketing apresenta “Trabalhe de 
 ### Home Pros School: proposta de inglês online
 
 `/courses/english` apresenta a escola, com preço proposto de R$ 99 em `src/content/english-course.ts`. A periodicidade da cobrança e as condições de acesso ainda não foram definidas. O menu Cursos, a categoria da Home e a Loja levam a essa apresentação. Inscrições e pagamentos ficam desabilitados. A proposta de conversação de cinco minutos e a área individual do aluno são identificadas como recursos planejados; não há login, aulas, chat ou integração de voz funcionais. O início previsto do curso avançado permanece no 1º trimestre de 2027. Nenhum curso de gerente foi criado.
+
+
+### Países e identificação da produção
+
+A faixa de ponta a ponta abaixo do menu principal apresenta Brasil, Estados Unidos e Canadá, com bandeiras em SVG e nomes acessíveis. Ela seleciona mercados: Estados Unidos abre `/licenses`; Brasil e Canadá abrem páginas claramente identificadas como em preparação, sem novos catálogos, preços ou ofertas. O país selecionado acompanha a navegação no Next.js e na prévia portátil por `usePathname`, com uma adaptação local do hash.
+
+O rodapé mantém a marca Home Pros Constructors, identificada com licenças e atendimento comercial, e mostra Make Noise no canto como responsável pela produção de vídeos e materiais. A estrutura de cinco funções recebida do responsável está registrada em `docs/COMPANY-STRUCTURE.md`, sem criar cargos ou condições comerciais novas.

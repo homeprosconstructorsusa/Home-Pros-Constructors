@@ -104,6 +104,16 @@ A prévia autocontida também foi conferida manualmente em 320, 768 e 1440 pixel
 - Previsão do curso avançado mantida no 1º trimestre de 2027. Valores e condições das duas modalidades de edição preservados. Nenhum curso de gerente foi adicionado e nenhuma licença de cidade foi alterada.
 - Loja inclui a proposta de inglês junto às ofertas existentes. A classificação final das quatro transações mencionadas pelo responsável ainda precisa de esclarecimento.
 
-Faltam a periodicidade dos R$ 99, a frequência das sessões de cinco minutos, o programa final, regras de acesso e execução da plataforma do aluno. A finalidade das bandeiras Brasil/Estados Unidos/Canadá (país ou idioma) também continua pendente de esclarecimento.
+Faltam a periodicidade dos R$ 99, a frequência das sessões de cinco minutos, o programa final, regras de acesso e execução da plataforma do aluno.
 
 Validação desta alteração: lint, TypeScript, build e quatro verificações de navegador para escola de inglês, preservação das ofertas de edição, navegação e prévia móvel offline.
+
+
+## Faixa de bandeiras e crédito Make Noise
+
+- Bandeiras Brasil, Estados Unidos e Canadá em uma faixa abaixo do cabeçalho, por toda a largura do site. Navegação por países, com destaque da seleção atual e operação por clique, teclado e toque.
+- Estados Unidos abre a entrada geral das licenças existentes; Brasil e Canadá mostram páginas em preparação. Nenhum catálogo ou oferta de outros estados/países foi criado ou duplicado.
+- Crédito Make Noise no canto do rodapé, identificado como produção de vídeos e materiais. A Home Pros permanece como a marca principal, identificada com licenças e atendimento comercial.
+- Tabela de investidor, gerente, administrador, atendimento por telefone e editor/produção recebida do responsável registrada no documento interno de estrutura. Nenhum cargo, salário ou condição de contratação foi inventado no website.
+
+Validação: lint, TypeScript, build de produção e quatro verificações de navegador para faixa de países com teclado/toque, menu amplo, Home móvel/offline e escola de inglês. Conteúdos e preços de cursos/licenças preservados; website não publicado.

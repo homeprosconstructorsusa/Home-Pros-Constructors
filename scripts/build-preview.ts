@@ -30,6 +30,7 @@ async function main() {
     alias: {
       "next/link": resolve("preview/link.tsx"),
       "next/image": resolve("preview/image.tsx"),
+      "next/navigation": resolve("preview/navigation.tsx"),
     },
     define: { "process.env.NODE_ENV": '"production"' },
   });

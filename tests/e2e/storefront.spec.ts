@@ -580,3 +580,43 @@ test("English school presents the proposed price without inventing billing or en
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.screenshot({ path: "/tmp/homepros-school-mobile.png", fullPage: true });
 });
+
+test("Country flag menu navigates by keyboard and touch without adding unapproved catalogs", async ({ page, browser }) => {
+  await page.goto("/");
+  const menu = page.getByRole("navigation", { name: "Países Home Pros" });
+  await expect(menu.getByRole("link")).toHaveCount(3);
+  await expect(menu.locator("svg")).toHaveCount(3);
+  await expect(page.locator(".production-credit")).toContainText("Make Noise");
+  await expect(page.locator(".production-credit")).toContainText("Produção de vídeos e materiais");
+  await expect(menu.getByRole("link", { name: "Estados Unidos", exact: true })).toHaveAttribute("aria-current", "true");
+  await menu.getByRole("link", { name: "Brasil", exact: true }).focus();
+  await page.keyboard.press("Enter");
+  await expect(page.getByRole("heading", { name: "Brasil.", exact: true })).toBeVisible();
+  await expect(menu.getByRole("link", { name: "Brasil", exact: true })).toHaveAttribute("aria-current", "true");
+  await expect(page.locator(".country-preparation")).toContainText("ainda não está disponível");
+  await expect(page.locator(".city-card")).toHaveCount(0);
+  await menu.getByRole("link", { name: "Canadá", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Canadá.", exact: true })).toBeVisible();
+  await expect(menu.getByRole("link", { name: "Canadá", exact: true })).toHaveAttribute("aria-current", "true");
+  await menu.getByRole("link", { name: "Estados Unidos", exact: true }).click();
+  await expect(page).toHaveURL(/\/licenses$/);
+  await expect(page.locator(".license-overview-grid")).toContainText("351 cidades");
+  const context = await browser.newContext({ viewport: { width: 320, height: 812 }, isMobile: true, hasTouch: true });
+  const mobile = await context.newPage();
+  await mobile.route("**/*", (route) => route.request().url() === "http://127.0.0.1:3102/homepros-preview.html" ? route.continue() : route.abort());
+  await mobile.goto("http://127.0.0.1:3102/homepros-preview.html#/");
+  const mobileMenu = mobile.getByRole("navigation", { name: "Países Home Pros" });
+  await expect.poll(() => mobile.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await expect(mobile.locator(".production-credit")).toContainText("Make Noise");
+  await mobile.screenshot({ path: "/tmp/homepros-flags-mobile.png" });
+  for (const country of ["Brasil", "Canadá"]) {
+    await mobileMenu.getByRole("link", { name: country, exact: true }).tap();
+    await expect(mobile.getByRole("heading", { name: `${country}.`, exact: true })).toBeVisible();
+    await expect(mobileMenu.getByRole("link", { name: country, exact: true })).toHaveAttribute("aria-current", "true");
+    await expect.poll(() => mobile.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  }
+  await mobileMenu.getByRole("link", { name: "Estados Unidos", exact: true }).tap();
+  await expect(mobile).toHaveURL(/#\/licenses$/);
+  await expect(mobileMenu.getByRole("link", { name: "Estados Unidos", exact: true })).toHaveAttribute("aria-current", "true");
+  await context.close();
+});

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BrandLogo } from "./brand-logo";
 import { MainNavigation } from "./main-navigation";
+import { CountryNavigation } from "./country-navigation";
 export function SiteShell({
   children,
   demo,
@@ -29,6 +30,7 @@ export function SiteShell({
           <MainNavigation />
         </nav>
       </header>
+      <CountryNavigation />
       <main id="main-content">{children}</main>
       <footer className="site-footer">
         <div className="shell footer-inner">
@@ -41,6 +43,7 @@ export function SiteShell({
               <BrandLogo />
             </Link>
             <p className="mt-2 text-sm">Sua cidade. Seu próximo negócio.</p>
+            <p className="footer-role">Licenças e atendimento comercial</p>
           </div>
           <div className="text-sm">
             <Link href="/states/massachusetts">Massachusetts</Link>
@@ -55,6 +58,10 @@ export function SiteShell({
               © {new Date().getFullYear()} Home Pros Constructors · Projeto em
               desenvolvimento
             </p>
+            <div className="production-credit" aria-label="Produção criativa">
+              <span>Produção de vídeos e materiais</span>
+              <strong>Make Noise</strong>
+            </div>
           </div>
         </div>
       </footer>
