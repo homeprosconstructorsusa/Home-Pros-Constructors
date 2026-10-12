@@ -58,3 +58,17 @@ As últimas alterações de texto estão isoladas em `cityPageOverrides.abington
 - Preços e condições na configuração de ofertas; nenhuma matrícula, pagamento ou direito é criado na prévia.
 
 Faltam o conteúdo final e acesso às aulas, o contrato da exclusividade (incluindo renovação e alcance), cancelamento, pedidos e pagamento dos cursos. As inscrições permanecem desativadas. A oferta independente não é uma licença comercial de cidade. As revisões específicas de Abington nas páginas de licenças continuam isoladas; não foram replicadas.
+
+
+## Revisão da página inicial, navegação e fotografias — 12/10/2026
+
+- Categoria e primeiro destaque: Agência Americana de Marketing. Imagens e nomes das categorias ampliados com proporções responsivas; destaque de edição transferido para o final da página inicial.
+- Cinco fotografias fornecidas pelo responsável em `imagens .zip`, otimizadas para WebP, substituem as imagens artificiais nas categorias, destaques da página inicial e páginas dos cursos. A foto de escritório também compõe o fundo suave da abertura. Nenhuma fotografia foi gerada com IA nesta revisão. Os fundos previamente aprovados das páginas de licenças e carrinho continuam existentes.
+- Cabeçalho Home / Licenças / Loja / Cursos / Contato e carrinho. Painéis amplos para Licenças e Cursos com hover, clique, teclado, toque, fechamento explícito e Escape. Licenças mantém uma entrada geral para futuros estados sem criar novos catálogos.
+- Loja apresenta somente as ofertas existentes com links funcionais e informação de preparação; Contato usa somente as redes sociais oficiais fornecidas e informa a falta de dados de contato direto.
+- Marca original em favicon ICO com 16/32/48 pixels e ícone Apple de 180 pixels; ícones também incorporados à prévia portátil.
+- Preços, condições, disponibilidade, carrinho e conteúdo das licenças preservados. O texto específico de Abington não foi replicado.
+
+Ainda dependem do responsável: e-mail/telefone oficiais para contato direto, eventuais produtos adicionais da loja, programa definitivo e contrato dos cursos, e aprovação final de ofertas/contratos. Pagamentos e inscrições continuam desabilitados. Nenhum website foi publicado e nenhuma hospedagem foi contratada.
+
+A configuração reutilizável de rede do ambiente recebeu os domínios `images.pexels.com` e `www.pexels.com` para uma possível consulta futura de fotografias. Salvar esse rascunho não alterou a rede em execução; nenhuma imagem externa foi baixada. O envio posterior das cinco fotos resolveu a necessidade desta revisão sem dependência desses domínios.

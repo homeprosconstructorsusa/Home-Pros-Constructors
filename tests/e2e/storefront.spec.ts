@@ -140,8 +140,8 @@ test("downloadable preview runs offline with catalog, pages and cart", async ({
     page.getByRole("heading", { name: "HOME PROS CONSTRUCTORS", exact: true }),
   ).toBeVisible();
   await page
-    .getByRole("link", { name: "Explorar cidades", exact: true })
-    .first()
+    .locator(".showcase-license")
+    .getByRole("link", { name: /^Explorar cidades/ })
     .click();
   await expect(page.locator(".city-card")).toHaveCount(351);
   await page.getByLabel("Buscar cidades").fill("Cambridge");
@@ -338,6 +338,8 @@ test("City pages explain the license before the album and separate payment amoun
   await page.goto("/cities/abington");
   const overview = page.locator(".city-overview");
   const album = page.getByRole("region", { name: "Álbum de Abington", exact: true });
+  await expect(overview).toBeVisible();
+  await expect(album).toBeVisible();
   await expect(overview).toContainText("licença de uso da cidade de Abington, em Massachusetts");
   await expect(overview).toContainText("conforme contrato");
   const overviewBox = await overview.boundingBox();
@@ -378,6 +380,9 @@ test("City pages explain the license before the album and separate payment amoun
   const offlineOverview = page.locator(".city-overview");
   const offlineSummary = page.locator(".city-purchase-summary");
   const offlineAlbum = page.getByRole("region", { name: "Álbum de Abington", exact: true });
+  await expect(offlineOverview).toBeVisible();
+  await expect(offlineSummary).toBeVisible();
+  await expect(offlineAlbum).toBeVisible();
   const first = await offlineOverview.boundingBox();
   const second = await offlineSummary.boundingBox();
   const third = await offlineAlbum.boundingBox();
@@ -394,13 +399,13 @@ test("City pages explain the license before the album and separate payment amoun
 
 test("Courses present two offers, city editing rights and an independent inventory", async ({ page }) => {
   await page.goto("/");
-  const menu = page.locator(".courses-menu");
-  await menu.locator("summary").click();
-  await expect(menu).toHaveAttribute("open", "");
+  const menu = page.getByRole("button", { name: /^Cursos/ });
+  await menu.click();
+  await expect(menu).toHaveAttribute("aria-expanded", "true");
   await page.keyboard.press("Escape");
-  await expect(menu).not.toHaveAttribute("open", "");
-  await menu.locator("summary").click();
-  await menu.getByRole("link", { name: /Curso de edição de vídeos/ }).click();
+  await expect(menu).toHaveAttribute("aria-expanded", "false");
+  await menu.click();
+  await page.locator(".mega-panel").getByRole("link", { name: "Curso de edição de vídeos", exact: true }).click();
   await expect(page).toHaveURL(/\/courses\/video-editing$/);
   await expect(page.locator(".course-options article")).toHaveCount(2);
   await expect(page.locator(".course-options article").first()).toContainText("297,00");
@@ -441,4 +446,88 @@ test("Courses present two offers, city editing rights and an independent invento
   await page.goto("http://127.0.0.1:3102/homepros-preview.html#/courses/video-editing/complete");
   await expect(page.locator(".complete-course-price")).toContainText("997,00");
   await page.screenshot({ path: "/tmp/homepros-course-complete-mobile.png", fullPage: true });
+});
+
+test("Wide navigation supports hover, keyboard, closing and functional destinations", async ({ page, request }) => {
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.goto("/");
+  const licenses = page.getByRole("button", { name: /^Licenças/ });
+  await licenses.hover();
+  await expect(licenses).toHaveAttribute("aria-expanded", "true");
+  const panel = page.locator(".mega-panel");
+  await panel.getByRole("link", { name: "Massachusetts", exact: true }).hover();
+  await expect(panel).toBeVisible();
+  const panelBox = await panel.boundingBox();
+  expect(panelBox!.width).toBe(1440);
+  await page.screenshot({ path: "/tmp/homepros-wide-menu.png" });
+  await page.keyboard.press("Escape");
+  await expect(licenses).toBeFocused();
+  await expect(panel).toHaveCount(0);
+  await licenses.press("ArrowDown");
+  await expect(panel.getByRole("link", { name: "Agência Americana de Marketing", exact: true })).toBeFocused();
+  await page.keyboard.press("Enter");
+  await expect(page).toHaveURL(/\/licenses$/);
+  await expect(page.locator(".license-overview-grid article")).toContainText("Outros estados");
+  await page.getByRole("link", { name: "Loja", exact: true }).click();
+  await expect(page).toHaveURL(/\/shop$/);
+  await expect(page.locator(".information-grid")).toContainText("297,00");
+  await expect(page.locator(".information-grid")).toContainText("997,00");
+  await expect(page.locator(".information-page")).toContainText("pagamentos estão em preparação");
+  await page.getByRole("link", { name: "Contato", exact: true }).click();
+  await expect(page).toHaveURL(/\/contact$/);
+  await expect(page.locator(".information-grid a")).toHaveCount(3);
+  await expect(page.locator(".information-grid a").first()).toHaveAttribute("href", "https://www.instagram.com/homeprosconstructors/");
+  await expect(page.locator(".contact-preparation")).toContainText("dados oficiais forem fornecidos");
+  const favicon = await request.get("/favicon.ico");
+  expect(favicon.status()).toBe(200);
+  const bytes = await favicon.body();
+  expect(Array.from(bytes.subarray(0, 6))).toEqual([0, 0, 1, 0, 3, 0]);
+  expect([bytes[6], bytes[22], bytes[38]]).toEqual([16, 32, 48]);
+  const apple = await request.get("/icons/icon-180.png");
+  expect(apple.status()).toBe(200);
+  const appleBytes = await apple.body();
+  expect(appleBytes.readUInt32BE(16)).toBe(180);
+  expect(appleBytes.readUInt32BE(20)).toBe(180);
+  await expect(page.locator('head link[rel="apple-touch-icon"]').first()).toHaveAttribute("sizes", "180x180");
+});
+
+test("Homepage uses supplied photographs and offline mobile navigation reaches every destination", async ({ browser }) => {
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
+  const page = await context.newPage();
+  await page.route("**/*", (route) => route.request().url() === "http://127.0.0.1:3102/homepros-preview.html" ? route.continue() : route.abort());
+  await page.goto("http://127.0.0.1:3102/homepros-preview.html#/");
+  await expect(page.locator(".home-category-nav a").first()).toContainText("Agência Americana de Marketing");
+  await expect(page.locator(".showcase-card").first()).toContainText("Sua agência.");
+  await expect(page.locator(".showcase-card").last()).toContainText("Edite histórias.");
+  await expect(page.locator(".showcase-card").last()).toContainText("Desenvolva sua atuação.");
+  const images = page.locator(".showcase-photo");
+  await expect(images).toHaveCount(4);
+  for (const img of await images.all()) {
+    await img.scrollIntoViewIfNeeded();
+    await expect(img).toHaveAttribute("src", /^blob:/);
+    await expect.poll(() => img.evaluate((element) => (element as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+  }
+  await expect(page.locator('head link[rel="icon"]')).toHaveAttribute("href", /^data:image\/png/);
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.screenshot({ path: "/tmp/homepros-new-home-mobile.png", fullPage: true });
+  const courses = page.getByRole("button", { name: /^Cursos/ });
+  await courses.tap();
+  await expect(courses).toHaveAttribute("aria-expanded", "true");
+  await courses.tap();
+  await expect(courses).toHaveAttribute("aria-expanded", "false");
+  await courses.tap();
+  await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await page.screenshot({ path: "/tmp/homepros-wide-menu-mobile.png" });
+  await page.getByRole("button", { name: "Fechar submenu", exact: true }).tap();
+  await expect(courses).toHaveAttribute("aria-expanded", "false");
+  for (const [name, destination] of [["Loja", "shop"], ["Contato", "contact"], ["Home", ""]]) {
+    await page.getByRole("link", { name, exact: true }).tap();
+    await expect(page).toHaveURL(new RegExp(`#/${destination}$`));
+    await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  }
+  await page.getByRole("button", { name: /^Licenças/ }).tap();
+  await page.locator(".mega-panel").getByRole("link", { name: "Agência Americana de Marketing", exact: true }).tap();
+  await expect(page.getByRole("heading", { name: "Agência Americana de Marketing.", exact: true })).toBeVisible();
+  await expect(page.locator(".license-overview-grid")).toContainText("351 cidades");
+  await context.close();
 });
