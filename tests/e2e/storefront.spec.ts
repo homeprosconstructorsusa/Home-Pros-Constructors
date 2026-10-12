@@ -167,6 +167,18 @@ test("desktop design screenshots", async ({ page }) => {
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("HOME PROS CONSTRUCTORS");
   await expect(page.locator(".home-headline")).toContainText("Trabalhe de Qualquer Lugar do Mundo");
   await expect.poll(() => page.locator(".page-backdrop-home .scene-image").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+  await expect(page.locator(".page-backdrop-home .scene-image")).toHaveAttribute("src", /home-liberty\.png/);
+  const agency = page.locator(".showcase-license");
+  await expect(agency.locator("h2")).toContainText("Trabalhe de casa ou de qualquer lugar.");
+  await expect(agency.locator("h2")).toContainText("Ganhe em dólares.");
+  await expect(agency.locator("figcaption")).toHaveText("Em casa ou em um coworking.");
+  await expect.poll(() => agency.locator(".agency-dollar-scene img").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+  await expect(agency.locator(".agency-dollar-scene img")).toHaveAttribute("src", /dollars\.webp/);
+  const desktopPhotos = agency.locator(".agency-work-frame");
+  const desktopFirst = await desktopPhotos.nth(0).boundingBox();
+  const desktopSecond = await desktopPhotos.nth(1).boundingBox();
+  expect(desktopFirst!.y).toBe(desktopSecond!.y);
+  expect(desktopFirst!.x + desktopFirst!.width).toBeLessThan(desktopSecond!.x);
   await expect(
     page.locator("main section").first().locator(".shell"),
   ).toHaveCSS("display", "grid");
@@ -497,16 +509,23 @@ test("Homepage uses supplied photographs and offline mobile navigation reaches e
   await page.route("**/*", (route) => route.request().url() === "http://127.0.0.1:3102/homepros-preview.html" ? route.continue() : route.abort());
   await page.goto("http://127.0.0.1:3102/homepros-preview.html#/");
   await expect(page.locator(".home-category-nav a").first()).toContainText("Agência Americana de Marketing");
-  await expect(page.locator(".showcase-card").first()).toContainText("Sua agência.");
+  await expect(page.locator(".showcase-card").first()).toContainText("Trabalhe de casa ou de qualquer lugar.");
+  await expect(page.locator(".showcase-card").first()).toContainText("Ganhe em dólares.");
   await expect(page.locator(".showcase-card").last()).toContainText("Edite histórias.");
   await expect(page.locator(".showcase-card").last()).toContainText("Desenvolva sua atuação.");
   const images = page.locator(".showcase-photo");
-  await expect(images).toHaveCount(4);
+  await expect(images).toHaveCount(5);
   for (const img of await images.all()) {
     await img.scrollIntoViewIfNeeded();
     await expect(img).toHaveAttribute("src", /^blob:/);
     await expect.poll(() => img.evaluate((element) => (element as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
   }
+  const mobilePhotos = page.locator(".agency-work-frame");
+  const mobileFirst = await mobilePhotos.nth(0).boundingBox();
+  const mobileSecond = await mobilePhotos.nth(1).boundingBox();
+  expect(mobileFirst!.y + mobileFirst!.height).toBeLessThan(mobileSecond!.y);
+  await expect(page.locator(".agency-work-gallery figcaption")).toHaveText("Em casa ou em um coworking.");
+  await expect.poll(() => page.locator(".agency-dollar-scene img").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
   await expect(page.locator('head link[rel="icon"]')).toHaveAttribute("href", /^data:image\/png/);
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.screenshot({ path: "/tmp/homepros-new-home-mobile.png", fullPage: true });

@@ -72,3 +72,14 @@ Faltam o conteúdo final e acesso às aulas, o contrato da exclusividade (inclui
 Ainda dependem do responsável: e-mail/telefone oficiais para contato direto, eventuais produtos adicionais da loja, programa definitivo e contrato dos cursos, e aprovação final de ofertas/contratos. Pagamentos e inscrições continuam desabilitados. Nenhum website foi publicado e nenhuma hospedagem foi contratada.
 
 A configuração reutilizável de rede do ambiente recebeu os domínios `images.pexels.com` e `www.pexels.com` para uma possível consulta futura de fotografias. Salvar esse rascunho não alterou a rede em execução; nenhuma imagem externa foi baixada. O envio posterior das cinco fotos resolveu a necessidade desta revisão sem dependência desses domínios.
+
+
+## Último ajuste: abertura e primeiro destaque da Home
+
+- Fundo original da Estátua da Liberdade restaurado somente na abertura da página inicial, mantendo opacidade e degradê.
+- Primeiro destaque: “Trabalhe de casa ou de qualquer lugar. Ganhe em dólares.”, sem valores, projeções ou novas garantias de renda.
+- Foto de dólar fornecida no novo ZIP, otimizada para WebP e usada como fundo decorativo suave junto ao título.
+- Fotos já fornecidas da profissional ao computador e do escritório em duas colunas no computador e uma coluna no celular; legenda “Em casa ou em um coworking.”.
+- Nenhuma alteração nas páginas de cidades, nos textos exclusivos de Abington, no menu, nos cursos, nos preços ou no carrinho. Nenhuma geração de imagens com IA.
+
+Validação deste ajuste: lint, TypeScript, build de produção e quatro verificações de navegador direcionadas à Home no computador/celular, navegação da prévia offline, carrinho e preservação da licença de Abington.

@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const scenes = {
-  home: "/photos/real/office.webp",
+  home: "/photos/backgrounds/home-liberty.png",
   market: "/photos/backgrounds/boston.png",
   abington: "/photos/backgrounds/home.png",
   boston: "/photos/backgrounds/boston.png",

@@ -31,8 +31,29 @@ export function HomeContent() {
       <section className="shell showcase-heading"><p className="eyebrow">Encontre seu caminho</p><h2>Seu próximo passo começa aqui.</h2><p>Representação comercial, formação e soluções para crescer.</p></section>
       <div className="home-showcase-grid">
         <section className="showcase-card showcase-license">
-          <div className="showcase-copy"><p className="eyebrow">Agência Americana de Marketing</p><h2>Sua agência.<br />Seu próximo mercado.</h2><p>Conheça a proposta da Agência Americana de Marketing e as condições da licença comercial da Home Pros.</p><Link href="/states/massachusetts" className="apple-text-link">Explorar cidades →</Link></div>
-          <Image src="/photos/real/office.webp" alt="Escritório compartilhado com mesas de trabalho e luz natural." width={1920} height={1272} sizes="(min-width: 1480px) 1480px, 100vw" className="showcase-photo" />
+          <div className="showcase-copy agency-dollar-copy">
+            <div className="agency-dollar-scene" aria-hidden="true">
+              <Image src="/photos/real/dollars.webp" alt="" width={1600} height={1067} sizes="(min-width: 1480px) 1480px, 100vw" loading="eager" />
+              <div className="agency-dollar-gradient" />
+            </div>
+            <div className="agency-message">
+              <p className="eyebrow">Agência Americana de Marketing</p>
+              <h2>Trabalhe de casa ou de qualquer lugar.<br /><span>Ganhe em dólares.</span></h2>
+              <p>Conheça a proposta da Agência Americana de Marketing e as condições da licença comercial da Home Pros.</p>
+              <Link href="/states/massachusetts" className="apple-text-link">Explorar cidades →</Link>
+            </div>
+          </div>
+          <figure className="agency-work-gallery">
+            <div className="agency-work-grid">
+              <div className="agency-work-frame agency-home-work">
+                <Image src="/photos/real/professional.webp" alt="Profissional ao computador em uma estação de trabalho." width={368} height={401} sizes="(min-width: 760px) 368px, 90vw" className="showcase-photo agency-work-photo" />
+              </div>
+              <div className="agency-work-frame">
+                <Image src="/photos/real/office.webp" alt="Ambiente de coworking com mesas de trabalho e luz natural." width={1920} height={1272} sizes="(min-width: 1200px) 488px, (min-width: 760px) 45vw, 90vw" className="showcase-photo agency-work-photo" />
+              </div>
+            </div>
+            <figcaption>Em casa ou em um coworking.</figcaption>
+          </figure>
         </section>
         <section id="services" className="showcase-card showcase-services">
           <div className="showcase-copy"><p className="eyebrow">Marketing digital</p><h2>Você atende.<br />A Home Pros produz.</h2><p>Websites, vídeos, identidade visual e divulgação para profissionais da construção e dos serviços residenciais.</p><Link href="/cities/abington" className="apple-text-link">Veja como funciona →</Link></div>
