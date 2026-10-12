@@ -48,6 +48,7 @@ async function main() {
     }
   }
   await collectImages("public/photos");
+  await collectImages("public/icons");
   const favicon = (await readFile("public/icons/icon-32.png")).toString("base64");
   const appleIcon = (await readFile("public/icons/icon-180.png")).toString("base64");
   const html = `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Home Pros Constructors · Prévia para aprovação</title><link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,${favicon}"><link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,${appleIcon}"><style>${await readFile(cssPath, "utf8")}</style></head><body><div id="root"></div><noscript>Ative o JavaScript para usar a prévia interativa.</noscript><script>window.__HOME_PROS_ASSETS=${JSON.stringify(assets)};${result.outputFiles[0].text.replaceAll("</script", "<\\/script")}</script></body></html>`;
