@@ -88,3 +88,10 @@ Validação deste ajuste: lint, TypeScript, build de produção e quatro verific
 ## Ajuste de espaço da abertura
 
 A abertura da Home foi encurtada no computador e no celular, reduzindo a altura mínima e o espaço inferior para aproximar as categorias do primeiro conteúdo. A fotografia da profissional continua preservada: o arquivo original disponível tem apenas 368 × 401 pixels. A substituição por uma fotografia de trabalho em casa em maior resolução depende do envio desse arquivo pelo responsável; não houve ampliação artificial nem uso de imagens de coworking como se fossem de casa. Lint, TypeScript, build de produção e duas verificações existentes de navegador (computador e celular/offline) foram executados para este ajuste.
+
+
+## Tipografia mais destacada na Home
+
+A tipografia foi reforçada somente na página inicial: títulos com peso 700, tamanhos responsivos maiores, descrições com peso 500 e contraste mais forte, categorias e links com peso 600 e textos auxiliares legíveis. A família continua nativa do sistema (`-apple-system`/`BlinkMacSystemFont` em dispositivos Apple), sem baixar ou redistribuir fontes proprietárias. Fotos, cores da marca, conteúdo, preços e demais páginas não foram alterados. O site Apple não pôde ser consultado ao vivo pela restrição de rede do ambiente; o ajuste segue a referência visual anteriormente fornecida. Validação: lint, TypeScript, build de produção e três verificações existentes de navegador para desktop, páginas no celular e prévia offline com toque.
+
+A prévia autocontida também foi conferida manualmente em 320, 768 e 1440 pixels, sem rolagem horizontal.
