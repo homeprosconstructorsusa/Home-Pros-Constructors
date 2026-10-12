@@ -6,11 +6,20 @@ import { englishCourseOffer } from "@/content/english-course";
 import { money } from "@/lib/license";
 
 const categories = [
-  { name: "Agência Americana de Marketing", href: "/licenses", image: "/photos/real/office.webp" },
-  { name: "Edição de vídeos", href: "/courses/video-editing", image: "/photos/real/editing.webp" },
-  { name: "Marketing digital", href: "#services", image: "/photos/real/professional.webp" },
-  { name: "Home Pros School", href: "/courses/english", image: "/photos/real/team.webp" },
+  { name: "Agência Americana de Marketing", href: "/licenses", image: "/photos/real/office.webp", label: "Sua atuação", icon: "agency" },
+  { name: "Edição de vídeos", href: "/courses/video-editing", image: "/photos/real/editing.webp", label: "Sua criatividade", icon: "video" },
+  { name: "Marketing digital", href: "#services", image: "/photos/real/professional.webp", label: "Suas conexões", icon: "marketing" },
+  { name: "Home Pros School", href: "/courses/english", image: "/photos/real/team.webp", label: "Seu aprendizado", icon: "school" },
 ];
+
+function CategoryIcon({ type }: { type: string }) {
+  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    {type === "agency" && <><path d="M4 21V5l8-2v18M12 9h8v12M2 21h20M8 7v1M8 12v1M8 17v1M16 13h1M16 17h1" /></>}
+    {type === "video" && <><rect x="2" y="4" width="20" height="16" rx="3" /><path d="m10 8 6 4-6 4Z" /></>}
+    {type === "marketing" && <><path d="m4 9 14-5v16L4 15Zm14 0h3v6h-3M6 16l1 5h4l-2-4" /></>}
+    {type === "school" && <><path d="M12 6c-3-2-6-3-10-2v15c4-1 7 0 10 2 3-2 6-3 10-2V4c-4-1-7 0-10 2Zm0 0v15M5 8l4 1M5 12l4 1M15 9l4-1M15 13l4-1" /></>}
+  </svg>;
+}
 
 export function HomeContent() {
   return (
@@ -28,7 +37,15 @@ export function HomeContent() {
         </div>
       </section>
       <nav className="shell home-category-nav" aria-label="Categorias da Home Pros">
-        {categories.map((category) => <Link href={category.href} key={category.name}><Image src={category.image} alt="" width={106} height={106} sizes="106px" /><span>{category.name}</span></Link>)}
+        {categories.map((category) => <Link className="home-category-card" href={category.href} key={category.name}>
+          <span className={`category-art category-art-${category.icon}`} aria-hidden="true">
+            <Image className="category-art-photo" src={category.image} alt="" width={480} height={360} sizes="(max-width: 640px) 44vw, (max-width: 900px) 40vw, 260px" />
+            <span className="category-art-shade" />
+            <span className="category-brand-seal"><Image src="/icons/icon-180.png" alt="" width={36} height={36} /><span>HOME PROS</span></span>
+            <span className="category-art-caption"><span className="category-art-icon"><CategoryIcon type={category.icon} /></span><span>{category.label}</span><svg className="category-art-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M6 18 18 6M6 6h12v12" /></svg></span>
+          </span>
+          <span className="category-name">{category.name}</span>
+        </Link>)}
       </nav>
       <section className="shell showcase-heading"><p className="eyebrow">Encontre seu caminho</p><h2>Seu próximo passo começa aqui.</h2><p>Representação comercial, formação e soluções para crescer.</p></section>
       <div className="home-showcase-grid">

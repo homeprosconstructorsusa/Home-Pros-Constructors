@@ -488,3 +488,32 @@ input, select, button { font: inherit; }
 .information-page > .partnership-demo-note { padding: 16px 20px; border: 1px solid #decda8; border-radius: 12px; background: #f7f0e5; font-size: 14px; }
 .demo-contact-details { padding: 20px; margin-top: 18px; border: 1px solid #decda8; border-radius: 12px; background: #f7f0e5; }
 .demo-contact-details strong { font-size: 17px; }
+
+/* Branded category artwork, limited to the Home entrance. */
+.apple-home .home-category-nav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; padding-block: 32px 48px; }
+.apple-home .home-category-nav .home-category-card { width: 100%; max-width: none; gap: 16px; border-radius: 18px; }
+.apple-home .category-art { position: relative; display: block; isolation: isolate; width: 100%; aspect-ratio: 1.45; overflow: hidden; border-radius: 18px; background: #173b31; box-shadow: 0 8px 24px #17352e16; border: 1px solid #17352e12; }
+.apple-home .home-category-nav .category-art-photo { display: block; width: 100%; height: 100%; border-radius: 0; object-fit: cover; box-shadow: none; }
+.apple-home .category-art-marketing .category-art-photo { object-position: center 35%; }
+.apple-home .category-art-shade { position: absolute; inset: 0; background: linear-gradient(180deg, #102e2760, transparent 45%, #102e27eb); }
+.apple-home .category-brand-seal { position: absolute; top: 12px; left: 12px; display: flex; align-items: center; gap: 7px; padding: 5px 9px 5px 5px; color: #fff; background: #102e27b8; border: 1px solid #ffffff28; border-radius: 30px; font-size: 9px; font-weight: 700; letter-spacing: .08em; }
+.apple-home .home-category-nav .category-brand-seal img { width: 26px; height: 26px; object-fit: contain; border-radius: 0; box-shadow: none; }
+.apple-home .category-art-caption { position: absolute; left: 14px; right: 14px; bottom: 16px; display: flex; align-items: center; gap: 9px; color: #fff; font-size: 12px; font-weight: 500; letter-spacing: .01em; text-align: left; }
+.apple-home .category-art-icon { display: flex; align-items: center; justify-content: center; width: 33px; height: 33px; border: 1px solid #d5c29b70; border-radius: 10px; color: #ead8b2; background: #173b3199; flex-shrink: 0; }
+.apple-home .category-art-icon svg { width: 21px; height: 21px; }
+.apple-home .category-art-arrow { width: 16px; height: 16px; margin-left: auto; flex-shrink: 0; color: #ead8b2; }
+.apple-home .category-name { padding-inline: 6px; }
+.apple-home .home-category-card:hover .category-art { box-shadow: 0 10px 28px #17352e28; border-color: #ad9155; }
+.apple-home .home-category-card:hover .category-name { color: #245840; }
+.apple-home .home-category-card:focus-visible { outline: 3px solid #ad9155; outline-offset: 6px; }
+@media (min-width: 641px) and (max-width: 900px) { .apple-home .home-category-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 640px; } }
+@media (max-width: 640px) {
+  .apple-home .home-category-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; padding-block: 24px 36px; }
+  .apple-home .category-art { aspect-ratio: 1.12; border-radius: 15px; }
+  .apple-home .category-brand-seal { top: 9px; left: 9px; font-size: 8px; padding-right: 7px; gap: 4px; }
+  .apple-home .category-art-caption { left: 10px; right: 10px; bottom: 12px; font-size: 10px; gap: 6px; }
+  .apple-home .category-art-icon { width: 28px; height: 28px; border-radius: 8px; }
+  .apple-home .category-art-icon svg { width: 18px; height: 18px; }
+  .apple-home .category-art-arrow { width: 12px; height: 12px; }
+  .apple-home .home-category-card .category-name { font-size: 15px; }
+}
