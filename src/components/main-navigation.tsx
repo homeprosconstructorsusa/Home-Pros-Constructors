@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { CartCount } from "./cart";
 
-type Section = "licenses" | "courses";
+type Section = "licenses" | "courses" | "partnership";
 const sections = {
   licenses: {
     label: "Licenças", heading: "Explore as licenças",
@@ -16,6 +16,12 @@ const sections = {
     primary: [{ label: "Curso de edição de vídeos", href: "/courses/video-editing" }, { label: "Curso completo independente", href: "/courses/video-editing/complete" }],
     secondary: [{ label: "Curso + direito de edição da cidade", href: "/courses/video-editing#editor-cities" }, { label: "Home Pros School", href: "/courses/english" }],
     note: "Conheça as propostas de formação e suas condições. As inscrições ainda estão em preparação.",
+  },
+  partnership: {
+    label: "Parceria", heading: "Escolha sua parceria",
+    primary: [{ label: "Com a Home Pros Constructors", href: "/partnership/company" }, { label: "Com o responsável por uma cidade", href: "/partnership/cities" }],
+    secondary: [{ label: "Opções de parceria", href: "/partnership" }, { label: "Canais oficiais da Home Pros", href: "/contact" }],
+    note: "Escolha a parceria com a empresa ou consulte estados e cidades. Os contatos locais serão publicados quando confirmados.",
   },
 };
 
@@ -44,6 +50,7 @@ export function MainNavigation() {
       {trigger("licenses")}
       <Link href="/shop" onClick={close} onPointerEnter={close}>Loja</Link>
       {trigger("courses")}
+      {trigger("partnership")}
       <Link href="/contact" onClick={close} onPointerEnter={close}>Contato</Link>
       <Link href="/cart" className="cart-link nav-cart" onClick={close} onPointerEnter={close}>Carrinho <CartCount /></Link>
     </div>

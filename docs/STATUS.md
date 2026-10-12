@@ -117,3 +117,16 @@ Validação desta alteração: lint, TypeScript, build e quatro verificações d
 - Tabela de investidor, gerente, administrador, atendimento por telefone e editor/produção recebida do responsável registrada no documento interno de estrutura. Nenhum cargo, salário ou condição de contratação foi inventado no website.
 
 Validação: lint, TypeScript, build de produção e quatro verificações de navegador para faixa de países com teclado/toque, menu amplo, Home móvel/offline e escola de inglês. Conteúdos e preços de cursos/licenças preservados; website não publicado.
+
+
+## Menu Parceria
+
+- Painel acessível com parceria institucional com a Home Pros Constructors e parceria com o responsável por uma cidade.
+- Seletor de estado, busca e seleção de cidade; o filtro inicial mostra apenas operações abertas a parceiros. Disponibilidade própria de parceria, sem usar a disponibilidade comercial das licenças como substituto.
+- Abington, Boston e Cambridge como exemplos na prévia, com responsáveis e contatos identificados como fictícios, conforme autorizado. Botões abrem demonstrações locais; não houve envio a terceiros.
+- Rotas de parceria por estado/cidade independentes das páginas de licença. Contatos reais não publicados ficam em preparação, inclusive no modo real. Não foram inventados telefones ou e-mails de pessoas reais.
+- Bandeiras, preços, cursos, carrinho e textos das licenças preservados, incluindo a revisão exclusiva de Abington. Nenhuma oferta ou catálogo de outro estado foi criado.
+
+Validação: lint, TypeScript, build, oito testes de dados/cálculo/disponibilidade e quatro verificações de navegador para parceria no computador/celular/offline, diferença entre contatos demonstrativos e reais, menu, bandeiras e carrinho. Website não publicado.
+
+Para substituir os exemplos serão necessários nome do responsável, cidade/estado, canal de contato comercial e confirmação de que a operação aceita parceiros. A matrícula, os contratos e as condições comerciais de parceria continuam fora desta apresentação.

@@ -120,3 +120,10 @@ O primeiro destaque da Agência Americana de Marketing apresenta “Trabalhe de 
 A faixa de ponta a ponta abaixo do menu principal apresenta Brasil, Estados Unidos e Canadá, com bandeiras em SVG e nomes acessíveis. Ela seleciona mercados: Estados Unidos abre `/licenses`; Brasil e Canadá abrem páginas claramente identificadas como em preparação, sem novos catálogos, preços ou ofertas. O país selecionado acompanha a navegação no Next.js e na prévia portátil por `usePathname`, com uma adaptação local do hash.
 
 O rodapé mantém a marca Home Pros Constructors, identificada com licenças e atendimento comercial, e mostra Make Noise no canto como responsável pela produção de vídeos e materiais. A estrutura de cinco funções recebida do responsável está registrada em `docs/COMPANY-STRUCTURE.md`, sem criar cargos ou condições comerciais novas.
+
+
+### Parceria com a empresa ou com uma cidade
+
+O menu **Parceria** abre um painel com dois caminhos: `/partnership/company` para a Home Pros Constructors e `/partnership/cities` para o responsável por uma operação local. O seletor usa os dados geográficos existentes de Massachusetts, com filtro inicial para cidades abertas a parceiros. `/partnership/cities/[state]/[slug]` apresenta a situação e o contato da cidade, sem alterar sua página de licença.
+
+A disponibilidade de parceria é independente de `CityLicense`: exige responsável, aceite de parceiros e um contato publicável. Os registros reais ficam em `src/content/partnerships.ts`; hoje estão vazios. No modo demonstrativo e na prévia portátil, Abington, Boston e Cambridge têm contatos fictícios, conforme autorizado pelo responsável. O botão de contato abre uma demonstração local e não envia mensagens nem inicia ligações. O modo real não exibe esses contatos. Outros estados só serão adicionados após autorização e fornecimento de dados geográficos/contatos.
