@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CartCount } from "./cart";
 import { BrandLogo } from "./brand-logo";
+import { CoursesMenu } from "./courses-menu";
 export function SiteShell({
   children,
   demo,
@@ -28,6 +29,7 @@ export function SiteShell({
           </Link>
           <div className="header-links">
             <Link href="/states/massachusetts">Explorar cidades</Link>
+            <CoursesMenu />
             <Link href="/cart" className="cart-link">
               Carrinho <CartCount />
             </Link>

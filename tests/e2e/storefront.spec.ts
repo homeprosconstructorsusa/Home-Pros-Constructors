@@ -107,6 +107,9 @@ test("mobile pages do not overflow and remain navigable", async ({ page }) => {
     "/states/massachusetts",
     "/cities/west-springfield",
     "/cart",
+    "/courses/video-editing",
+    "/courses/video-editing/abington",
+    "/courses/video-editing/complete",
   ]) {
     await page.goto(route);
     expect(
@@ -116,6 +119,11 @@ test("mobile pages do not overflow and remain navigable", async ({ page }) => {
     ).toBe(true);
   }
   await page.goto("/");
+  for (const picture of await page.locator(".showcase-photo").all()) {
+    await picture.scrollIntoViewIfNeeded();
+    await expect.poll(() => picture.evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+  }
+  await page.evaluate(() => window.scrollTo(0, 0));
   await page.screenshot({ path: "/tmp/homepros-mobile.png", fullPage: true });
 });
 test("downloadable preview runs offline with catalog, pages and cart", async ({
@@ -163,6 +171,11 @@ test("desktop design screenshots", async ({ page }) => {
     page.locator("main section").first().locator(".shell"),
   ).toHaveCSS("display", "grid");
   await expect.poll(() => page.locator(".page-backdrop-market img").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+  for (const picture of await page.locator(".showcase-photo").all()) {
+    await picture.scrollIntoViewIfNeeded();
+    await expect.poll(() => picture.evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+  }
+  await page.evaluate(() => window.scrollTo(0, 0));
   await page.screenshot({ path: "/tmp/homepros-home.png", fullPage: true });
   await page.goto("/cities/boston");
   await expect.poll(() => page.locator(".page-backdrop-boston img").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
@@ -377,4 +390,55 @@ test("City pages explain the license before the album and separate payment amoun
   await expect(page.locator(".city-overview")).not.toContainText("materiais personalizados durante todo o ano");
   await expect(page.getByRole("heading", { name: "Escola de inglês Home Pros School", exact: true })).toHaveCount(0);
   await expect(page.locator(".city-license-details")).not.toContainText("100 vídeos");
+});
+
+test("Courses present two offers, city editing rights and an independent inventory", async ({ page }) => {
+  await page.goto("/");
+  const menu = page.locator(".courses-menu");
+  await menu.locator("summary").click();
+  await expect(menu).toHaveAttribute("open", "");
+  await page.keyboard.press("Escape");
+  await expect(menu).not.toHaveAttribute("open", "");
+  await menu.locator("summary").click();
+  await menu.getByRole("link", { name: /Curso de edição de vídeos/ }).click();
+  await expect(page).toHaveURL(/\/courses\/video-editing$/);
+  await expect(page.locator(".course-options article")).toHaveCount(2);
+  await expect(page.locator(".course-options article").first()).toContainText("297,00");
+  await expect(page.locator(".course-options article").last()).toContainText("997,00");
+  await page.getByLabel("Buscar cidade para edição").fill("Abington");
+  await expect(page.locator(".editor-city-card")).toHaveCount(1);
+  await page.locator(".editor-city-card").click();
+  await expect(page.getByRole("heading", { name: "Edição em Abington.", exact: true })).toBeVisible();
+  await expect(page.locator(".editor-offer-summary")).toContainText("297,00");
+  await expect(page.locator(".editor-offer-summary")).toContainText("12 meses");
+  await expect(page.locator(".editor-offer-summary")).toContainText("freelancer para responsáveis por outras cidades");
+  await expect(page.getByRole("button", { name: "Inscrição ainda não habilitada" })).toBeDisabled();
+  await expect(page.locator(".cart-count")).toHaveText("0");
+  await page.screenshot({ path: "/tmp/homepros-editor-abington.png", fullPage: true });
+  await page.goto("/courses/video-editing/complete");
+  await expect(page.locator(".complete-course-price")).toContainText("997,00");
+  await expect(page.locator(".editor-offer-summary")).toContainText("sem vínculo com a Home Pros e sem exclusividade de cidade");
+  await page.goto("http://127.0.0.1:3101/courses/video-editing/abington");
+  await expect(page.locator(".editor-offer-summary")).toContainText("297,00");
+  const { Pool } = await import("pg");
+  const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+  try {
+    const result = await pool.query('SELECT COUNT(*) AS count FROM "EditorCityOffer" WHERE "courseCode" = $1 AND "priceCents" = $2 AND "exclusivityMonths" = $3 AND status = $4', ["video-editing", 29700, 12, "DRAFT"]);
+    expect(Number(result.rows[0].count)).toBe(351);
+    const cities = await pool.query('SELECT COUNT(*) AS count FROM "CityLicense"');
+    expect(Number(cities.rows[0].count)).toBe(351);
+  } finally { await pool.end(); }
+  await page.route("**/*", (route) => route.request().url() === "http://127.0.0.1:3102/homepros-preview.html" ? route.continue() : route.abort());
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("http://127.0.0.1:3102/homepros-preview.html#/courses/video-editing");
+  await expect(page.locator(".course-options article").first()).toContainText("297,00");
+  await expect.poll(() => page.locator(".course-image img").evaluate((img) => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+  await page.getByLabel("Buscar cidade para edição").fill("Cambridge");
+  await page.locator(".editor-city-card").click();
+  await expect(page.getByRole("heading", { name: "Edição em Cambridge.", exact: true })).toBeVisible();
+  await expect(page.locator(".editor-offer-summary")).toContainText("297,00");
+  await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await page.goto("http://127.0.0.1:3102/homepros-preview.html#/courses/video-editing/complete");
+  await expect(page.locator(".complete-course-price")).toContainText("997,00");
+  await page.screenshot({ path: "/tmp/homepros-course-complete-mobile.png", fullPage: true });
 });

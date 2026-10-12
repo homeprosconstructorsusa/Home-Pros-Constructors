@@ -30,3 +30,21 @@ model CityLicense {
  @@unique([state, city])
  @@index([state, status])
 }
+
+model EditorCityOffer {
+ id String @id @default(cuid())
+ courseCode String @default("video-editing")
+ citySlug String
+ city String
+ county String
+ state String @default("MA")
+ priceCents Int?
+ currency String @default("BRL")
+ exclusivityMonths Int?
+ scope String?
+ status LicenseStatus @default(DRAFT)
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@unique([courseCode, citySlug])
+ @@index([state, status])
+}

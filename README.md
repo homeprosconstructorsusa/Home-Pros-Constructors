@@ -88,3 +88,11 @@ O build standalone inclui `server.js`, `.next/static` e `public`. Depois de copi
 ### Fundos fotográficos
 
 `public/photos/backgrounds` contém quatro fundos preparados com edição generativa das capturas enviadas pelo responsável, removendo textos publicitários, marcas de terceiros e barras de interface: `home.png` (IMG_2563.PNG, profissional trabalhando), `boston.png` (IMG_2567.PNG, dólar) e `cart.png` (IMG_2553.PNG, Estátua da Liberdade e bandeira). São imagens ilustrativas, sem atribuição de equipe ou sede real. A referência IMG_2555.PNG originou `home-liberty.png`, usado no destaque principal da página inicial. O Franklin também aparece na seção de escolha do estado na página inicial. A imagem do profissional, `home.png`, é usada no fundo de Abington. `cart.png`, preparada a partir da IMG_2553.PNG, também aparece no fundo do catálogo de Massachusetts. O componente compartilhado `PageBackdrop` funciona no website e na prévia portátil, que incorpora os arquivos. As camadas de opacidade e degradê são CSS; os textos e controles ficam acima e as imagens decorativas não interferem na navegação. A imagem anterior da página inicial permanece arquivada em `public/photos/home/hero.png`.
+
+## Cursos de edição e inventário próprio
+
+A página inicial apresenta categorias de licenças, cursos, marketing e escola de inglês. O menu **Cursos** abre `/courses/video-editing`, com duas ofertas: R$ 297 (curso + direito de edição de uma cidade por 12 meses, com vínculo à Home Pros) e R$ 997 (curso completo independente). Os termos aprovados ficam em `src/content/video-course.ts`.
+
+`/courses/video-editing/[slug]` oferece uma prévia para cada um dos 351 municípios; `/courses/video-editing/complete` apresenta o curso independente. `EditorCityOffer` é um inventário separado de `CityLicense`, sem copiar disponibilidade da licença comercial. A migration e o seed criam ofertas em DRAFT; o seed preserva ofertas já configuradas. A compra continua desativada até o programa final, contrato e integração de pagamentos. O alcance da edição e das atividades freelancer deverá constar no contrato. A matrícula e o curso completo não foram adicionados ao carrinho de licenças.
+
+As fotografias ilustrativas de edição e estudo foram geradas para a apresentação, sem identificar equipe ou alunos reais. A prévia HTML também inclui estas páginas e imagens, sem depender de rede.

@@ -247,3 +247,91 @@ input, select, button { font: inherit; }
 .city-info-body .detail-facts { margin-top: 0; padding-top: 0; border-top: 0; margin-bottom: 22px; }
 @media (max-width: 900px) { .city-product-layout { column-gap: 28px; } .city-purchase-summary { padding: 24px; } .purchase-heading { flex-wrap: wrap; } .purchase-breakdown > div { flex-wrap: wrap; gap: 6px 16px; } }
 @media (max-width: 760px) { .city-product-layout { grid-template-columns: 1fr; row-gap: 32px; } .city-overview, .city-purchase-summary, .city-detail-body { grid-column: auto; grid-row: auto; } .city-purchase-summary { position: static; } .city-license-intro { font-size: 19px; } .city-gallery-area > h2, .city-details-heading h2 { font-size: 25px; } }
+
+/* Image-led home presentation and the separate course offering. */
+.apple-hero .home-hero-grid { grid-template-columns: 1fr; min-height: 790px; align-items: start; text-align: center; padding-block: 70px 270px; }
+.apple-hero-copy { max-width: 960px; margin-inline: auto; }
+.apple-hero .home-headline { font-size: clamp(44px, 5.4vw, 80px); line-height: 1.05; }
+.apple-hero .home-headline span { font-size: .38em; margin-top: 22px; }
+.apple-hero .home-description { max-width: 620px; margin: 24px auto 0; font-size: 20px; line-height: 1.6; }
+.apple-hero .home-actions { justify-content: center; margin-top: 26px; }
+.apple-hero .page-backdrop .scene-image { opacity: .72; object-position: center 80%; }
+.apple-hero .scene-gradient { background: linear-gradient(180deg, #f8faf8fa 0%, #f8faf8dc 38%, #f8faf83d 75%, #f8faf8 100%); }
+.apple-text-link { display: inline-block; color: #245840; font-size: 15px; font-weight: 500; padding-block: 10px; }
+.apple-text-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.home-category-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 56px; padding-block: 30px 42px; }
+.home-category-nav a { display: grid; justify-items: center; gap: 14px; font-size: 13px; }
+.home-category-nav img { display: block; width: 82px; height: 82px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 18px #17352e12; }
+.showcase-heading { text-align: center; padding-block: 30px 34px; }
+.showcase-heading h2, .apple-states h2, .editor-city-picker h2, .course-outline h2, .course-rights h2 { font-size: clamp(30px, 3.4vw, 46px); line-height: 1.2; letter-spacing: -.045em; font-weight: 600; margin-top: 14px; }
+.showcase-heading > p:last-child, .apple-states > p:not(.eyebrow) { font-size: 17px; color: #627263; line-height: 1.7; margin-top: 14px; }
+.home-showcase-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; width: min(1480px, calc(100% - 32px)); margin: 0 auto 40px; }
+.showcase-card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border-radius: 24px; background: #eff3ef; text-align: center; }
+.showcase-copy { padding: 42px 30px 24px; }
+.showcase-copy h2 { font-size: clamp(30px, 3.1vw, 48px); font-weight: 600; line-height: 1.08; letter-spacing: -.045em; margin-top: 16px; }
+.showcase-copy p:not(.eyebrow) { max-width: 440px; margin: 18px auto 8px; font-size: 15px; line-height: 1.75; color: #526456; }
+.showcase-photo { display: block; width: 100%; height: 310px; object-fit: cover; margin-top: auto; }
+.showcase-course { background: #e9eeea; }
+.showcase-license { background: #f7f0e5; }
+.showcase-services { background: #102c28; color: white; }
+.showcase-services .eyebrow, .showcase-services .apple-text-link { color: #d5c29b; }
+.showcase-services .showcase-copy p:not(.eyebrow) { color: #d5dfd8; }
+.showcase-school { background: #edf2ed; }
+.showcase-small-note { display: block; color: #677b65; font-size: 11px; line-height: 1.7; margin-top: 16px; }
+.apple-states { padding-block: 70px; }
+.state-feature-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; margin-top: 30px; }
+.state-feature-grid > * { padding: 26px; border: 1px solid #dce4d8; border-radius: 18px; background: #ffffffdc; }
+.state-feature-grid strong { display: block; font-size: 20px; font-weight: 600; }
+.state-feature-grid span { display: block; margin-top: 12px; font-size: 14px; color: #677461; line-height: 1.7; }
+.courses-menu { position: relative; }
+.courses-menu > summary { list-style: none; cursor: pointer; padding-block: 10px; white-space: nowrap; }
+.courses-menu > summary::-webkit-details-marker { display: none; }
+.courses-menu > summary:focus-visible { outline: 3px solid #b98236; outline-offset: 4px; border-radius: 4px; }
+.courses-dropdown { position: absolute; z-index: 20; top: calc(100% + 10px); left: 50%; transform: translateX(-50%); width: min(310px, calc(100vw - 32px)); padding: 10px; border: 1px solid #dce3d8; border-radius: 14px; background: #fffffff5; box-shadow: 0 16px 50px #0d30252b; color: #17352e; }
+.courses-dropdown a { display: block; padding: 14px; font-size: 14px; border-radius: 8px; }
+.courses-dropdown a:hover { background: #edf3ec; }
+.courses-dropdown span { display: block; color: #697a65; font-size: 11px; margin-top: 8px; line-height: 1.6; }
+.course-intro { text-align: center; max-width: 920px; padding-block: 60px 40px; }
+.course-intro h1 { font-size: clamp(38px, 5vw, 68px); font-weight: 600; letter-spacing: -.05em; line-height: 1.08; margin-top: 20px; }
+.course-lead { margin-top: 24px; font-size: clamp(20px, 2.5vw, 28px); line-height: 1.4; letter-spacing: -.025em; }
+.course-intro > p:not(.course-lead):not(.eyebrow) { max-width: 700px; margin: 18px auto; color: #637362; line-height: 1.8; font-size: 15px; }
+.course-image img { display: block; width: 100%; height: auto; max-height: 570px; object-fit: cover; border-radius: 24px; }
+.course-options { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; margin-top: 36px; text-align: left; }
+.course-options article { padding: 28px; background: white; border: 1px solid #dce3d8; border-radius: 20px; }
+.course-options h2 { font-size: 25px; letter-spacing: -.03em; font-weight: 600; margin-top: 14px; }
+.course-options strong, .complete-course-price { display: block; font-size: 38px; font-weight: 600; letter-spacing: -.04em; margin-top: 18px; }
+.course-options p { font-size: 14px; line-height: 1.8; color: #627362; margin-block: 18px; }
+.course-outline, .course-rights, .editor-city-picker { padding-block: 60px; }
+.course-module-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 28px; margin-top: 32px; }
+.course-module-grid h3 { font-size: 20px; font-weight: 600; margin-top: 14px; }
+.course-module-grid p { margin-top: 12px; font-size: 14px; line-height: 1.8; color: #647761; }
+.course-rights { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 48px; border-block: 1px solid #dce4d8; }
+.course-rights p, .course-rights li { font-size: 14px; line-height: 1.9; color: #627461; margin-top: 16px; }
+.course-rights h3 { font-size: 22px; font-weight: 600; }
+.course-rights ul { list-style: disc; padding-left: 20px; }
+.editor-city-picker > p:not(.eyebrow) { color: #647560; font-size: 15px; line-height: 1.8; margin-top: 14px; }
+.editor-city-picker label { display: block; font-size: 12px; margin-top: 26px; font-weight: 600; }
+.editor-city-picker input { display: block; width: min(540px, 100%); padding: 14px 16px; background: white; border: 1px solid #d2ddcb; border-radius: 10px; margin-top: 10px; }
+.editor-city-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; margin-top: 24px; }
+.editor-city-card { padding: 24px; border: 1px solid #dce4d8; border-radius: 16px; background: white; }
+.editor-city-card h3 { font-size: 24px; font-weight: 600; margin-block: 14px; }
+.editor-city-card > span:not(.eyebrow) { font-size: 13px; }
+.editor-city-card small { display: block; color: #71826c; font-size: 11px; margin-top: 14px; }
+.editor-offer-layout { display: grid; grid-template-columns: minmax(0,1.6fr) minmax(0,1fr); gap: 48px; }
+.editor-offer-photo { display: block; width: 100%; height: auto; border-radius: 20px; margin-block: 30px; }
+.editor-offer-layout h2 { font-size: 25px; font-weight: 600; letter-spacing: -.025em; }
+.editor-offer-description { color: #627460; font-size: 14px; line-height: 1.9; margin-top: 18px; }
+.editor-offer-layout ol { list-style: decimal; padding-left: 20px; margin-top: 18px; line-height: 1.9; font-size: 14px; }
+.editor-offer-summary h2 { margin-top: 20px; }
+.editor-offer-summary > p { margin-top: 14px; font-size: 14px; line-height: 1.8; }
+.editor-offer-summary dl { margin-block: 24px; font-size: 14px; }
+.editor-offer-summary dl > div { padding-block: 18px; border-bottom: 1px solid #e1e7dc; }
+.editor-offer-summary dt { color: #69795f; font-size: 12px; }
+.editor-offer-summary dd { margin-top: 10px; font-weight: 500; line-height: 1.8; }
+.editor-offer-summary .complete-course-price { margin-block: 25px; }
+.editor-offer-summary .btn { margin-top: 16px; }
+@media (max-width: 900px) { .home-category-nav { gap: 30px; } .course-module-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .editor-offer-layout { gap: 26px; } }
+@media (max-width: 760px) { .home-showcase-grid, .state-feature-grid, .course-options, .course-rights, .editor-offer-layout { grid-template-columns: 1fr; } .showcase-photo { height: 280px; } .course-rights { gap: 32px; } .editor-city-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .apple-hero .home-hero-grid { min-height: 800px; padding-block: 46px 260px; } }
+@media (max-width: 640px) { .header-inner { flex-wrap: wrap; row-gap: 8px; padding-block: 14px; } .header-inner > .brand { margin-inline: auto; } .header-links { width: 100%; justify-content: space-between; gap: 12px; } .apple-hero .home-headline { font-size: 44px; } .apple-hero .home-description { font-size: 17px; } .home-category-nav { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px 18px; } .home-showcase-grid { width: calc(100% - 24px); gap: 16px; } .showcase-copy { padding: 32px 22px 20px; } .showcase-copy h2 { font-size: 36px; } .showcase-photo { height: 250px; } .course-options article { padding: 24px; } .course-module-grid, .editor-city-grid { grid-template-columns: 1fr; } .course-outline, .course-rights, .editor-city-picker { padding-block: 40px; } .apple-states { padding-block: 44px; } }
+
+.editor-offer-summary dl > div:first-child dd { font-size: 36px; line-height: 1.2; font-weight: 600; letter-spacing: -.04em; }
