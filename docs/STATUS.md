@@ -130,3 +130,8 @@ Validação: lint, TypeScript, build de produção e quatro verificações de na
 Validação: lint, TypeScript, build, oito testes de dados/cálculo/disponibilidade e quatro verificações de navegador para parceria no computador/celular/offline, diferença entre contatos demonstrativos e reais, menu, bandeiras e carrinho. Website não publicado.
 
 Para substituir os exemplos serão necessários nome do responsável, cidade/estado, canal de contato comercial e confirmação de que a operação aceita parceiros. A matrícula, os contratos e as condições comerciais de parceria continuam fora desta apresentação.
+
+
+## Download simplificado da prévia
+
+O menu Parceria e suas ações foram conferidos no código e no GitHub, na branch main. Para facilitar a abertura da versão atualizada no Mac, `npm run preview:build` agora também gera `downloads/Home-Pros-Preview.zip`, contendo somente `ABRA-O-SITE.html` e as instruções. O HTML empacotado é idêntico à prévia autocontida, com menus, contatos demonstrativos, bandeiras, cursos e carrinho. O ZIP foi validado por extração e verificação de CRC/conteúdo; lint e TypeScript passaram. O fluxo de Parceria foi novamente verificado no navegador. Nenhuma condição comercial ou página do website foi alterada por este empacotamento, e nada foi hospedado ou publicado como website.

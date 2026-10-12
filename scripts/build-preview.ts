@@ -3,6 +3,7 @@ import { mkdir, readFile, writeFile, rm, cp, readdir } from "node:fs/promises";
 import { resolve } from "node:path";
 import { spawnSync } from "node:child_process";
 import { tmpdir } from "node:os";
+import { packagePreview } from "./package-preview.mjs";
 async function main() {
   const work = resolve(tmpdir(), "homepros-preview-build");
   await mkdir(work, { recursive: true });
@@ -58,8 +59,9 @@ async function main() {
     "Abra homepros-preview.html no navegador do computador. Não é necessário contratar hospedagem. A prévia usa os mesmos componentes do website, com navegação local. Os valores são do modelo enviado para Boston e a disponibilidade é demonstrativa. Não há conexão com pagamentos ou PostgreSQL. Se seu navegador bloquear arquivos locais, execute python3 -m http.server 8080 nesta pasta e abra a porta 8080 no navegador.\n",
   );
   await rm(work, { recursive: true, force: true });
+  await packagePreview();
   console.log(
-    "Created preview/homepros-preview.html — interactive local review, no hosting required.",
+    "Created preview/homepros-preview.html and downloads/Home-Pros-Preview.zip — local review, no hosting required.",
   );
 }
 main().catch((error) => {

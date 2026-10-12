@@ -4,7 +4,7 @@ Website de licenças de uso das cidades, com Next.js 16, TypeScript, Tailwind 4,
 
 ## Ver a prévia sem hospedagem
 
-Baixe `preview/homepros-preview.html` pelo botão **Download raw file** do GitHub e abra no navegador do computador. É um HTML autocontido, com navegação, 351 cidades e carrinho. O carrinho depende do armazenamento local do navegador. Se o navegador bloquear arquivos locais, sirva a pasta `preview` com `python3 -m http.server 8080`.
+Baixe [somente a prévia em ZIP](https://github.com/homeprosconstructorsusa/Home-Pros-Constructors/raw/refs/heads/main/downloads/Home-Pros-Preview.zip), extraia e dê dois cliques em **ABRA-O-SITE.html** na nova pasta. O ZIP contém apenas o HTML autocontido e as instruções, sem os arquivos de desenvolvimento. Ele inclui navegação, 351 cidades, carrinho, bandeiras e menu Parceria. Arquivos de downloads anteriores não são atualizados automaticamente; abra sempre o HTML da pasta que acabou de extrair. O carrinho depende do armazenamento local do navegador.
 
 A prévia usa os **mesmos componentes React, dados geográficos, texto e cálculos** da aplicação Next.js. Apenas a navegação e a apresentação de imagens são adaptadas para um arquivo local. Ela não conecta ao banco de dados nem processa pagamentos. No teste automatizado, o HTML foi servido localmente porque o Chromium gerenciado bloqueia `file://`; todas as demais solicitações de rede foram bloqueadas para confirmar que a prévia é autocontida.
 
@@ -37,7 +37,7 @@ npm run test:e2e
 
 Os testes de navegador usam Chromium em `/usr/bin/chromium` neste ambiente. Em outra máquina, configure `CHROMIUM_PATH` com o executável do Chromium. Os testes de integração precisam do PostgreSQL inicializado; portas 3100, 3101 e 3102 precisam estar livres.
 
-`npm run preview:build` atualiza o HTML distribuído a partir dos componentes reais. `npm run build` prepara a saída standalone e copia seus assets. Para validar a versão compilada: `npm start -- --hostname 127.0.0.1 --port 3000`.
+`npm run preview:build` atualiza o HTML distribuído e o ZIP simplificado em `downloads/Home-Pros-Preview.zip` a partir dos componentes reais. O empacotamento usa apenas o Node.js 24, sem programas ou dependências adicionais. `npm run build` prepara a saída standalone e copia seus assets. Para validar a versão compilada: `npm start -- --hostname 127.0.0.1 --port 3000`.
 
 ## Catálogo e gerenciamento de disponibilidade
 
