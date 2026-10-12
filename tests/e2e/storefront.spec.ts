@@ -225,7 +225,9 @@ test("live PostgreSQL publishes a license and preserves changes on reseed", asyn
       ).rows[0].depositCents,
     ).toBe(123400);
     await page.goto("http://127.0.0.1:3101/cities/cambridge");
-    await expect(page.locator(".summary-card")).toContainText("1.234,00");
+    await expect(page.locator(".purchase-entry")).toContainText("1.234,00");
+    await expect(page.locator(".purchase-breakdown")).toContainText("3.485,00");
+    await expect(page.locator(".purchase-breakdown")).toContainText("2.251,00");
     await expect(page.locator(".demo-bar")).toHaveCount(0);
     await page
       .getByRole("button", { name: "Adicionar licença ao carrinho" })
@@ -317,4 +319,47 @@ test("City albums can be read before entering details and enlarged offline", asy
   await abingtonDialog.getByRole("button", { name: "Fechar" }).click();
   await page.setViewportSize({ width: 390, height: 844 });
   await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+});
+
+test("City pages explain the license before the album and separate payment amounts", async ({ page }) => {
+  await page.goto("/cities/abington");
+  const overview = page.locator(".city-overview");
+  const album = page.getByRole("region", { name: "Álbum de Abington", exact: true });
+  await expect(overview).toContainText("licença de uso da cidade de Abington, em Massachusetts");
+  await expect(overview).toContainText("conforme contrato");
+  const overviewBox = await overview.boundingBox();
+  const albumBox = await album.boundingBox();
+  expect(overviewBox!.y + overviewBox!.height).toBeLessThan(albumBox!.y);
+  const summary = page.getByRole("complementary", { name: "Condições da licença de Abington" });
+  await expect(summary.locator(".purchase-entry")).toContainText("Entrada");
+  await expect(summary.locator(".purchase-entry")).toContainText("997,00");
+  await expect(summary.locator(".purchase-breakdown")).toContainText("Valor total da licença");
+  await expect(summary.locator(".purchase-breakdown")).toContainText("3.485,00");
+  await expect(summary.locator(".purchase-breakdown")).toContainText("Saldo restante");
+  await expect(summary.locator(".purchase-breakdown")).toContainText("2.488,00");
+  await expect(summary.locator(".purchase-plan")).toContainText("17 parcelas de R$ 138,22");
+  await expect(summary.locator(".purchase-plan")).toContainText("R$ 138,26");
+  const details = page.getByRole("region", { name: "Detalhes da licença de Abington" });
+  await expect(details.getByText("Criação de websites.", { exact: true })).toBeVisible();
+  const english = details.locator("summary").filter({ hasText: "Inglês: do zero ao avançado" });
+  await english.focus();
+  await page.keyboard.press("Enter");
+  await expect(details.getByText(/Sem inglês: comece atendendo brasileiros/)).toBeVisible();
+  await expect(details.getByText(/Início das aulas do curso avançado: 1º trimestre de 2027/)).toBeVisible();
+  await details.locator("summary").filter({ hasText: "Remuneração do licenciado" }).click();
+  await expect(details.getByText(/comissão de 54%/)).toBeVisible();
+  await expect(details.getByText(/comissão prevista é de 3%/)).toBeVisible();
+  await page.screenshot({ path: "/tmp/homepros-city-details.png", fullPage: true });
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("http://127.0.0.1:3102/homepros-preview.html#/cities/abington");
+  const offlineOverview = page.locator(".city-overview");
+  const offlineSummary = page.locator(".city-purchase-summary");
+  const offlineAlbum = page.getByRole("region", { name: "Álbum de Abington", exact: true });
+  const first = await offlineOverview.boundingBox();
+  const second = await offlineSummary.boundingBox();
+  const third = await offlineAlbum.boundingBox();
+  expect(first!.y + first!.height).toBeLessThan(second!.y);
+  expect(second!.y + second!.height).toBeLessThan(third!.y);
+  await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await page.screenshot({ path: "/tmp/homepros-city-mobile.png", fullPage: true });
 });
